@@ -1,0 +1,238 @@
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*------ Ajoute d'informations struct -------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+func AddinfostructMember(pseudo, uid string) {
+	member.pseudo = pseudo
+	member.uid = uid
+
+	AddMembre(pseudo, uid)
+}
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------- Requête relatif au membre --------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+// AddMembre ajoute un membre à la base de données (en vérifiant qu'il n'existe pas sinon on le mais à jour)
+func AddMembre(pseudo, uid string) {
+	db := dbConn()
+	defer db.Close()
+
+	VerifMember(uid)
+
+	if count == 0 {
+		insert, e := db.Prepare("INSERT INTO member(pseudo, uid) VALUES(?,?)")
+		checkError(e)
+		insert.Exec(pseudo, uid)
+	}
+}
+
+// getMember retourne toutes les informations de la base de données dans le struct member
+func structMember(uid string) {
+	db := dbConn()
+	defer db.Close()
+
+	VerifMember(uid)
+
+	if count == 0 {
+		AddMembre(member.pseudo, member.uid)
+	} else {
+		e := db.QueryRow("SELECT * FROM member WHERE uid = "+uid).Scan(&member.id, &member.pseudo, &member.uid)
+		checkError(e)
+	}
+
+}
+
+// VerifMember vérifie l'existence d'un utilisateur dans la base de données avec son uid (return le nombre)
+func VerifMember(uid string) {
+	db := dbConn()
+	defer db.Close()
+
+	e := db.QueryRow("select count(*) from member where uid = " + uid).Scan(&count)
+	checkError(e)
+}
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*------- Requête de ban/unban ticket -------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+// BanTicket ajoute l'utilisateur dans la table des ban avec la raison
+func BanTicket(uid string, reason string) {
+	db := dbConn()
+	defer db.Close()
+	tNow := time.Now()
+	tUnix := tNow.Unix()
+
+	structMember(uid)
+
+	insert, e := db.Prepare("INSERT INTO ban_ticket (id_member, reason, time_sec) VALUES(?,?,?)")
+	checkError(e)
+	_, e = insert.Exec(member.id, reason, tUnix)
+	checkError(e)
+}
+
+// GetBanTicket retourne les informations du ban count / raison / time
+func GetBanTicket(uid string) (int, string, string) {
+	db := dbConn()
+	defer db.Close()
+
+	tNow := time.Now()
+	tUnix := tNow.Unix()
+	var calculeTime int64
+
+	structMember(uid)
+	verifBanTicket(strconv.Itoa(int(member.id)))
+
+	if count == 1 {
+		e := db.QueryRow("select * from ban_ticket where id_member = "+strconv.Itoa(int(member.id))).Scan(&banticket.id, &banticket.idmember, &banticket.reason, &banticket.timesec)
+		checkError(e)
+
+		calculeTime = tUnix - banticket.timesec
+	}
+	return count, banticket.reason, modules.Calcseconde(calculeTime)
+}
+
+func GetOpenTicket() int {
+	structMember(member.uid)
+
+	db := dbConn()
+	defer db.Close()
+
+	e := db.QueryRow("SELECT count(status) FROM ticket WHERE id_member=" + strconv.Itoa(int(member.id)) + " AND status=1;").Scan(&count)
+	checkError(e)
+
+	return count
+}
+
+// UnBanTicket retire une personne de la table des ban
+func UnBanTicket(uid string) {
+	db := dbConn()
+	defer db.Close()
+
+	structMember(uid)
+	verifBanTicket(strconv.Itoa(int(member.id)))
+
+	if count == 1 {
+		_, e := db.Query("DELETE FROM ban_ticket WHERE id = " + strconv.Itoa(int(banticket.id)))
+		checkError(e)
+	}
+}
+
+func verifBanTicket(id string) {
+	db := dbConn()
+	defer db.Close()
+
+	e := db.QueryRow("select count(*) from ban_ticket where id_member = " + id).Scan(&count)
+	checkError(e)
+}
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------- Requête relatif au ticket --------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+// AddTicket Insert dans la table ticket le contenu du premier message / time.unix / id_membre / num du ticket
+func AddTicket(uid string, request string) {
+	db := dbConn()
+	defer db.Close()
+
+	tNow := time.Now()
+	tUnix := tNow.Unix()
+	GetNumTicket()
+
+	structMember(uid)
+	insert, e := db.Prepare("INSERT INTO ticket (num, time_sec, id_member, request) VALUES(?,?,?,?)")
+	_, e = insert.Exec(numticket.num, tUnix, member.id, request)
+	checkError(e)
+
+	SetNumTicket()
+}
+
+// CloseTicket calcule principalement le temps de traitement du ticket en seconde
+func CloseTicket(numticket string) {
+	//d2626 erreur random calculeTime
+	tNow := time.Now()
+	tUnix := tNow.Unix()
+
+	db := dbConn()
+	defer db.Close()
+
+	e := db.QueryRow("SELECT count(*) FROM ticket WHERE num = " + numticket).Scan(&count)
+	checkError(e)
+
+	if count == 1 {
+		e := db.QueryRow("SELECT * FROM ticket WHERE num = "+numticket).Scan(&ticket.id, &ticket.num, &ticket.timesec, &ticket.status, &ticket.idmember, &ticket.request)
+		checkError(e)
+		calculeTime := tUnix - ticket.timesec
+
+		fmt.Println("CalculeTime : " + strconv.Itoa(int(calculeTime)) + " | tUnix : " + strconv.Itoa(int(tUnix)) + " | ticket.timesec : " + strconv.Itoa(int(ticket.timesec)))
+
+		_, e = db.Query("UPDATE ticket SET time_sec = " + strconv.Itoa(int(calculeTime)) + ",status = 0  where id = " + strconv.Itoa(int(ticket.id)))
+		checkError(e)
+	}
+}
+
+// LogTicket permet de log tous les messages dans les tickets
+func LogTicket(uid string, ticket string, content string) {
+	db := dbConn()
+	defer db.Close()
+
+	structMember(uid)
+
+	insert, e := db.Prepare("INSERT INTO log_ticket (id_member, ticket, content) VALUES(?,?,?)")
+	_, e = insert.Exec(member.id, ticket, content)
+	checkError(e)
+}
+
+// GetNumTicket retourne le nombre de tickets déjà ouvert
+func GetNumTicket() int {
+	db := dbConn()
+	defer db.Close()
+
+	e := db.QueryRow("select * from num_ticket").Scan(&numticket.num)
+	checkError(e)
+	return numticket.num
+}
+
+// SetNumTicket mais à jour le nombre de tickets ouverts +1
+func SetNumTicket() {
+	db := dbConn()
+	defer db.Close()
+
+	_, e := db.Query("update num_ticket set num = num + 1")
+	checkError(e)
+}
+
+func TicketUser(uid string) [][]string {
+	db := dbConn()
+	defer db.Close()
+	tab := [][]string{}
+	i := 0
+
+	structMember(uid)
+
+	rows, e := db.Query("SELECT * FROM ticket WHERE id_member=" + strconv.Itoa(int(member.id)) + " ORDER BY num DESC LIMIT 10")
+	checkError(e)
+
+	for rows.Next() {
+		var info []string
+
+		e := rows.Scan(&ticket.id, &ticket.num, &ticket.timesec, &ticket.status, &ticket.idmember, &ticket.request)
+		checkError(e)
+
+		info = append(info, strconv.Itoa(int(i+1)), strconv.Itoa(int(ticket.num)), modules.Calcseconde(ticket.timesec), ticket.request, strconv.FormatBool(ticket.status))
+		tab = append(tab, info)
+
+		e = rows.Err()
+		checkError(e)
+		i++
+	}
+	return tab
+}
