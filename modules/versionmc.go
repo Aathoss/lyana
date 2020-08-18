@@ -7,8 +7,7 @@ import (
 	"regexp"
 
 	"github.com/spf13/viper"
-	"gitlab.com/inovaperf/bot/modules"
-	"gitlab.com/unispace/framework"
+	"gitlab.com/lyana/framework"
 )
 
 var (
@@ -22,7 +21,7 @@ var (
 
 func VerifServerMCVersion() {
 	response, err := http.Get(urlVersion)
-	modules.CheckError(err)
+	CheckError(err)
 	defer response.Body.Close()
 
 	body, err := ioutil.ReadAll(response.Body)
@@ -36,11 +35,11 @@ func VerifServerMCVersion() {
 
 func VerifServerMCBuild() {
 	response, err := http.Get(urlBuild)
-	modules.CheckError(err)
+	CheckError(err)
 	defer response.Body.Close()
 
 	body, err := ioutil.ReadAll(response.Body)
-	modules.CheckError(err)
+	CheckError(err)
 
 	var retuInfo map[string]interface{}
 	json.Unmarshal(body, &retuInfo)

@@ -6,10 +6,9 @@ import (
 	"strconv"
 	"time"
 
-	"gitlab.com/inovaperf/bot/framework"
-
 	"github.com/bwmarrin/discordgo"
 	"github.com/dustin/go-humanize"
+	"gitlab.com/lyana/framework"
 )
 
 // credit to github.com/iopred/bruxism for this command

@@ -2,7 +2,7 @@ package framework
 
 import (
 	bot "github.com/bwmarrin/discordgo"
-	"gitlab.com/unispace/logger"
+	"gitlab.com/lyana/logger"
 )
 
 type Context struct {

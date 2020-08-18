@@ -4,10 +4,11 @@ import (
 	"strings"
 
 	"github.com/spf13/viper"
-	"gitlab.com/unispace/framework"
-	"gitlab.com/unispace/logger"
-	"gitlab.com/unispace/modules"
-	"gitlab.com/unispace/mysql"
+	"gitlab.com/lyana/framework"
+	"gitlab.com/lyana/logger"
+	"gitlab.com/lyana/modules"
+	"gitlab.com/lyana/mysql"
+	"gitlab.com/lyana/rcon"
 )
 
 func AddPlayer(ctx framework.Context) {
@@ -27,7 +28,7 @@ func AddPlayer(ctx framework.Context) {
 				return
 			}
 
-			resp := modules.WhitelistRcon(player_mc)
+			resp := rcon.RconCommandeWhitelistAdd(player_mc)
 			if resp[0] == "Added" {
 				ctx.Discord.ChannelMessageSend(viper.GetString("ChannelID.General"), "> Votre candidature à était accepté, je viens de procéder à la whitelist de votre pseudo mc. \n> Nous vous souhaitons un agréable séjour "+tag_discord+".")
 				mysql.AddWhitelist(user.User.ID, player_mc)

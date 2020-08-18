@@ -4,19 +4,16 @@ import (
 	"strconv"
 	"strings"
 
-	"gitlab.com/unispace/framework"
-	"gitlab.com/unispace/modules"
-)
-
-var (
-	conn *modules.MCConn
+	"gitlab.com/lyana/framework"
+	"gitlab.com/lyana/modules"
+	"gitlab.com/lyana/rcon"
 )
 
 func OnlinePlayer(ctx framework.Context) {
 	var listeplayers string
 	ctx.Discord.ChannelMessageDelete(ctx.TextChannel.ID, ctx.Message.ID)
 
-	modules.OnlinePlayerRcon()
+	rcon.RconCommandeList()
 
 	for i := 0; i < len(framework.ListPlayer); i++ {
 		listeplayers = listeplayers + framework.ListPlayer[i]

@@ -4,9 +4,10 @@ import (
 	"strings"
 
 	"github.com/spf13/viper"
-	"gitlab.com/unispace/framework"
-	"gitlab.com/unispace/modules"
-	"gitlab.com/unispace/mysql"
+	"gitlab.com/lyana/framework"
+	"gitlab.com/lyana/modules"
+	"gitlab.com/lyana/mysql"
+	"gitlab.com/lyana/rcon"
 )
 
 func Signalement(ctx framework.Context) {
@@ -26,8 +27,8 @@ func Signalement(ctx framework.Context) {
 
 			countPlayer := mysql.VerifPlayerMC(player_mc)
 			if countPlayer == 1 {
-				modules.UnWhitelistRcon(player_mc)
-				modules.KickPlayerRcon(player_mc, "Vous êtes actuellement suspecté d'avoir enfreint les règles ! Nous vous invitons à vous rendre sur le discord dans le channel #signalement-de-joueur")
+				rcon.RconCommandeWhitelistRemove(player_mc)
+				rcon.RconCommandeKick(player_mc, "Vous êtes actuellement suspecté d'avoir enfreint les règles ! Nous vous invitons à vous rendre sur le discord dans le channel #signalement-de-joueur")
 
 				embed := modules.NewEmbed().
 					SetTitle("Signialement  de joueurs !").

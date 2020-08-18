@@ -2,7 +2,7 @@ package framework
 
 import (
 	"github.com/spf13/viper"
-	"gitlab.com/unispace/logger"
+	"gitlab.com/lyana/logger"
 )
 
 var Cmdliste []string

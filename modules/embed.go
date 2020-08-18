@@ -5,7 +5,6 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/spf13/viper"
-	"gitlab.com/inovaperf/bot/modules"
 )
 
 var (
@@ -14,7 +13,7 @@ var (
 			SetColor(0xBD0000).
 			SetDescription("Excusez-moi, mon esprit divague. \nVous n'avez pas autorisé les messages privés venant de ce discord !").MessageEmbed
 
-	EmbedPermissionFalse = modules.NewEmbed().
+	EmbedPermissionFalse = NewEmbed().
 				SetTitle("Vous n'avez pas l'autorisation pour cette commande !").
 				SetColor(viper.GetInt("EmbedColor.Error")).MessageEmbed
 )

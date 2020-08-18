@@ -13,11 +13,11 @@ import (
 	bot "github.com/bwmarrin/discordgo"
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
-	"gitlab.com/unispace/command"
-	"gitlab.com/unispace/framework"
-	"gitlab.com/unispace/logger"
-	"gitlab.com/unispace/modules"
-	"gitlab.com/unispace/mysql"
+	"gitlab.com/lyana/command"
+	"gitlab.com/lyana/framework"
+	"gitlab.com/lyana/logger"
+	"gitlab.com/lyana/modules"
+	"gitlab.com/lyana/mysql"
 )
 
 // Variable
@@ -63,7 +63,6 @@ func main() {
 
 			modules.LogDiscord("[:tools:] [v:" + version + "] **Lyana** à correctement démarré accompagné des " + strconv.Itoa(framework.CountCommand+viper.GetInt("ModuleCount")) + " modules.")
 			modules.UpdateOnlinePlayer(framework.Session)
-			modules.VersionServerRcon()
 			modules.VerifServerMCVersion()
 			modules.VerifServerMCBuild()
 		}
@@ -123,7 +122,6 @@ out:
 		case <-t:
 			// Actualise le nombre de joueurs en ligne toute les 1 minute
 			modules.UpdateOnlinePlayer(framework.Session)
-			modules.VersionServerRcon()
 		case <-d:
 			// Actualise le nombre de joueurs en ligne toute les 1 minute
 			modules.VerifServerMCVersion()
@@ -146,6 +144,7 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 	if viper.GetBool("Dev.test") != true {
 		mysql.NewCountMessage(user.ID)
 	}
+	mysql.NewCountMessage(user.ID)
 	framework.CountMsg = framework.CountMsg + 1
 
 	content := m.Content
@@ -191,7 +190,7 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 }
 
 func registerCommands() {
-	CmdHandler.Register("test", command.Test, "???")
+	CmdHandler.Register("test1", command.Test, "???")
 
 	if viper.GetBool("Dev.test") != true {
 		CmdHandler.Register("online", command.OnlinePlayer, "Affiche les joueurs connecté")

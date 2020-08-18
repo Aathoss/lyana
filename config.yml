@@ -40,7 +40,7 @@ MySql:
 
 Minecraft:
   IP: "185.157.246.69"
-  Port: "31526"
+  Port: 31526
   Mdp: "j2H4RP3ud72Kbmc"
   CheckVersion: "1.16.2"
 

@@ -1,0 +1,28 @@
+INFO: 2020/08/18 19:33:52 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/08/18 19:34:14 request.go:40: Commande list vide --> Player is already whitelisted
+ERROR: 2020/08/18 19:34:24 request.go:40: Commande list vide --> Player is already whitelisted
+ERROR: 2020/08/18 19:34:26 request.go:40: Commande list vide --> Player is already whitelisted
+ERROR: 2020/08/18 19:34:27 request.go:40: Commande list vide --> Player is already whitelisted
+ERROR: 2020/08/18 19:34:29 request.go:40: Commande list vide --> Player is already whitelisted
+ERROR: 2020/08/18 19:34:30 request.go:40: Commande list vide --> Player is already whitelisted
+INFO: 2020/08/18 19:37:56 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/18 19:37:57 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/08/18 19:41:57 request.go:100: Open failed dial tcp 185.157.246.69:31526: connectex: Une opération a été tentée sur un hôte impossible à atteindre.
+INFO: 2020/08/18 20:21:16 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/18 20:21:18 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/08/18 20:23:18 request.go:116: Open failed dial tcp 185.157.246.69:31526: connectex: Une opération a été tentée sur un hôte impossible à atteindre.
+ERROR: 2020/08/18 20:43:30 request.go:123: Open failed dial tcp :0: connectex: L’adresse demandée n’est pas valide dans son contexte.
+INFO: 2020/08/18 20:43:30 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/18 20:43:31 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/08/18 20:44:28 request.go:123: Open failed dial tcp :0: connectex: L’adresse demandée n’est pas valide dans son contexte.
+INFO: 2020/08/18 20:44:28 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/18 20:44:29 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/08/18 20:46:14 request.go:127: Open failed dial tcp :0: connectex: L’adresse demandée n’est pas valide dans son contexte.
+INFO: 2020/08/18 20:46:14 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/18 20:46:16 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/08/18 20:46:58 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/18 20:47:00 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/08/18 20:49:27 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/18 20:49:28 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/08/18 20:52:27 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/18 20:52:28 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]

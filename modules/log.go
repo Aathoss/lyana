@@ -5,7 +5,7 @@ import (
 	"regexp"
 
 	"github.com/spf13/viper"
-	"gitlab.com/unispace/framework"
+	"gitlab.com/lyana/framework"
 )
 
 func CheckError(err error) {

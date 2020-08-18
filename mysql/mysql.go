@@ -6,7 +6,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/spf13/viper"
-	"gitlab.com/unispace/logger"
+	"gitlab.com/lyana/logger"
 )
 
 var (
@@ -104,14 +104,14 @@ func NewCountMessage(author string) {
 
 	if count == 1 {
 
-		insert, e := db.Prepare("UPDATE message_count SET count_msg=cunt_msg+1 WHERE uid=?")
+		insert, e := db.Prepare("UPDATE message_count SET count_msg=count_msg+1 WHERE uid=?")
 		checkError(e)
 		insert.Exec(author)
 		return
 	}
 	if count == 0 {
-		insert, e := db.Prepare("INSERT INTO message_count(uid, 1) VALUES(?)")
+		insert, e := db.Prepare("INSERT INTO message_count(uid, count_msg) VALUES(?, ?)")
 		checkError(e)
-		insert.Exec(author)
+		insert.Exec(author, 1)
 	}
 }

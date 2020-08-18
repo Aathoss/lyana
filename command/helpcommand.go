@@ -2,8 +2,8 @@ package command
 
 import (
 	"github.com/spf13/viper"
-	"gitlab.com/inovaperf/bot/framework"
-	"gitlab.com/inovaperf/bot/modules"
+	"gitlab.com/lyana/framework"
+	"gitlab.com/lyana/modules"
 )
 
 func HelpCommand(ctx framework.Context) {
