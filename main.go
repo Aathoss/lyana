@@ -144,7 +144,6 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 	if viper.GetBool("Dev.test") != true {
 		mysql.NewCountMessage(user.ID)
 	}
-	mysql.NewCountMessage(user.ID)
 	framework.CountMsg = framework.CountMsg + 1
 
 	content := m.Content
@@ -190,7 +189,9 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 }
 
 func registerCommands() {
-	CmdHandler.Register("test1", command.Test, "???")
+	if viper.GetBool("Dev.test") == true {
+		CmdHandler.Register("test1", command.Test, "???")
+	}
 
 	if viper.GetBool("Dev.test") != true {
 		CmdHandler.Register("online", command.OnlinePlayer, "Affiche les joueurs connecté")

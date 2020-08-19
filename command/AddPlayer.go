@@ -1,6 +1,7 @@
 package command
 
 import (
+	"fmt"
 	"strings"
 
 	"github.com/spf13/viper"
@@ -29,15 +30,10 @@ func AddPlayer(ctx framework.Context) {
 			}
 
 			resp := rcon.RconCommandeWhitelistAdd(player_mc)
-			if resp[0] == "Added" {
+			fmt.Println(resp)
+			if resp[4] == "§7Whitelisted" {
 				ctx.Discord.ChannelMessageSend(viper.GetString("ChannelID.General"), "> Votre candidature à était accepté, je viens de procéder à la whitelist de votre pseudo mc. \n> Nous vous souhaitons un agréable séjour "+tag_discord+".")
 				mysql.AddWhitelist(user.User.ID, player_mc)
-			}
-			if resp[2] == "already" {
-				embed := modules.NewEmbed().
-					SetTitle("Le joueurs semble déjà whitelist").
-					SetColor(viper.GetInt("EmbedColor.Error")).MessageEmbed
-				ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, embed)
 			}
 		}
 

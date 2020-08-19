@@ -10,21 +10,16 @@ import (
 )
 
 var (
-	c   *Client
-	err bool
+	c       *Client
+	connect bool
 )
 
 func RconCommandeList() {
-	c = openRcon()
+	openRcon()
 
 	response, err := c.SendCommand("list")
 	if err != nil {
 		logger.ErrorLogger.Println("Send Command", err)
-	}
-
-	if response == "" {
-		logger.ErrorLogger.Println("Commande list vide")
-		return
 	}
 
 	messageSplit := strings.Fields(response)
@@ -34,57 +29,31 @@ func RconCommandeList() {
 }
 
 func RconCommandeWhitelistAdd(player string) []string {
-	c = openRcon()
+	openRcon()
 
-	response, err := c.SendCommand("whitelist add " + player)
+	response, err := c.SendCommand("ewhitelist add " + player)
 	if err != nil {
 		logger.ErrorLogger.Println("Send Command", err)
 	}
 
 	messageSplit := strings.Fields(response)
-	if response == "" {
-		logger.ErrorLogger.Println("Commande list vide")
-		return messageSplit
-	}
-
 	return messageSplit
 }
 
 func RconCommandeWhitelistRemove(player string) []string {
-	c = openRcon()
+	openRcon()
 
-	response, err := c.SendCommand("whitelist remove " + player)
+	response, err := c.SendCommand("ewhitelist remove " + player)
 	if err != nil {
 		logger.ErrorLogger.Println("Send Command", err)
 	}
 
 	messageSplit := strings.Fields(response)
-	if response == "" {
-		logger.ErrorLogger.Println("Commande list vide")
-		return messageSplit
-	}
-
 	return messageSplit
 }
 
-/* func RconCommandeTest() []string {
-	c = openRcon()
-
-	response, err := c.SendCommand("co lookup Aathoss")
-	if err != nil {
-		logger.ErrorLogger.Println("Send Command", err)
-	}
-
-	messageSplit := strings.Fields(response)
-	if response != "" {
-		logger.ErrorLogger.Println("Commande list vide")
-		return messageSplit
-	}
-	return messageSplit
-} */
-
 func RconCommandeKick(player, raison string) []string {
-	c = openRcon()
+	openRcon()
 
 	response, err := c.SendCommand("kick " + player + " " + raison)
 	if err != nil {
@@ -92,18 +61,20 @@ func RconCommandeKick(player, raison string) []string {
 	}
 
 	messageSplit := strings.Fields(response)
-	if response == "" {
-		logger.ErrorLogger.Println("Commande list vide")
-		return messageSplit
-	}
-
 	return messageSplit
 }
 
-func openRcon() (c *Client) {
-	c, err := NewClient(viper.GetString("Minecraft.IP"), viper.GetInt("Minecraft.Port"), viper.GetString("Minecraft.Mdp"))
-	if err != nil {
-		logger.ErrorLogger.Println("Open failed", err)
+func openRcon() {
+	for connect == false {
+		liaison, err := NewClient(viper.GetString("Minecraft.IP"), viper.GetInt("Minecraft.Port"), viper.GetString("Minecraft.Mdp"))
+		if err != nil {
+			logger.ErrorLogger.Println("Open failed", err)
+			connect = false
+			continue
+		} else {
+			connect = true
+			c = liaison
+			break
+		}
 	}
-	return c
 }

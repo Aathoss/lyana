@@ -26,3 +26,26 @@ INFO: 2020/08/18 20:49:27 command.go:46: Chargement de la commande : !test1
 INFO: 2020/08/18 20:49:28 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
 INFO: 2020/08/18 20:52:27 command.go:46: Chargement de la commande : !test1
 INFO: 2020/08/18 20:52:28 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/08/19 13:17:27 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/19 13:17:28 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/08/19 14:07:50 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/19 14:07:55 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/08/19 14:15:04 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/19 14:15:05 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/08/19 14:16:45 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/19 14:16:46 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/08/19 14:17:57 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/19 14:17:57 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/08/19 14:19:28 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/19 14:19:29 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/08/19 14:19:38 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/19 14:19:39 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/08/19 14:21:06 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/19 14:21:07 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/08/19 14:21:53 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/19 14:21:54 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/08/19 14:24:30 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/19 14:24:31 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/08/19 14:29:30 command.go:46: Chargement de la commande : !test1
+INFO: 2020/08/19 14:29:31 main.go:62: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/08/19 14:31:50 request.go:23: Send Command createPayloadFromPacket: Failed reading bytes
