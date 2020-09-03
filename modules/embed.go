@@ -16,6 +16,10 @@ var (
 	EmbedPermissionFalse = NewEmbed().
 				SetTitle("Vous n'avez pas l'autorisation pour cette commande !").
 				SetColor(viper.GetInt("EmbedColor.Error")).MessageEmbed
+
+	EmbedLimite = NewEmbed().
+			SetTitle("Vous avez atteint la limite").
+			SetColor(viper.GetInt("EmbedColor.Error")).MessageEmbed
 )
 
 type Embed struct {

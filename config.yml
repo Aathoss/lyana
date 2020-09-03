@@ -8,6 +8,9 @@ PrefixMsg: "!"
 Motd: "UniSpace"
 ModuleCount: 3
 
+Categorie:
+  Information: "735263787996676177"
+
 ChannelID:
   OnlinePlayer: "742494102850895995"
   Log: "742667036215214100"
@@ -31,6 +34,7 @@ EmbedColor:
   Signalement: 0x3F0063 #Violet très foncé : 63, 0, 99
   Bienvenue: 0x00C8E3 #Bleu ciel : 0, 200, 227
 
+# Information de connexion à la bdd
 MySql:
   dbip: "185.157.246.69"
   dbport: "8500"
@@ -38,6 +42,7 @@ MySql:
   dbmdp: "jra2snpEe98mq39QCyyoNEDxHz5n3A"
   dbname: "lyana"
 
+# Information de connexion rcon
 Minecraft:
   IP: "185.157.246.69"
   Port: 31526
@@ -45,5 +50,5 @@ Minecraft:
   CheckVersion: "1.16.2"
 
 Dev:
-  test: true
+  test: false
   PrintMessage: false

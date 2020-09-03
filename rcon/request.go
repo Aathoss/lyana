@@ -3,6 +3,7 @@ package rcon
 import (
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/framework"
@@ -70,6 +71,7 @@ func openRcon() {
 		if err != nil {
 			logger.ErrorLogger.Println("Open failed", err)
 			connect = false
+			time.Sleep(10 * time.Second)
 			continue
 		} else {
 			connect = true

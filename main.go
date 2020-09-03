@@ -25,7 +25,7 @@ var (
 	CmdHandler *framework.CommandHandler
 	Token      = "NzQyNTA1ODUxMDc1NDI4NDIz.XzHGdQ.3e0fddUjcsxT19C1FwtussGA-fk"
 
-	version = "0.2.7"
+	version = "0.2.9"
 )
 
 func init() {
@@ -68,37 +68,9 @@ func main() {
 		}
 	})
 	dg.AddHandler(commandHandler)
-	dg.AddHandler(func(s *discordgo.Session, join *discordgo.GuildMemberAdd) {
-		//join action
-		s.GuildMemberRoleAdd(viper.GetString("GuildID"), join.User.ID, "742781882852179988")
-
-		embed := modules.NewEmbed().
-			SetTitle(join.User.String() + ", je te souhaite la bienvenue parmi nous.").
-			SetColor(viper.GetInt("EmbedColor.Bienvenue")).
-			SetDescription("Je t'invite à lire notre <#735271074735849564> ainsi que <#735271020575064165>, tu trouveras un maximum d'information pour commencer.\nSi tu à la moindre question, n'hésite pas.\n\nSur ce bon séjour parmi nous. Cordialement Lyana.").MessageEmbed
-
-		s.ChannelMessageSendEmbed(viper.GetString("ChannelID.Trafic"), embed)
-		modules.LogDiscord("[<:upvote:742854427454472202>] " + join.User.Username)
-	})
-	dg.AddHandler(func(s *discordgo.Session, leave *discordgo.GuildMemberRemove) {
-		//leave action
-		modules.LogDiscord("[<:downvote:742854427177648190>] " + leave.User.Username)
-	})
-	dg.AddHandler(func(s *discordgo.Session, reac *discordgo.MessageReactionAdd) {
-		if reac.UserID == s.State.User.ID {
-			return
-			log.Println("Bot ajoute un emoji")
-		}
-
-		//Acceptation du réglement
-		if reac.Emoji.Name == "✅" && reac.ChannelID == viper.GetString("ChannelID.Reglement") && reac.MessageID == viper.GetString("MessageID.Reglement") {
-			s.GuildMemberRoleRemove(viper.GetString("GuildID"), reac.UserID, "742781882852179988")
-			s.GuildMemberRoleAdd(viper.GetString("GuildID"), reac.UserID, "735281835080286291")
-		}
-		if reac.Emoji.Name != "✅" && reac.ChannelID == viper.GetString("ChannelID.Reglement") {
-			s.MessageReactionRemove(reac.ChannelID, reac.MessageID, reac.Emoji.Name, reac.UserID)
-		}
-	})
+	dg.AddHandler(guildMemberAdd)
+	dg.AddHandler(guildMemberRemove)
+	dg.AddHandler(messageReactionAdd)
 
 	dg.Identify.Intents = discordgo.MakeIntent(discordgo.IntentsAll)
 	err = dg.Open()
@@ -195,7 +167,45 @@ func registerCommands() {
 
 	if viper.GetBool("Dev.test") != true {
 		CmdHandler.Register("online", command.OnlinePlayer, "Affiche les joueurs connecté")
-		CmdHandler.Register("signal", command.Signalement, "Permet au joueurs whitelist sur le serveur de signaler un autre joueurs commétande une infraction")
+		CmdHandler.Register("signal", command.AddSignalement, "Permet au joueurs whitelist sur le serveur de signaler un autre joueurs commétande une infraction")
+		CmdHandler.Register("rsignal", command.RemoveSignalement, "Permet au staff de retiré un signalement")
 		CmdHandler.Register("addplayer", command.AddPlayer, "???")
+	}
+}
+
+//Trafic des membres du discord [join]
+func guildMemberAdd(s *discordgo.Session, join *discordgo.GuildMemberAdd) {
+	//join action
+	s.GuildMemberRoleAdd(viper.GetString("GuildID"), join.User.ID, "742781882852179988")
+
+	embed := modules.NewEmbed().
+		SetTitle(join.User.String() + ", je te souhaite la bienvenue parmi nous.").
+		SetColor(viper.GetInt("EmbedColor.Bienvenue")).
+		SetDescription("Je t'invite à lire notre <#735271074735849564> ainsi que <#735271020575064165>, tu trouveras un maximum d'information pour commencer.\nSi tu à la moindre question, n'hésite pas.\n\nSur ce bon séjour parmi nous. Cordialement Lyana.").MessageEmbed
+
+	s.ChannelMessageSendEmbed(viper.GetString("ChannelID.Trafic"), embed)
+	modules.LogDiscord("[<:upvote:742854427454472202>] " + join.User.Username)
+}
+
+//Trafic des membres du discord [leave]
+func guildMemberRemove(s *discordgo.Session, leave *discordgo.GuildMemberRemove) {
+	//leave action
+	modules.LogDiscord("[<:downvote:742854427177648190>] " + leave.User.Username)
+}
+
+//Gestion des Reaction
+func messageReactionAdd(s *discordgo.Session, reac *discordgo.MessageReactionAdd) {
+	if reac.UserID == s.State.User.ID {
+		log.Println("Bot ajoute un emoji")
+		return
+	}
+
+	//Acceptation du réglement
+	if reac.Emoji.Name == "✅" && reac.ChannelID == viper.GetString("ChannelID.Reglement") && reac.MessageID == viper.GetString("MessageID.Reglement") {
+		s.GuildMemberRoleRemove(viper.GetString("GuildID"), reac.UserID, "742781882852179988")
+		s.GuildMemberRoleAdd(viper.GetString("GuildID"), reac.UserID, "735281835080286291")
+	}
+	if reac.Emoji.Name != "✅" && reac.ChannelID == viper.GetString("ChannelID.Reglement") {
+		s.MessageReactionRemove(reac.ChannelID, reac.MessageID, reac.Emoji.Name, reac.UserID)
 	}
 }

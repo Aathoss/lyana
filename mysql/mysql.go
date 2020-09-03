@@ -12,6 +12,7 @@ import (
 var (
 	member   sMember
 	msgcount sMessageCount
+	sanction sSanction
 	count    int
 )
 
@@ -27,6 +28,13 @@ type sMessageCount struct {
 	id          int
 	uid_discord string
 	count_msg   int
+}
+
+type sSanction struct {
+	id           int
+	uid          string
+	id_message   string
+	id_msg_notif string
 }
 
 /*-------------------------------------------*/
@@ -96,6 +104,7 @@ func VerifPlayerMC(player string) int {
 	return count
 }
 
+//Count le message sur le discord
 func NewCountMessage(author string) {
 	db := dbConn()
 	defer db.Close()
@@ -115,3 +124,42 @@ func NewCountMessage(author string) {
 		insert.Exec(author, 1)
 	}
 }
+
+func AddSanctionLimit(uid_discord, id_message, id_message_notif string) {
+	db := dbConn()
+	defer db.Close()
+
+	insert, e := db.Prepare("INSERT INTO sanction(uid, id_message, id_msg_notif) VALUES(?, ?, ?)")
+	checkError(e)
+	insert.Exec(uid_discord, id_message, id_message_notif)
+}
+
+func RemoveSanctionLimit(uid_discord string) (sanctionID_msg, sanctionID_msg_notif string) {
+	db := dbConn()
+	defer db.Close()
+
+	e := db.QueryRow("SELECT * FROM sanction WHERE uid = "+uid_discord).Scan(&sanction.id, &sanction.uid, &sanction.id_message, &sanction.id_msg_notif)
+	checkError(e)
+
+	_, e = db.Query("DELETE FROM sanction WHERE uid = " + uid_discord)
+	checkError(e)
+
+	return sanction.id_message, sanction.id_msg_notif
+}
+
+/* rows, e := db.Query("SELECT * FROM ticket WHERE id_member=" + strconv.Itoa(int(member.id)) + " ORDER BY num DESC LIMIT 10")
+checkError(e)
+
+for rows.Next() {
+	var info []string
+
+	e := rows.Scan(&ticket.id, &ticket.num, &ticket.timesec, &ticket.status, &ticket.idmember, &ticket.request)
+	checkError(e)
+
+	info = append(info, strconv.Itoa(int(i+1)), strconv.Itoa(int(ticket.num)), modules.Calcseconde(ticket.timesec), ticket.request, strconv.FormatBool(ticket.status))
+	tab = append(tab, info)
+
+	e = rows.Err()
+	checkError(e)
+	i++
+} */
