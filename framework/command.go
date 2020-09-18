@@ -1,20 +1,21 @@
 package framework
 
-import (
-	"github.com/spf13/viper"
-	"gitlab.com/lyana/logger"
-)
+import "regexp"
 
-var Cmdliste []string
+var (
+	Cmdliste      []string
+	commandNumero int
+)
 
 type (
 	Command func(Context)
 
 	CommandStruct struct {
-		command Command
-		grade   int
-		module  string
-		help    string
+		command  Command
+		grade    int
+		help     string
+		cmdalias int
+		cmdnum   int
 	}
 
 	CmdMap map[string]CommandStruct
@@ -37,20 +38,51 @@ func (handler CommandHandler) GetAllCmd(name string) (help string) {
 	return cmd.help
 }
 
-func (handler CommandHandler) Get(name string) (*Command, bool) {
-	cmd, found := handler.cmds[name]
-	return &cmd.command, found
+func (handler CommandHandler) CheckCmd(content string) (name string) {
+	for _, cmd := range Cmdliste {
+		matched, _ := regexp.MatchString(cmd, content)
+		/* fmt.Print(err)
+		fmt.Print(" | ")
+		fmt.Print(matched)
+		fmt.Print(" | ")
+		fmt.Println(cmd) */
+		if matched == true {
+			name = cmd
+		}
+	}
+	return name
 }
 
-func (handler CommandHandler) Register(name string, command Command, helpmsg string) {
-	logger.InfoLogger.Println("Chargement de la commande : " + viper.GetString("PrefixMsg") + name)
-	cmdstruct := handler.cmds[name]
-	cmdstruct.command = command
-	cmdstruct.help = helpmsg
-	handler.cmds[name] = cmdstruct
+func (handler CommandHandler) Get(name string, gradelvl int) (*Command, bool, bool) {
+	cmd, found := handler.cmds[name]
+	if gradelvl >= cmd.grade {
+		return &cmd.command, found, true
+	}
+	return &cmd.command, found, false
+}
 
-	CountCommand = CountCommand + 1
-	Cmdliste = append(Cmdliste, name)
+func (handler CommandHandler) Register(name string, alias []string, gradelvl int, command Command, helpmsg string) {
+	//logger.DebugLogger.Println("Chargement de la commande : " + viper.GetString("PrefixMsg") + name)
+	niveaucmd := 0
+	alias = append(alias, name)
+	//fmt.Println(len(name))
+
+	for _, aliasCmd := range alias {
+		cmdstruct := handler.cmds[aliasCmd]
+		cmdstruct.command = command
+		cmdstruct.grade = gradelvl
+		cmdstruct.help = helpmsg
+		cmdstruct.cmdalias = niveaucmd
+		cmdstruct.cmdnum = commandNumero
+		handler.cmds[aliasCmd] = cmdstruct
+
+		niveaucmd++
+		Cmdliste = append(Cmdliste, aliasCmd)
+
+		//fmt.Print(aliasCmd + " | ")
+		//fmt.Println(cmdstruct)
+	}
+	commandNumero++
 }
 
 func (command CommandStruct) GetHelp() string {

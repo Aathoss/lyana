@@ -1,4 +1,4 @@
-package modules
+package framework
 
 import (
 	"encoding/json"
@@ -7,7 +7,8 @@ import (
 	"regexp"
 
 	"github.com/spf13/viper"
-	"gitlab.com/lyana/framework"
+	"gitlab.com/lyana/logger"
+	"gitlab.com/unispace/framework"
 )
 
 var (
@@ -21,25 +22,25 @@ var (
 
 func VerifServerMCVersion() {
 	response, err := http.Get(urlVersion)
-	CheckError(err)
+	logger.ErrorLogger.Println(err)
 	defer response.Body.Close()
 
 	body, err := ioutil.ReadAll(response.Body)
 
 	matched, err := regexp.Match(viper.GetString("Minecraft.CheckVersion"), body)
 	if matched != false && NotifVersion != true && framework.VersionMC != viper.GetString("Minecraft.CheckVersion") {
-		LogDiscord("[:pushpin:] La version " + viper.GetString("Minecraft.CheckVersion") + " vient de sortir. <@&735283360322027600>")
+		LogsChannel("[:pushpin:] La version " + viper.GetString("Minecraft.CheckVersion") + " vient de sortir. <@&735283360322027600>")
 		NotifVersion = true
 	}
 }
 
 func VerifServerMCBuild() {
 	response, err := http.Get(urlBuild)
-	CheckError(err)
+	logger.ErrorLogger.Println(err)
 	defer response.Body.Close()
 
 	body, err := ioutil.ReadAll(response.Body)
-	CheckError(err)
+	logger.ErrorLogger.Println(err)
 
 	var retuInfo map[string]interface{}
 	json.Unmarshal(body, &retuInfo)
@@ -51,7 +52,7 @@ func VerifServerMCBuild() {
 
 	matched, err := regexp.Match(buildMap, body)
 	if matched != false && NotifBuild != true {
-		LogDiscord("[:pushpin:] Un nouveau build est disponible " + buildMap + ". <@&735283360322027600>")
+		LogsChannel("[:pushpin:] Un nouveau build est disponible " + buildMap + ". <@&735283360322027600>")
 		NotifBuild = true
 		NotifBuildVersion = buildMap
 	}

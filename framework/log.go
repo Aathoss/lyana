@@ -1,26 +1,19 @@
-package modules
+package framework
 
 import (
-	"log"
 	"regexp"
 
 	"github.com/spf13/viper"
-	"gitlab.com/lyana/framework"
+	"gitlab.com/unispace/framework"
 )
 
-func CheckError(err error) {
-	if err != nil {
-		log.Fatal(err)
-	}
-}
-
-func LogDiscord(msg string) {
+func LogsChannel(msg string) {
 	if viper.GetBool("Dev.test") != true {
 		framework.Session.ChannelMessageSend(viper.GetString("ChannelID.Log"), msg)
 	}
 }
 
-func ErrorDM(ctx framework.Context, err error) {
+func ErrorDM(ctx Context, err error) {
 	if err != nil {
 		notmp, _ := regexp.MatchString(`50007`, err.Error())
 		if notmp == true {

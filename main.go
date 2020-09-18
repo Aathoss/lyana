@@ -4,7 +4,6 @@ import (
 	"log"
 	"os"
 	"os/signal"
-	"strconv"
 	"strings"
 	"syscall"
 	"time"
@@ -24,8 +23,6 @@ import (
 var (
 	CmdHandler *framework.CommandHandler
 	Token      = "NzQyNTA1ODUxMDc1NDI4NDIz.XzHGdQ.3e0fddUjcsxT19C1FwtussGA-fk"
-
-	version = "0.2.9"
 )
 
 func init() {
@@ -44,6 +41,10 @@ func init() {
 }
 
 func main() {
+	framework.FormatTime(1597530893)
+
+	logger.InfoLogger.Println("\n---------------------------------\nDémarrage du bot en cours")
+
 	CmdHandler = framework.NewCommandHandler()
 	registerCommands()
 
@@ -53,24 +54,12 @@ func main() {
 		return
 	}
 
-	dg.AddHandler(func(s *bot.Session, Event *bot.Event) {
-		framework.Session = s
-
-		if Event.Type == "READY" {
-			s.UpdateStatus(0, viper.GetString("Motd"))
-			log.Println("Le bot est dispo.\nAppuyez sur CTRL+C pour l'arrêter !")
-			logger.InfoLogger.Println("Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]")
-
-			modules.LogDiscord("[:tools:] [v:" + version + "] **Lyana** à correctement démarré accompagné des " + strconv.Itoa(framework.CountCommand+viper.GetInt("ModuleCount")) + " modules.")
-			modules.UpdateOnlinePlayer(framework.Session)
-			modules.VerifServerMCVersion()
-			modules.VerifServerMCBuild()
-		}
-	})
+	dg.AddHandler(modules.Ready)
+	go dg.AddHandler(modules.Stats)
+	dg.AddHandler(modules.GuildMemberAdd)
+	dg.AddHandler(modules.GuildMemberLeave)
+	go dg.AddHandler(modules.ReactionAdd)
 	dg.AddHandler(commandHandler)
-	dg.AddHandler(guildMemberAdd)
-	dg.AddHandler(guildMemberRemove)
-	dg.AddHandler(messageReactionAdd)
 
 	dg.Identify.Intents = discordgo.MakeIntent(discordgo.IntentsAll)
 	err = dg.Open()
@@ -83,21 +72,16 @@ func main() {
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, os.Kill)
 
 	t := time.Tick(1 * time.Minute)
-	d := time.Tick(1 * time.Hour)
 
 out:
 	for {
 		select {
 		case <-sc:
-			modules.LogDiscord("[:tools:] **Lyana** s'est déconnecté de l'univers !")
+			framework.LogsChannel("[:tools:] **Lyana** s'est déconnecté de l'univers !")
 			break out
 		case <-t:
-			// Actualise le nombre de joueurs en ligne toute les 1 minute
-			modules.UpdateOnlinePlayer(framework.Session)
-		case <-d:
-			// Actualise le nombre de joueurs en ligne toute les 1 minute
-			modules.VerifServerMCVersion()
-			modules.VerifServerMCBuild()
+			// Exécute des action
+			modules.ExecuteTime()
 		}
 	}
 }
@@ -130,13 +114,6 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 		return
 	}
 
-	messageSplit := strings.Fields(content)
-	name := strings.ToLower(messageSplit[0])
-	command, found := CmdHandler.Get(name)
-	if !found {
-		return
-	}
-
 	channel, err := s.State.Channel(m.ChannelID)
 	if err != nil {
 		logger.ErrorLogger.Println("Erreur lors de l'obtention du channel,", err)
@@ -145,7 +122,17 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 
 	staff := 0
 	if channel.Type != discordgo.ChannelTypeDM {
-		staff = modules.VerifStaff(m.Member.Roles)
+		staff = framework.VerifStaff(m.Member.Roles)
+	}
+
+	checkCmdName := CmdHandler.CheckCmd(content)
+	command, found, permission := CmdHandler.Get(checkCmdName, staff)
+	if !found {
+		return
+	}
+	if permission == false {
+		s.ChannelMessageSendEmbed(m.ChannelID, framework.EmbedPermissionFalse)
+		return
 	}
 
 	guild, err := s.State.Guild(channel.GuildID)
@@ -154,58 +141,30 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 		return
 	}
 
-	ctx := framework.NewContext(s, guild, channel, user, m, staff, CmdHandler, messageSplit)
-	ctx.Args = messageSplit[1:]
+	ctx := framework.NewContext(s, guild, channel, user, m, CmdHandler, checkCmdName, staff)
+	messageSplit := strings.Fields(content)
+	if len(strings.Fields(checkCmdName)) == 1 {
+		ctx.Args = messageSplit[1:]
+	}
+	if len(strings.Fields(checkCmdName)) == 2 {
+		ctx.Args = messageSplit[2:]
+	}
 	c := *command
 	c(*ctx)
 }
 
 func registerCommands() {
-	if viper.GetBool("Dev.test") == true {
-		CmdHandler.Register("test1", command.Test, "???")
-	}
+	CmdHandler.Register("test", []string{}, 1, command.Test, "???")
+	CmdHandler.Register("test1", []string{}, 1, command.Test1, "???")
 
-	if viper.GetBool("Dev.test") != true {
-		CmdHandler.Register("online", command.OnlinePlayer, "Affiche les joueurs connecté")
-		CmdHandler.Register("signal", command.AddSignalement, "Permet au joueurs whitelist sur le serveur de signaler un autre joueurs commétande une infraction")
-		CmdHandler.Register("rsignal", command.RemoveSignalement, "Permet au staff de retiré un signalement")
-		CmdHandler.Register("addplayer", command.AddPlayer, "???")
-	}
-}
+	//Commande Modération
+	CmdHandler.Register("purge", []string{}, 1, command.Purges, "La commande permet d'effectuer un netoyage d'un channel limite à 2.500 Message")
 
-//Trafic des membres du discord [join]
-func guildMemberAdd(s *discordgo.Session, join *discordgo.GuildMemberAdd) {
-	//join action
-	s.GuildMemberRoleAdd(viper.GetString("GuildID"), join.User.ID, "742781882852179988")
+	//Commande Liée à minecraft
+	CmdHandler.Register("fiche", []string{}, 0, command.InfoPlayer, "Permet de voir votre fiche utilisateur")
+	CmdHandler.Register("online", []string{}, 0, command.OnlinePlayer, "Affiche les joueurs connecté")
+	CmdHandler.Register("signal", []string{}, 0, command.AddSignalement, "Permet au joueurs whitelist sur le serveur de signaler un autre joueurs commétande une infraction")
+	CmdHandler.Register("rsignal", []string{}, 1, command.RemoveSignalement, "Permet au staff de retiré un signalement")
+	CmdHandler.Register("addplayer", []string{}, 1, command.AddPlayer, "???")
 
-	embed := modules.NewEmbed().
-		SetTitle(join.User.String() + ", je te souhaite la bienvenue parmi nous.").
-		SetColor(viper.GetInt("EmbedColor.Bienvenue")).
-		SetDescription("Je t'invite à lire notre <#735271074735849564> ainsi que <#735271020575064165>, tu trouveras un maximum d'information pour commencer.\nSi tu à la moindre question, n'hésite pas.\n\nSur ce bon séjour parmi nous. Cordialement Lyana.").MessageEmbed
-
-	s.ChannelMessageSendEmbed(viper.GetString("ChannelID.Trafic"), embed)
-	modules.LogDiscord("[<:upvote:742854427454472202>] " + join.User.Username)
-}
-
-//Trafic des membres du discord [leave]
-func guildMemberRemove(s *discordgo.Session, leave *discordgo.GuildMemberRemove) {
-	//leave action
-	modules.LogDiscord("[<:downvote:742854427177648190>] " + leave.User.Username)
-}
-
-//Gestion des Reaction
-func messageReactionAdd(s *discordgo.Session, reac *discordgo.MessageReactionAdd) {
-	if reac.UserID == s.State.User.ID {
-		log.Println("Bot ajoute un emoji")
-		return
-	}
-
-	//Acceptation du réglement
-	if reac.Emoji.Name == "✅" && reac.ChannelID == viper.GetString("ChannelID.Reglement") && reac.MessageID == viper.GetString("MessageID.Reglement") {
-		s.GuildMemberRoleRemove(viper.GetString("GuildID"), reac.UserID, "742781882852179988")
-		s.GuildMemberRoleAdd(viper.GetString("GuildID"), reac.UserID, "735281835080286291")
-	}
-	if reac.Emoji.Name != "✅" && reac.ChannelID == viper.GetString("ChannelID.Reglement") {
-		s.MessageReactionRemove(reac.ChannelID, reac.MessageID, reac.Emoji.Name, reac.UserID)
-	}
 }

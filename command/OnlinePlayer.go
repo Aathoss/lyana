@@ -7,7 +7,6 @@ import (
 
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/modules"
 	"gitlab.com/lyana/rcon"
 )
 
@@ -25,7 +24,7 @@ func OnlinePlayer(ctx framework.Context) {
 		listeplayers = strings.Replace(listeplayers, ",", " - ", -1)
 
 		tNow := time.Now()
-		embedHelp := modules.NewEmbed().
+		embedHelp := framework.NewEmbed().
 			SetTitle("Joueurs en ligne " + strconv.Itoa(framework.OnlinePlayer) + " / " + strconv.Itoa(framework.MaxOnlinePlayer)).
 			SetColor(0x725F7C).
 			SetFooter(ctx.Message.Author.Username + " | Date : " + tNow.Format("2/1 15:04:05")).

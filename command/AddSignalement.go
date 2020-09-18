@@ -5,7 +5,6 @@ import (
 
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/modules"
 	"gitlab.com/lyana/mysql"
 	"gitlab.com/lyana/rcon"
 )
@@ -19,11 +18,11 @@ func AddSignalement(ctx framework.Context) {
 		count = mysql.SelectCount("membre", "tag_discord", ctx.Message.Author.ID)
 		if count == 1 {
 
-			if len(ctx.MessageSplit) >= 2 {
+			if len(ctx.Args) >= 1 {
 
-				playermc := ctx.MessageSplit[1]
+				playermc := ctx.Args[0]
 				if playermc == "Aathoss" || playermc == "Paulth04" || playermc == "Bajoux" {
-					embed := modules.NewEmbed().
+					embed := framework.NewEmbed().
 						SetTitle("Vous n'êtes pas autorisé à signaler un membre du staff").
 						SetColor(viper.GetInt("EmbedColor.Error")).MessageEmbed
 
@@ -31,7 +30,7 @@ func AddSignalement(ctx framework.Context) {
 					return
 				}
 
-				raison := ctx.MessageSplit[2:]
+				raison := ctx.Args[1:]
 				var raisonString string
 
 				for i := 0; i <= len(raison)-1; i++ {
@@ -45,7 +44,7 @@ func AddSignalement(ctx framework.Context) {
 					rcon.RconCommandeWhitelistRemove(playermc)
 					rcon.RconCommandeKick(playermc, "Vous êtes actuellement suspecté d'avoir enfreint les règles ! Nous vous invitons à vous rendre sur le discord dans le channel #signalement-de-joueur")
 
-					embed := modules.NewEmbed().
+					embed := framework.NewEmbed().
 						SetTitle("Signialement  de joueurs !").
 						SetColor(viper.GetInt("EmbedColor.Signalement")).
 						AddField("Informateur", ctx.Message.Author.Username, true).
@@ -59,7 +58,7 @@ func AddSignalement(ctx framework.Context) {
 				}
 
 				if countPlayer == 0 {
-					embed := modules.NewEmbed().
+					embed := framework.NewEmbed().
 						SetTitle("D'après ma sonde, aucun joueur whitelist n'existe avec ce pseudo !").
 						SetColor(viper.GetInt("EmbedColor.Error")).MessageEmbed
 					ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, embed)
@@ -67,8 +66,8 @@ func AddSignalement(ctx framework.Context) {
 
 			}
 
-			if len(ctx.MessageSplit) < 2 {
-				embedHelp := modules.NewEmbed().
+			if len(ctx.Args) < 1 {
+				embedHelp := framework.NewEmbed().
 					SetTitle("Il semble y avoir une erreur !").
 					SetColor(viper.GetInt("EmbedColor.Error")).
 					SetDescription("Veuillez respecter ce format : " + viper.GetString("PrefixMsg") + "signal <player> <raison>").MessageEmbed
@@ -78,10 +77,10 @@ func AddSignalement(ctx framework.Context) {
 		}
 
 		if count == 0 {
-			ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, modules.EmbedPermissionFalse)
+			ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, framework.EmbedPermissionFalse)
 		}
 	}
 	if count == 1 {
-		ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, modules.EmbedLimite)
+		ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, framework.EmbedLimite)
 	}
 }

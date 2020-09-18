@@ -3,7 +3,6 @@ package command
 import (
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/modules"
 )
 
 func HelpCommand(ctx framework.Context) {
@@ -20,12 +19,12 @@ func HelpCommand(ctx framework.Context) {
 		cmdhelp = cmdhelp + ctx.CmdHandler.GetAllCmd(cmdStruct) + "\n"
 	}
 
-	embedHelp := modules.NewEmbed().
+	embedHelp := framework.NewEmbed().
 		SetTitle("Liste des commande :").
 		SetColor(0x6E318E).
 		AddField("Commande", cmd, true).
 		AddField("Info", cmdhelp, true).MessageEmbed
 
 	_, err := ctx.Discord.ChannelMessageSendEmbed(dm.ID, embedHelp)
-	modules.ErrorDM(ctx, err)
+	framework.ErrorDM(ctx, err)
 }
