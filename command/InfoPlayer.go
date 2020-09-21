@@ -18,7 +18,7 @@ func InfoPlayer(ctx framework.Context) {
 	}
 
 	t1, _ := user.JoinedAt.Parse()
-	_, pseudoMC, t2 := mysql.GetWhitelist(ctx.Message.Author.ID)
+	_, pseudoMC, t2, _ := mysql.GetWhitelist(ctx.Message.Author.ID)
 
 	embed := framework.NewEmbed().
 		SetTitle("Votre Carte d'identité : "+user.User.Username).

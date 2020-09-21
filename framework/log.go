@@ -4,12 +4,11 @@ import (
 	"regexp"
 
 	"github.com/spf13/viper"
-	"gitlab.com/unispace/framework"
 )
 
 func LogsChannel(msg string) {
 	if viper.GetBool("Dev.test") != true {
-		framework.Session.ChannelMessageSend(viper.GetString("ChannelID.Log"), msg)
+		Session.ChannelMessageSend(viper.GetString("ChannelID.Log"), msg)
 	}
 }
 

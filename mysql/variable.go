@@ -13,7 +13,9 @@ type sMember struct {
 	id             int
 	uid_discord    string
 	player_mc      string
-	date_whitelist int
+	date_whitelist int64
+	inactif        int64
+	notif          int
 }
 
 type sMessageCount struct {

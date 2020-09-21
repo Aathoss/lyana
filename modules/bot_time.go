@@ -19,9 +19,11 @@ func ExecuteTime() {
 	Minute30++
 
 	UpdateOnlinePlayer(framework.Session)
+	go mysql.UpdateInactifPlayer()
 
 	if Minute30 >= 30 {
 		VerifRule()
+
 		Minute30 = 0
 	}
 }
@@ -46,15 +48,19 @@ func VerifRule() {
 }
 
 func UpdateOnlinePlayer(session *discordgo.Session) {
-	rcon.RconCommandeList()
+	err := rcon.RconCommandeList()
+	if err != nil {
+		return
+	}
 
-	test := &discordgo.ChannelEdit{
+	editchannel := &discordgo.ChannelEdit{
 		Name:     "🪐  Online : " + strconv.Itoa(framework.OnlinePlayer),
 		Position: 2,
 	}
 
-	_, err := session.ChannelEditComplex(viper.GetString("ChannelID.OnlinePlayer"), test)
+	_, err = session.ChannelEditComplex(viper.GetString("ChannelID.OnlinePlayer"), editchannel)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
+		return
 	}
 }

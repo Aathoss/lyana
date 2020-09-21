@@ -1,192 +1,246 @@
-INFO: 2020/09/10 18:41:44 main.go:44: ---------------------------------
-Démarrage du bot en cours
-DEBUG: 2020/09/10 18:41:46 bot_event.go:17: READY
-DEBUG: 2020/09/10 18:41:46 bot_event.go:17: GUILD_CREATE
-DEBUG: 2020/09/10 18:41:47 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 18:41:50 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 18:41:52 bot_event.go:17: MESSAGE_CREATE
-DEBUG: 2020/09/10 18:41:55 bot_event.go:17: MESSAGE_CREATE
-DEBUG: 2020/09/10 18:42:05 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 18:42:07 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 18:42:09 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 18:42:22 bot_event.go:17: MESSAGE_CREATE
-DEBUG: 2020/09/10 18:42:41 bot_event.go:17: CHANNEL_UPDATE
-INFO: 2020/09/10 18:47:36 main.go:44: ---------------------------------
-Démarrage du bot en cours
-DEBUG: 2020/09/10 18:47:37 bot_event.go:17: READY
-DEBUG: 2020/09/10 18:47:37 bot_event.go:17: GUILD_CREATE
-INFO: 2020/09/10 18:48:39 main.go:44: ---------------------------------
-Démarrage du bot en cours
-DEBUG: 2020/09/10 18:48:40 bot_event.go:17: READY
-DEBUG: 2020/09/10 18:48:40 bot_event.go:17: GUILD_CREATE
-DEBUG: 2020/09/10 18:48:41 bot_event.go:17: CHANNEL_UPDATE
-DEBUG: 2020/09/10 18:48:57 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 18:49:17 bot_event.go:17: MESSAGE_CREATE
-DEBUG: 2020/09/10 18:49:19 bot_event.go:17: TYPING_START
-DEBUG: 2020/09/10 18:49:20 bot_event.go:17: MESSAGE_CREATE
-INFO: 2020/09/10 18:51:06 main.go:44: 
+INFO: 2020/09/21 22:13:35 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-DEBUG: 2020/09/10 18:51:07 bot_event.go:17: READY
-DEBUG: 2020/09/10 18:51:07 bot_event.go:17: GUILD_CREATE
-DEBUG: 2020/09/10 18:51:31 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 18:51:41 bot_event.go:17: CHANNEL_UPDATE
-INFO: 2020/09/10 18:53:29 main.go:44: 
+INFO: 2020/09/21 22:13:37 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:14:22 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-DEBUG: 2020/09/10 18:53:30 bot_event.go:17: READY
-DEBUG: 2020/09/10 18:53:30 bot_event.go:17: GUILD_CREATE
-DEBUG: 2020/09/10 18:53:41 bot_event.go:17: CHANNEL_UPDATE
-INFO: 2020/09/10 18:57:17 main.go:44: 
+DEBUG: 2020/09/21 22:15:25 request.go:39: There are 2 of a max of 100 players online: Bajoux, _SkyLiiiinE_R34_
+DEBUG: 2020/09/21 22:15:25 request.go:40: [Bajoux, _SkyLiiiinE_R34_]
+DEBUG: 2020/09/21 22:16:24 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 22:16:24 request.go:40: [Bajoux]
+DEBUG: 2020/09/21 22:17:23 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 22:17:23 request.go:40: [Bajoux]
+DEBUG: 2020/09/21 22:18:23 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 22:18:23 request.go:40: [Bajoux]
+DEBUG: 2020/09/21 22:19:23 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 22:19:23 request.go:40: [Bajoux]
+INFO: 2020/09/21 22:19:53 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-DEBUG: 2020/09/10 18:57:18 bot_event.go:17: READY
-DEBUG: 2020/09/10 18:57:18 bot_event.go:17: GUILD_CREATE
-DEBUG: 2020/09/10 18:57:41 bot_event.go:17: CHANNEL_UPDATE
-DEBUG: 2020/09/10 18:58:18 bot_event.go:17: CHANNEL_UPDATE
-DEBUG: 2020/09/10 18:58:19 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 18:58:41 bot_event.go:17: CHANNEL_UPDATE
-INFO: 2020/09/10 18:58:46 main.go:44: 
+INFO: 2020/09/21 22:19:55 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:21:15 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-DEBUG: 2020/09/10 18:58:47 bot_event.go:17: READY
-DEBUG: 2020/09/10 18:58:47 bot_event.go:17: GUILD_CREATE
-DEBUG: 2020/09/10 18:59:14 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 18:59:34 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 18:59:34 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 18:59:41 bot_event.go:17: CHANNEL_UPDATE
-DEBUG: 2020/09/10 18:59:47 bot_event.go:17: CHANNEL_UPDATE
-INFO: 2020/09/10 19:00:13 main.go:44: 
+INFO: 2020/09/21 22:21:17 bot_event.go:24: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:21:40 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-DEBUG: 2020/09/10 19:00:14 bot_event.go:17: READY
-DEBUG: 2020/09/10 19:00:14 bot_event.go:17: GUILD_CREATE
-DEBUG: 2020/09/10 19:00:41 bot_event.go:17: CHANNEL_UPDATE
-DEBUG: 2020/09/10 19:00:45 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 19:01:14 bot_event.go:17: CHANNEL_UPDATE
-DEBUG: 2020/09/10 19:01:24 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 19:01:34 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 19:01:41 bot_event.go:17: CHANNEL_UPDATE
-DEBUG: 2020/09/10 19:02:04 bot_event.go:17: PRESENCE_UPDATE
-DEBUG: 2020/09/10 19:02:14 bot_event.go:17: CHANNEL_UPDATE
-INFO: 2020/09/10 19:07:15 main.go:44: 
+INFO: 2020/09/21 22:21:51 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/10 19:08:56 main.go:44: 
+INFO: 2020/09/21 22:22:26 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-ERROR: 2020/09/10 19:09:00 rule_discord.go:66: Error 1054: Unknown column 'uid' in 'field list'
-INFO: 2020/09/10 19:09:55 main.go:44: 
+INFO: 2020/09/21 22:22:28 bot_event.go:24: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:23:35 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-ERROR: 2020/09/10 19:09:59 rule_discord.go:66: Error 1054: Unknown column 'uid' in 'field list'
-INFO: 2020/09/10 19:10:32 main.go:44: 
+INFO: 2020/09/21 22:23:36 bot_event.go:27: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:25:03 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-ERROR: 2020/09/10 19:10:36 rule_discord.go:66: Error 1054: Unknown column 'uid' in 'field list'
-INFO: 2020/09/10 19:12:13 main.go:44: 
+INFO: 2020/09/21 22:25:05 bot_event.go:25: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:26:14 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-ERROR: 2020/09/10 19:12:17 rule_discord.go:66: Error 1054: Unknown column 'uid' in 'field list'
-INFO: 2020/09/10 19:14:19 main.go:44: 
+INFO: 2020/09/21 22:26:17 bot_event.go:24: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:27:27 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-ERROR: 2020/09/10 19:14:33 rule_discord.go:66: Error 1054: Unknown column 'uid' in 'field list'
-INFO: 2020/09/10 19:15:26 main.go:44: 
+INFO: 2020/09/21 22:27:28 bot_event.go:25: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:28:22 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/10 19:16:55 main.go:44: 
+INFO: 2020/09/21 22:28:24 bot_event.go:25: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:29:02 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/10 19:25:00 main.go:44: 
+INFO: 2020/09/21 22:29:04 bot_event.go:25: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:29:37 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/10 19:25:30 main.go:44: 
+INFO: 2020/09/21 22:29:39 bot_event.go:25: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:31:36 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/10 19:27:50 main.go:44: 
+INFO: 2020/09/21 22:31:38 bot_event.go:25: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:34:17 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/10 19:28:40 main.go:44: 
+INFO: 2020/09/21 22:34:18 bot_event.go:25: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:35:41 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/10 19:29:29 main.go:44: 
+INFO: 2020/09/21 22:35:43 bot_event.go:25: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:40:40 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/10 19:34:03 main.go:44: 
+INFO: 2020/09/21 22:40:41 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:41:37 main.go:47: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/10 19:34:28 main.go:44: 
+INFO: 2020/09/21 22:41:39 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:42:00 main.go:47: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/10 19:36:31 main.go:44: 
+INFO: 2020/09/21 22:42:01 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:42:25 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/10 20:01:33 main.go:39: Config file changed: C:\Users\thoma\go\src\gitlab.com\lyana\config.yml
-INFO: 2020/09/14 11:33:15 main.go:44: 
+INFO: 2020/09/21 22:42:28 bot_event.go:28: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:43:35 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/18 15:05:42 main.go:46: 
+INFO: 2020/09/21 22:43:37 bot_event.go:28: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:45:25 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/18 15:06:40 main.go:46: 
+INFO: 2020/09/21 22:45:27 bot_event.go:27: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:45:56 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/18 15:16:34 main.go:46: 
+INFO: 2020/09/21 22:45:57 bot_event.go:28: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:46:10 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/18 15:19:22 main.go:46: 
+INFO: 2020/09/21 22:46:12 bot_event.go:27: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2020/09/21 22:46:27 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 22:46:27 request.go:40: [Bajoux]
+INFO: 2020/09/21 22:48:22 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/18 15:28:45 main.go:46: 
+INFO: 2020/09/21 22:48:23 bot_event.go:28: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 22:49:44 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/18 17:38:21 main.go:46: 
+INFO: 2020/09/21 22:49:45 bot_event.go:26: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 23:07:16 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/18 17:39:27 main.go:46: 
+INFO: 2020/09/21 23:07:19 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 23:10:19 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/18 17:39:51 main.go:46: 
+INFO: 2020/09/21 23:10:20 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 23:12:16 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/18 17:40:19 main.go:46: 
+INFO: 2020/09/21 23:12:18 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2020/09/21 23:13:18 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:13:18 request.go:40: [Bajoux]
+INFO: 2020/09/21 23:13:19 main.go:39: Config file changed: C:\Users\thoma\go\src\gitlab.com\lyana\config.yml
+INFO: 2020/09/21 23:13:19 main.go:39: Config file changed: C:\Users\thoma\go\src\gitlab.com\lyana\config.yml
+DEBUG: 2020/09/21 23:14:18 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:14:18 request.go:40: [Bajoux]
+DEBUG: 2020/09/21 23:15:18 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:15:18 request.go:40: [Bajoux]
+DEBUG: 2020/09/21 23:16:18 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:16:18 request.go:40: [Bajoux]
+DEBUG: 2020/09/21 23:17:18 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:17:18 request.go:40: [Bajoux]
+DEBUG: 2020/09/21 23:18:18 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:18:18 request.go:40: [Bajoux]
+DEBUG: 2020/09/21 23:19:18 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:19:18 request.go:40: [Bajoux]
+DEBUG: 2020/09/21 23:20:18 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:20:18 request.go:40: [Bajoux]
+DEBUG: 2020/09/21 23:20:55 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:20:55 request.go:40: [Bajoux]
+DEBUG: 2020/09/21 23:21:18 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:21:18 request.go:40: [Bajoux]
+DEBUG: 2020/09/21 23:22:18 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:22:18 request.go:40: [Bajoux]
+DEBUG: 2020/09/21 23:23:18 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:23:18 request.go:40: [Bajoux]
+ERROR: 2020/09/21 23:24:05 minecraft.go:44: sql: expected 6 destination arguments in Scan, not 5
+DEBUG: 2020/09/21 23:24:18 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:24:18 request.go:40: [Bajoux]
+INFO: 2020/09/21 23:25:19 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/18 17:41:33 main.go:46: 
+INFO: 2020/09/21 23:25:21 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2020/09/21 23:26:22 request.go:39: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/21 23:26:22 request.go:40: [Bajoux, Aathoss]
+DEBUG: 2020/09/21 23:27:21 request.go:39: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:27:21 request.go:40: [Bajoux]
+DEBUG: 2020/09/21 23:28:21 request.go:39: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/21 23:28:21 request.go:40: [Bajoux, Aathoss]
+ERROR: 2020/09/21 23:36:22 request.go:24: Send Command write tcp 10.6.3.66:56553->185.157.246.69:31526: wsasend: Une connexion existante a dû être fermée par l’hôte distant.
+ERROR: 2020/09/21 23:37:21 request.go:24: Send Command write tcp 10.6.3.66:56553->185.157.246.69:31526: wsasend: Une connexion existante a dû être fermée par l’hôte distant.
+ERROR: 2020/09/21 23:38:21 request.go:24: Send Command write tcp 10.6.3.66:56553->185.157.246.69:31526: wsasend: Une connexion existante a dû être fermée par l’hôte distant.
+ERROR: 2020/09/21 23:39:21 request.go:24: Send Command write tcp 10.6.3.66:56553->185.157.246.69:31526: wsasend: Une connexion existante a dû être fermée par l’hôte distant.
+ERROR: 2020/09/21 23:40:21 request.go:24: Send Command write tcp 10.6.3.66:56553->185.157.246.69:31526: wsasend: Une connexion existante a dû être fermée par l’hôte distant.
+ERROR: 2020/09/21 23:41:21 request.go:24: Send Command write tcp 10.6.3.66:56553->185.157.246.69:31526: wsasend: Une connexion existante a dû être fermée par l’hôte distant.
+ERROR: 2020/09/21 23:42:21 request.go:24: Send Command write tcp 10.6.3.66:56553->185.157.246.69:31526: wsasend: Une connexion existante a dû être fermée par l’hôte distant.
+ERROR: 2020/09/21 23:43:21 request.go:24: Send Command write tcp 10.6.3.66:56553->185.157.246.69:31526: wsasend: Une connexion existante a dû être fermée par l’hôte distant.
+ERROR: 2020/09/21 23:44:21 request.go:24: Send Command write tcp 10.6.3.66:56553->185.157.246.69:31526: wsasend: Une connexion existante a dû être fermée par l’hôte distant.
+ERROR: 2020/09/21 23:45:21 request.go:24: Send Command write tcp 10.6.3.66:56553->185.157.246.69:31526: wsasend: Une connexion existante a dû être fermée par l’hôte distant.
+INFO: 2020/09/21 23:46:05 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/18 18:15:23 main.go:46: 
+INFO: 2020/09/21 23:46:06 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2020/09/21 23:47:06 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/21 23:47:06 request.go:41: [Bajoux, Aathoss]
+DEBUG: 2020/09/21 23:48:06 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/21 23:48:06 request.go:41: [Bajoux, Aathoss]
+DEBUG: 2020/09/21 23:49:11 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/21 23:49:11 request.go:41: [Bajoux, Aathoss]
+DEBUG: 2020/09/21 23:50:06 request.go:40: There are 1 of a max of 100 players online: Bajoux
+DEBUG: 2020/09/21 23:50:06 request.go:41: [Bajoux]
+DEBUG: 2020/09/21 23:51:06 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/21 23:51:06 request.go:41: [Bajoux, Aathoss]
+DEBUG: 2020/09/21 23:52:06 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/21 23:52:06 request.go:41: [Bajoux, Aathoss]
+INFO: 2020/09/21 23:53:12 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/18 18:17:23 main.go:46: 
+INFO: 2020/09/21 23:53:13 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/21 23:53:56 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/18 18:21:09 main.go:46: 
+INFO: 2020/09/21 23:53:57 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2020/09/21 23:54:57 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/21 23:54:57 request.go:41: [Bajoux, Aathoss]
+INFO: 2020/09/21 23:56:02 main.go:46: 
 ---------------------------------
 Démarrage du bot en cours
-INFO: 2020/09/18 18:21:42 main.go:46: 
----------------------------------
-Démarrage du bot en cours
-INFO: 2020/09/18 18:22:03 main.go:46: 
----------------------------------
-Démarrage du bot en cours
-INFO: 2020/09/18 19:56:43 main.go:46: 
----------------------------------
-Démarrage du bot en cours
-ERROR: 2020/09/18 19:56:57 InfoPlayer.go:15: HTTP 404 Not Found, {"message": "Unknown User", "code": 10013}
-INFO: 2020/09/18 19:57:42 main.go:46: 
----------------------------------
-Démarrage du bot en cours
-ERROR: 2020/09/18 19:57:44 connect.go:26: sql: unknown driver "mysql" (forgotten import?)
-INFO: 2020/09/18 20:06:33 main.go:46: 
----------------------------------
-Démarrage du bot en cours
-ERROR: 2020/09/18 20:06:38 connect.go:26: sql: unknown driver "mysql" (forgotten import?)
-INFO: 2020/09/18 20:08:27 main.go:46: 
----------------------------------
-Démarrage du bot en cours
-ERROR: 2020/09/18 20:08:29 minecraft.go:44: Error 1054: Unknown column 'uid' in 'where clause'
-INFO: 2020/09/18 20:09:24 main.go:46: 
----------------------------------
-Démarrage du bot en cours
+INFO: 2020/09/21 23:56:02 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2020/09/21 23:57:02 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/21 23:57:02 request.go:41: [Bajoux, Aathoss]
+DEBUG: 2020/09/21 23:58:02 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/21 23:58:02 request.go:41: [Bajoux, Aathoss]
+DEBUG: 2020/09/21 23:59:02 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/21 23:59:02 request.go:41: [Bajoux, Aathoss]
+DEBUG: 2020/09/22 00:00:02 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/22 00:00:02 request.go:41: [Bajoux, Aathoss]
+DEBUG: 2020/09/22 00:01:02 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/22 00:01:02 request.go:41: [Bajoux, Aathoss]
+DEBUG: 2020/09/22 00:02:02 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/22 00:02:02 request.go:41: [Bajoux, Aathoss]
+DEBUG: 2020/09/22 00:03:02 request.go:40: There are 2 of a max of 100 players online: Aathoss, Bajoux
+DEBUG: 2020/09/22 00:03:02 request.go:41: [Aathoss, Bajoux]
+DEBUG: 2020/09/22 00:04:02 request.go:40: There are 2 of a max of 100 players online: Aathoss, Bajoux
+DEBUG: 2020/09/22 00:04:02 request.go:41: [Aathoss, Bajoux]
+DEBUG: 2020/09/22 00:05:02 request.go:40: There are 2 of a max of 100 players online: Aathoss, Bajoux
+DEBUG: 2020/09/22 00:05:02 request.go:41: [Aathoss, Bajoux]
+DEBUG: 2020/09/22 00:06:02 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/22 00:06:02 request.go:41: [Bajoux, Aathoss]
+DEBUG: 2020/09/22 00:07:02 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/22 00:07:02 request.go:41: [Bajoux, Aathoss]
+DEBUG: 2020/09/22 00:08:02 request.go:40: There are 2 of a max of 100 players online: Bajoux, Aathoss
+DEBUG: 2020/09/22 00:08:02 request.go:41: [Bajoux, Aathoss]
+DEBUG: 2020/09/22 00:09:02 request.go:40: There are 2 of a max of 100 players online: Aathoss, Bajoux
+DEBUG: 2020/09/22 00:09:02 request.go:41: [Aathoss, Bajoux]
+DEBUG: 2020/09/22 00:10:02 request.go:40: There are 2 of a max of 100 players online: Aathoss, Bajoux
+DEBUG: 2020/09/22 00:10:02 request.go:41: [Aathoss, Bajoux]
+DEBUG: 2020/09/22 00:11:02 request.go:40: There are 2 of a max of 100 players online: Aathoss, Bajoux
+DEBUG: 2020/09/22 00:11:02 request.go:41: [Aathoss, Bajoux]
+DEBUG: 2020/09/22 00:12:02 request.go:40: There are 2 of a max of 100 players online: Aathoss, Bajoux
+DEBUG: 2020/09/22 00:12:02 request.go:41: [Aathoss, Bajoux]
+DEBUG: 2020/09/22 00:13:02 request.go:40: There are 2 of a max of 100 players online: Aathoss, Bajoux
+DEBUG: 2020/09/22 00:13:02 request.go:41: [Aathoss, Bajoux]
+DEBUG: 2020/09/22 00:14:02 request.go:40: There are 2 of a max of 100 players online: Aathoss, Bajoux
+DEBUG: 2020/09/22 00:14:02 request.go:41: [Aathoss, Bajoux]
+DEBUG: 2020/09/22 00:15:02 request.go:40: There are 2 of a max of 100 players online: Aathoss, Bajoux
+DEBUG: 2020/09/22 00:15:02 request.go:41: [Aathoss, Bajoux]

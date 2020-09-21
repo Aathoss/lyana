@@ -27,7 +27,12 @@ func AddPlayer(ctx framework.Context) {
 			return
 		}
 
-		resp := rcon.RconCommandeWhitelistAdd(playermc)
+		resp, err := rcon.RconCommandeWhitelistAdd(playermc)
+		if err != nil {
+			logger.ErrorLogger.Println(err)
+			framework.LogsChannel("[:x:] Une erreur c'est produits sur `" + ctx.Commande + " " + tagdiscord + " " + playermc + "`\n" + err.Error() + "`\n" + "uuid discord : " + user.User.ID)
+			return
+		}
 		fmt.Println(resp)
 		if resp[4] == "§7Whitelisted" {
 			ctx.Discord.ChannelMessageSend(viper.GetString("ChannelID.General"), "<:CraftingTable:753547645875912736> Je viens de craft votre carte d'accès au serveur, nous vous souhaitons la bienvenue parmi nous "+tagdiscord+".")

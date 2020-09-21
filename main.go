@@ -41,7 +41,7 @@ func init() {
 }
 
 func main() {
-	framework.FormatTime(1597530893)
+	//framework.FormatTime(1597530893)
 
 	logger.InfoLogger.Println("\n---------------------------------\nDémarrage du bot en cours")
 
@@ -57,7 +57,7 @@ func main() {
 	dg.AddHandler(modules.Ready)
 	go dg.AddHandler(modules.Stats)
 	dg.AddHandler(modules.GuildMemberAdd)
-	dg.AddHandler(modules.GuildMemberLeave)
+	go dg.AddHandler(modules.GuildMemberLeave)
 	go dg.AddHandler(modules.ReactionAdd)
 	dg.AddHandler(commandHandler)
 
@@ -155,7 +155,6 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 
 func registerCommands() {
 	CmdHandler.Register("test", []string{}, 1, command.Test, "???")
-	CmdHandler.Register("test1", []string{}, 1, command.Test1, "???")
 
 	//Commande Modération
 	CmdHandler.Register("purge", []string{}, 1, command.Purges, "La commande permet d'effectuer un netoyage d'un channel limite à 2.500 Message")

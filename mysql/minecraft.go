@@ -27,22 +27,23 @@ func AddWhitelist(uid_discord, playermc string) {
 	if count == 0 {
 		tNow := time.Now()
 
-		insert, err := db.Prepare("INSERT INTO membre(tag_discord, player_mc, date_whitelist) VALUES(?,?,?)")
+		insert, err := db.Prepare("INSERT INTO membre(tag_discord, player_mc, date_whitelist, inactif) VALUES(?,?,?,?)")
 		if err != nil {
 			logger.ErrorLogger.Println(err)
 		}
-		insert.Exec(uid_discord, playermc, tNow.Unix)
+		insert.Exec(uid_discord, playermc, tNow.Unix, tNow.Unix)
 	}
 }
 
-func GetWhitelist(uuid string) (string, string, int) {
+func GetWhitelist(uuid string) (string, string, int64, error) {
 	db := dbConn()
 	defer db.Close()
 
-	err := db.QueryRow("SELECT * FROM membre WHERE tag_discord = "+uuid).Scan(&member.id, &member.uid_discord, &member.player_mc, &member.date_whitelist)
+	err := db.QueryRow("SELECT * FROM membre WHERE tag_discord = "+uuid).Scan(&member.id, &member.uid_discord, &member.player_mc, &member.date_whitelist, &member.inactif, &member.notif)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
+		return "", "", 0, err
 	}
 
-	return member.uid_discord, member.player_mc, member.date_whitelist
+	return member.uid_discord, member.player_mc, member.date_whitelist, nil
 }
