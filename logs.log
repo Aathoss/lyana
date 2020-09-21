@@ -244,3 +244,7 @@ DEBUG: 2020/09/22 00:14:02 request.go:40: There are 2 of a max of 100 players on
 DEBUG: 2020/09/22 00:14:02 request.go:41: [Aathoss, Bajoux]
 DEBUG: 2020/09/22 00:15:02 request.go:40: There are 2 of a max of 100 players online: Aathoss, Bajoux
 DEBUG: 2020/09/22 00:15:02 request.go:41: [Aathoss, Bajoux]
+INFO: 2020/09/22 00:36:26 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/09/22 00:36:28 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]

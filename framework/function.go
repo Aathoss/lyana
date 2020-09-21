@@ -28,6 +28,17 @@ func VerifStaff(grade []string) (r int) {
 	return
 }
 
+func VerifGrade(grade []string) (count int) {
+	if len(grade) != 0 {
+		for _, s := range grade {
+			if s == "757730769023008958" {
+				return 1
+			}
+		}
+	}
+	return 0
+}
+
 func RemoveIndex(s []string, r string) []string {
 	for i, v := range s {
 		if v == r {
