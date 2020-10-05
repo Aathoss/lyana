@@ -1,7 +1,6 @@
 package framework
 
 import (
-	"fmt"
 	"strconv"
 	"time"
 
@@ -48,57 +47,61 @@ func RemoveIndex(s []string, r string) []string {
 	return s
 }
 
-func FormatTime(timestamp int64) {
-	/* date1 := time.Date(0, 0, 0, 0, 0, 36, 0, time.UTC)
-	date2 := time.Date(0, 0, 0, 0, 0, 0, 0, time.UTC)
-
-	if date1.After(date2) {
-		date1, date2 = date2, date1
-	}
-
-	stringdate := diff(date1, date2) */
-
-	Calculetime(1597530893, 0)
-}
-
-//timestamp = 0 heure actuel - heure données | timestamp = 1 calcule uniquement l'heure données
+//timestamp = 0 heure actuel - heure données
+// | timestamp = 1 heure données - heure actuel
+// | timestamp = 2 calcule uniquement l'heure données
 func Calculetime(timesec int64, timestamp int) string {
 	seconde := timesec
 
-	/* 	var ans int     // 60 * 60 * 24 * 30 * 12 = 31 104 000
-	 */var mois int // 60 * 60 * 24 * 30 = 2 592 000
-	var jours int   // 60 * 60 * 24 = 86 400
-	var heures int  // 60 * 60 = 3 600
+	var ans int // 60 * 60 * 24 * 30 * 12 = 31 104 000
+	var calcans bool
+	var mois int // 60 * 60 * 24 * 30 = 2 592 000
+	var calcmois bool
+	var jours int // 60 * 60 * 24 = 86 400
+	var calcjour bool
+	var heures int // 60 * 60 = 3 600
+	var calcheures bool
 	var minutes int // 60 = 60
+	var calcminutes bool
+	var parse string
 
-	if timestamp != 1 {
+	if timestamp == 0 {
 		t1 := time.Now()
 		seconde = t1.Unix() - timesec
 	}
 
-	fmt.Println(seconde)
+	if timestamp == 1 {
+		t1 := time.Now()
+		seconde = timesec - t1.Unix()
+	}
+
 	for seconde >= 0 {
-		/* if seconde >= 31104000 {
+		if seconde >= 31104000 {
+			calcans = true
 			ans++
 			seconde = seconde - 31104000
 			continue
-		} */
+		}
 		if seconde >= 2592000 {
+			calcmois = true
 			mois++
 			seconde = seconde - 2592000
 			continue
 		}
 		if seconde >= 86400 {
+			calcjour = true
 			jours++
 			seconde = seconde - 86400
 			continue
 		}
 		if seconde >= 3600 {
+			calcheures = true
 			heures++
 			seconde = seconde - 3600
 			continue
 		}
 		if seconde >= 60 {
+			calcminutes = true
 			minutes++
 			seconde = seconde - 60
 			continue
@@ -106,19 +109,38 @@ func Calculetime(timesec int64, timestamp int) string {
 		break
 	}
 
-	/* fmt.Print(ans)
-	fmt.Print(" Années ") */
+	if calcans == true {
+		parse = parse + plural(int(ans), "année")
+	}
 
-	/* fmt.Print(mois)
-	fmt.Print(" mois ")
-	fmt.Print(jours)
-	fmt.Print(" jours ")
-	fmt.Print(heures)
-	fmt.Print(" heures ")
-	fmt.Print(minutes)
-	fmt.Print(" minutes ")
-	fmt.Print(seconde)
-	fmt.Println(" secondes ") */
-	return strconv.Itoa(mois) + " mois " + strconv.Itoa(jours) + " jours " + strconv.Itoa(heures) + " heures " + strconv.Itoa(minutes) + " minutes " + strconv.Itoa(int(seconde)) + " secondes "
+	if calcmois == true {
+		parse = parse + strconv.Itoa(mois) + " mois "
+	}
 
+	if calcjour == true {
+		parse = parse + plural(int(jours), "jour")
+	}
+
+	if calcheures == true {
+		parse = parse + plural(int(heures), "heure")
+	}
+
+	if calcminutes == true && calcans == false {
+		parse = parse + plural(int(minutes), "minute")
+	}
+
+	if calcmois == false {
+		parse = parse + plural(int(seconde), "seconde")
+	}
+
+	return parse
+}
+
+func plural(count int, singular string) (result string) {
+	if (count == 1) || (count == 0) {
+		result = strconv.Itoa(count) + " " + singular + " "
+	} else {
+		result = strconv.Itoa(count) + " " + singular + "s "
+	}
+	return
 }

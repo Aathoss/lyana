@@ -56,12 +56,13 @@ func AddRule(uuid string, timestamp int64) {
 	insert.Exec(uuid, timestamp+(60*60*24*3))
 }
 
-func RemoveRule(uuid string) {
+func RemoveRule(uuid string) error {
 	db := dbConn()
 	defer db.Close()
 
 	_, err := db.Query("DELETE FROM rule WHERE uid = " + uuid)
 	if err != nil {
-		logger.ErrorLogger.Println(err)
+		return err
 	}
+	return nil
 }

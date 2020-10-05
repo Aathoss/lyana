@@ -3,8 +3,10 @@ package framework
 import bot "github.com/bwmarrin/discordgo"
 
 var (
-	CountMsg int
-	Session  *bot.Session
+	CountMsg       int
+	SQlRequest     int
+	OnlineActulise int
+	Session        *bot.Session
 )
 
 //Variable framework

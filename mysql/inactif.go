@@ -23,7 +23,7 @@ func UpdateInactifPlayer() {
 	for _, player := range framework.ListPlayer {
 		player := strings.Replace(player, ",", " ", -1)
 
-		insert, err := db.Prepare("UPDATE membre SET inactif=? WHERE player_mc=?")
+		insert, err := db.Prepare("UPDATE membre SET inactif=?, notif=0 WHERE player_mc=?")
 		if err != nil {
 			logger.ErrorLogger.Println(err)
 			return
@@ -39,7 +39,7 @@ func UpdateInactifDiscord(uuid string) {
 	t1 := time.Now()
 	t2 := t1.Unix()
 
-	insert, err := db.Prepare("UPDATE membre SET inactif=? WHERE tag_discord=?")
+	insert, err := db.Prepare("UPDATE membre SET inactif=?, notif=0 WHERE tag_discord=?")
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 		return
@@ -54,10 +54,6 @@ func VerifInactif() error {
 	t1 := time.Now()
 	t2 := t1.Unix()
 
-	fmt.Println(t2)
-	fmt.Println(t2 - 20000)
-	//fmt.Println(t2 - 1209600)
-
 	rows, err := db.Query("SELECT id, player_mc, inactif, notif FROM membre")
 	if err != nil {
 		return err
@@ -69,7 +65,7 @@ func VerifInactif() error {
 			return err
 		}
 
-		if member.inactif <= t2-20000 {
+		if member.inactif <= t2-1209600 {
 			fmt.Print(member.id)
 			fmt.Print(" ")
 			fmt.Print(member.player_mc)

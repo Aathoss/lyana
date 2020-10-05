@@ -1,8 +1,6 @@
 package modules
 
 import (
-	"log"
-
 	"github.com/bwmarrin/discordgo"
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/mysql"
@@ -10,7 +8,6 @@ import (
 
 func ReactionAdd(s *discordgo.Session, reac *discordgo.MessageReactionAdd) {
 	if reac.UserID == s.State.User.ID {
-		log.Println("Bot ajoute un emoji")
 		return
 	}
 

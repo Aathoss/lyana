@@ -18,21 +18,28 @@ func VerifPlayerMC(player string) int {
 	return count
 }
 
-func AddWhitelist(uid_discord, playermc string) {
+func AddWhitelist(uid_discord, playermc string) error {
 	db := dbConn()
 	defer db.Close()
 
 	SelectCount("membre", "tag_discord", uid_discord)
 
 	if count == 0 {
-		tNow := time.Now()
+		t1 := time.Now()
+		t2 := t1.Unix()
 
 		insert, err := db.Prepare("INSERT INTO membre(tag_discord, player_mc, date_whitelist, inactif) VALUES(?,?,?,?)")
 		if err != nil {
 			logger.ErrorLogger.Println(err)
+			return err
 		}
-		insert.Exec(uid_discord, playermc, tNow.Unix, tNow.Unix)
+		_, err = insert.Exec(uid_discord, playermc, t2, t2)
+		if err != nil {
+			logger.ErrorLogger.Println(err)
+			return err
+		}
 	}
+	return nil
 }
 
 func GetWhitelist(uuid string) (string, string, int64, error) {

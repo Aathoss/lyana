@@ -1,6 +1,7 @@
 package rcon
 
 import (
+	"errors"
 	"strconv"
 	"strings"
 	"time"
@@ -25,16 +26,24 @@ func RconCommandeList() error {
 		return err
 	}
 
-	messageSplit := strings.Fields(response)
+	respFix, err := after(response, "There")
+	if err != nil {
+		logger.ErrorLogger.Println("Send Command", err)
+		connect = false
+		return err
+	}
+
+	messageSplit := strings.Fields(respFix)
 	framework.OnlinePlayer, err = strconv.Atoi(messageSplit[2])
 	if err != nil {
-		logger.DebugLogger.Println(response)
+		logger.DebugLogger.Println(respFix)
 	}
 	framework.MaxOnlinePlayer, err = strconv.Atoi(messageSplit[7])
 	if err != nil {
-		logger.DebugLogger.Println(response)
+		logger.DebugLogger.Println(respFix)
 	}
 	framework.ListPlayer = messageSplit[10:]
+	framework.OnlineActulise++
 
 	return nil
 }
@@ -95,4 +104,17 @@ func openRcon() {
 			break
 		}
 	}
+}
+
+func after(value string, a string) (string, error) {
+	// Get substring after a string.
+	pos := strings.LastIndex(value, a)
+	if pos == -1 {
+		return "", errors.New("after : pos = -1")
+	}
+	adjustedPos := pos //+ len(a)
+	if adjustedPos >= len(value) {
+		return "", errors.New("after : adjustedPos >= len(value)")
+	}
+	return value[adjustedPos:len(value)], nil
 }

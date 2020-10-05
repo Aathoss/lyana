@@ -22,27 +22,40 @@ func ExecuteTime() {
 	go mysql.UpdateInactifPlayer()
 
 	if Minute30 >= 30 {
-		VerifRule()
+		VerifRule(framework.Session)
 
 		Minute30 = 0
 	}
 }
 
-func VerifRule() {
-	s := &discordgo.Session{}
-
+func VerifRule(session *discordgo.Session) {
 	liste, err := mysql.VerifRuleTimestamp()
 	if err != nil {
 		logger.ErrorLogger.Println(err)
+		return
 	}
 
 	if len(liste) >= 1 {
-		for _, uid := range liste {
-			mysql.RemoveRule(uid)
-			s.GuildMemberDeleteWithReason(viper.GetString("GuildID"), uid, "[UniSpace] Vous n'avez pas accepté le règlement du discord sous 3 jours")
+		for _, uuid := range liste {
+			user, err := session.GuildMember(viper.GetString("GuildID"), uuid)
 			if err != nil {
 				logger.ErrorLogger.Println(err)
+				return
 			}
+
+			err = mysql.RemoveRule(uuid)
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+				return
+			}
+
+			err = session.GuildMemberDeleteWithReason(viper.GetString("GuildID"), uuid, "[UniSpace] Vous n'avez pas accepté le règlement du discord sous 3 jours")
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+				return
+			}
+
+			framework.LogsChannel("[<:downvote:742854427177648190>] " + user.User.String() + " n'as pas validé les règles sous 3 jours")
 		}
 	}
 }

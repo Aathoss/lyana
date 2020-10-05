@@ -5,6 +5,7 @@ import (
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/spf13/viper"
+	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
 )
 
@@ -26,5 +27,6 @@ func dbConn() (db *sql.DB) {
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
+	framework.SQlRequest++
 	return db
 }

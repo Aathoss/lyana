@@ -2,7 +2,6 @@ package command
 
 import (
 	"fmt"
-	"strings"
 
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/framework"
@@ -14,12 +13,15 @@ import (
 func AddPlayer(ctx framework.Context) {
 	ctx.Discord.ChannelMessageDelete(ctx.Message.ChannelID, ctx.Message.ID)
 
-	if len(ctx.Args) >= 1 {
+	if len(ctx.Args) > 1 {
 		tagdiscord := ctx.Args[0]
 		playermc := ctx.Args[1]
 
-		userID := strings.Replace(ctx.Args[0], "<@!", "", -1)
-		userID = strings.Replace(userID, ">", "", -1)
+		userID := tagdiscord[3 : len(tagdiscord)-1]
+		logger.DebugLogger.Println(ctx.Commande + " ( " + tagdiscord + " | " + userID + " ) " + playermc)
+
+		/* userID := strings.Replace(ctx.Args[0], "<@!", "", -1)
+		userID = strings.Replace(userID, ">", "", -1) */
 		user, err := ctx.Discord.GuildMember(viper.GetString("GuildID"), userID)
 		if err != nil {
 			logger.ErrorLogger.Println(err)
@@ -36,12 +38,15 @@ func AddPlayer(ctx framework.Context) {
 		fmt.Println(resp)
 		if resp[4] == "§7Whitelisted" {
 			ctx.Discord.ChannelMessageSend(viper.GetString("ChannelID.General"), "<:CraftingTable:753547645875912736> Je viens de craft votre carte d'accès au serveur, nous vous souhaitons la bienvenue parmi nous "+tagdiscord+".")
-			mysql.AddWhitelist(user.User.ID, playermc)
+			err = mysql.AddWhitelist(user.User.ID, playermc)
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+			}
 			return
 		}
 	}
 
-	if len(ctx.Args) < 1 {
+	if len(ctx.Args) <= 1 {
 		embed := framework.NewEmbed().
 			SetTitle("Il semble y avoir une erreur !").
 			SetColor(viper.GetInt("EmbedColor.Error")).

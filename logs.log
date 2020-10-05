@@ -248,3 +248,141 @@ INFO: 2020/09/22 00:36:26 main.go:46:
 ---------------------------------
 Démarrage du bot en cours
 INFO: 2020/09/22 00:36:28 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/09/24 08:22:29 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/09/24 08:22:29 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2020/09/24 08:23:28 AddPlayer.go:39: 693473406108041218 test4582
+ERROR: 2020/09/24 08:23:28 minecraft.go:37: sql: converting argument $3 type: unsupported type func() int64, a func
+ERROR: 2020/09/24 08:23:28 AddPlayer.go:42: sql: converting argument $3 type: unsupported type func() int64, a func
+INFO: 2020/09/24 08:33:29 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/09/24 08:33:30 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2020/09/24 08:34:13 AddPlayer.go:39: 693473406108041218 test4582
+INFO: 2020/09/24 08:36:20 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/09/24 08:36:21 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 00:22:12 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 00:22:13 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 00:42:26 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 00:42:27 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 00:46:08 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 00:46:10 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 00:53:07 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 00:53:08 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2020/10/04 00:53:36 cmdTEST.go:15: test ( <@!284053267988873226> | 284053267988873226 )
+DEBUG: 2020/10/04 00:53:52 cmdTEST.go:15: test ( <@!284053267988873226> | 284053267988873226 )
+INFO: 2020/10/04 00:57:06 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 00:57:07 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 01:00:12 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 01:00:13 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 15:45:07 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 15:45:09 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/10/04 15:46:09 request.go:46: Send Command after : pos = -1
+INFO: 2020/10/04 15:48:06 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 15:48:07 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 15:50:38 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 15:50:41 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 15:51:04 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 15:51:06 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 15:52:03 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 15:52:06 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 15:52:21 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 15:52:24 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 16:23:35 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 16:23:36 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 17:03:47 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 17:03:49 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/10/04 17:05:48 stats.go:28: dial tcp 185.157.246.69:8500: connectex: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu.
+INFO: 2020/10/04 17:05:57 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 17:05:58 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 17:56:45 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 17:56:46 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/10/04 18:01:06 request.go:39: Send Command createPayloadFromPacket: Failed reading bytes
+ERROR: 2020/10/04 18:07:05 stats.go:11: dial tcp 185.157.246.69:8500: connectex: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu.
+ERROR: 2020/10/04 18:21:12 inactif.go:44: dial tcp 185.157.246.69:8500: connectex: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu.
+ERROR: 2020/10/04 18:21:40 stats.go:11: dial tcp 185.157.246.69:8500: connectex: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu.
+INFO: 2020/10/04 18:30:56 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 18:30:58 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2020/10/04 18:31:46 AddPlayer.go:21: addplayer ( <@!442126900417003531> | 442126900417003531 ) Kanichito
+ERROR: 2020/10/04 19:01:00 request.go:46: Send Command after : pos = -1
+INFO: 2020/10/04 19:08:09 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 19:08:10 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 19:10:47 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 19:10:49 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 19:14:54 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 19:14:55 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/04 19:16:20 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 19:16:22 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/10/04 19:16:25 minecraft.go:51: sql: no rows in result set
+ERROR: 2020/10/04 19:16:25 bot_memberRemove.go:20: sql: no rows in result set
+ERROR: 2020/10/04 19:27:22 request.go:46: Send Command after : pos = -1
+ERROR: 2020/10/04 19:37:22 request.go:46: Send Command after : pos = -1
+ERROR: 2020/10/04 20:12:22 request.go:46: Send Command after : pos = -1
+ERROR: 2020/10/04 20:37:25 minecraft.go:51: sql: no rows in result set
+ERROR: 2020/10/04 20:37:25 bot_memberRemove.go:20: sql: no rows in result set
+ERROR: 2020/10/04 20:37:26 minecraft.go:51: sql: no rows in result set
+ERROR: 2020/10/04 20:37:26 bot_memberRemove.go:20: sql: no rows in result set
+ERROR: 2020/10/04 20:37:28 minecraft.go:51: sql: no rows in result set
+ERROR: 2020/10/04 20:37:28 bot_memberRemove.go:20: sql: no rows in result set
+ERROR: 2020/10/04 20:37:29 minecraft.go:51: sql: no rows in result set
+ERROR: 2020/10/04 20:37:29 bot_memberRemove.go:20: sql: no rows in result set
+INFO: 2020/10/04 20:38:10 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/04 20:38:14 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2020/10/04 21:18:49 AddPlayer.go:21: addplayer ( <@!427610345406726146> | 427610345406726146 ) ShihoYoru
+ERROR: 2020/10/04 21:23:47 stats.go:11: dial tcp 185.157.246.69:8500: connectex: Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu.
+INFO: 2020/10/05 18:16:01 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/05 18:16:03 bot_event.go:23: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/05 18:19:27 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/05 18:19:30 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/10/05 18:21:30 request.go:35: Send Command after : pos = -1
