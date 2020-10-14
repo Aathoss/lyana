@@ -23,4 +23,5 @@ var (
 	OnlinePlayer    int
 	MaxOnlinePlayer int
 	ListPlayer      []string
+	Sanction        [][]string
 )

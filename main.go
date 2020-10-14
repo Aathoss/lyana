@@ -13,6 +13,7 @@ import (
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/command"
+	"gitlab.com/lyana/command/moderation"
 	"gitlab.com/lyana/command/stats"
 	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
@@ -42,8 +43,6 @@ func init() {
 }
 
 func main() {
-	//framework.FormatTime(1597530893)
-
 	logger.InfoLogger.Println("\n---------------------------------\nDémarrage du bot en cours")
 
 	CmdHandler = framework.NewCommandHandler()
@@ -160,11 +159,14 @@ func registerCommands() {
 	//Commande Modération
 	CmdHandler.Register("stats", []string{}, 1, stats.Statistique, "Returne les statistique du serveur")
 	CmdHandler.Register("purge", []string{}, 1, command.Purges, "La commande permet d'effectuer un netoyage d'un channel limite à 2.500 Message")
+	CmdHandler.Register("grade", []string{}, 0, moderation.Grade, "Affiche la conversion des grade")
 
 	//Commande Liée à minecraft
 	CmdHandler.Register("fiche", []string{}, 0, command.InfoPlayer, "Permet de voir votre fiche utilisateur")
 	CmdHandler.Register("online", []string{}, 0, command.OnlinePlayer, "Affiche les joueurs connecté")
 	CmdHandler.Register("signal", []string{}, 0, command.AddSignalement, "Permet au joueurs whitelist sur le serveur de signaler un autre joueurs commétande une infraction")
-	CmdHandler.Register("rsignal", []string{}, 1, command.RemoveSignalement, "Permet au staff de retiré un signalement")
+	CmdHandler.Register("pardon", []string{}, 1, command.RemoveSignalement, "Permet au staff de retiré un signalement")
 	CmdHandler.Register("addplayer", []string{}, 1, command.AddPlayer, "???")
+
+	CmdHandler.Register("map", []string{}, 0, command.DynmapDropURL, "???")
 }

@@ -21,7 +21,7 @@ func AddSignalement(ctx framework.Context) {
 			if len(ctx.Args) >= 1 {
 
 				playermc := ctx.Args[0]
-				if playermc == "Aathoss" || playermc == "Paulth04" || playermc == "Bajoux" {
+				if playermc == "Aathoss" || playermc == "Paulth04" || playermc == "Bajoux" || playermc == "Laihela_" {
 					embed := framework.NewEmbed().
 						SetTitle("Vous n'êtes pas autorisé à signaler un membre du staff").
 						SetColor(viper.GetInt("EmbedColor.Error")).MessageEmbed
@@ -53,34 +53,31 @@ func AddSignalement(ctx framework.Context) {
 
 					info, _ := ctx.Discord.ChannelMessageSendEmbed(viper.GetString("ChannelID.Signalement"), embed)
 					infoNotif, _ := ctx.Discord.ChannelMessageSend(viper.GetString("ChannelID.Signalement"), "> Le staff va lancer une vérification des que possible <@&743945966813708369>")
-					mysql.AddSanctionLimit(ctx.Message.Author.ID, info.ID, infoNotif.ID)
+					mysql.AddSanctionLimit(ctx.Message.Author.ID, playermc, info.ID, infoNotif.ID)
+					return
 
 				}
 
-				if countPlayer == 0 {
-					embed := framework.NewEmbed().
-						SetTitle("D'après ma sonde, aucun joueur whitelist n'existe avec ce pseudo !").
-						SetColor(viper.GetInt("EmbedColor.Error")).MessageEmbed
-					ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, embed)
-				}
+				embed := framework.NewEmbed().
+					SetTitle("D'après ma sonde, aucun joueur whitelist n'existe avec ce pseudo !").
+					SetColor(viper.GetInt("EmbedColor.Error")).MessageEmbed
+				ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, embed)
+				return
 
 			}
 
-			if len(ctx.Args) < 1 {
-				embedHelp := framework.NewEmbed().
-					SetTitle("Il semble y avoir une erreur !").
-					SetColor(viper.GetInt("EmbedColor.Error")).
-					SetDescription("Veuillez respecter ce format : " + viper.GetString("PrefixMsg") + "signal <player> <raison>").MessageEmbed
+			embedHelp := framework.NewEmbed().
+				SetTitle("Il semble y avoir une erreur !").
+				SetColor(viper.GetInt("EmbedColor.Error")).
+				SetDescription("Veuillez respecter ce format : " + viper.GetString("PrefixMsg") + "signal <player> <raison>").MessageEmbed
 
-				ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, embedHelp)
-			}
+			ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, embedHelp)
+			return
 		}
 
-		if count == 0 {
-			ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, framework.EmbedPermissionFalse)
-		}
+		ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, framework.EmbedPermissionFalse)
+		return
 	}
-	if count == 1 {
-		ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, framework.EmbedLimite)
-	}
+	ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, framework.EmbedLimite)
+	return
 }

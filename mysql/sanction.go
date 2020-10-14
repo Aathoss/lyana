@@ -8,22 +8,22 @@ import "gitlab.com/lyana/logger"
 /*-------------------------------------------*/
 /*-------------------------------------------*/
 
-func AddSanctionLimit(uid_discord, id_message, id_message_notif string) {
+func AddSanctionLimit(uid_discord, pseudomc, id_message, id_message_notif string) {
 	db := dbConn()
 	defer db.Close()
 
-	insert, err := db.Prepare("INSERT INTO sanction(uid, id_message, id_msg_notif) VALUES(?, ?, ?)")
+	insert, err := db.Prepare("INSERT INTO sanction(uid, pseudomc, id_message, id_msg_notif) VALUES(?, ?, ?, ?)")
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
-	insert.Exec(uid_discord, id_message, id_message_notif)
+	insert.Exec(uid_discord, pseudomc, id_message, id_message_notif)
 }
 
-func RemoveSanctionLimit(uid_discord string) (sanctionID_msg, sanctionID_msg_notif string) {
+func RemoveSanctionLimit(uid_discord string) (pseudomc, sanctionID_msg, sanctionID_msg_notif string) {
 	db := dbConn()
 	defer db.Close()
 
-	err := db.QueryRow("SELECT * FROM sanction WHERE uid = "+uid_discord).Scan(&sanction.id, &sanction.uid, &sanction.id_message, &sanction.id_msg_notif)
+	err := db.QueryRow("SELECT * FROM sanction WHERE uid = "+uid_discord).Scan(&sanction.id, &sanction.uid, &sanction.pseudomc, &sanction.id_message, &sanction.id_msg_notif)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -33,5 +33,5 @@ func RemoveSanctionLimit(uid_discord string) (sanctionID_msg, sanctionID_msg_not
 		logger.ErrorLogger.Println(err)
 	}
 
-	return sanction.id_message, sanction.id_msg_notif
+	return sanction.pseudomc, sanction.id_message, sanction.id_msg_notif
 }

@@ -23,8 +23,43 @@ func ExecuteTime() {
 
 	if Minute30 >= 30 {
 		VerifRule(framework.Session)
+		VerifInactif(framework.Session)
 
 		Minute30 = 0
+	}
+}
+
+//VerifInactif Vérifie la liste des inactif discord/mc
+func VerifInactif(session *discordgo.Session) {
+	liste, err := mysql.VerifInactif()
+	if err != nil {
+		logger.ErrorLogger.Println(err)
+		return
+	}
+
+	if len(liste) != 0 {
+		for _, inf := range liste {
+			user, err := session.GuildMember(viper.GetString("GuildID"), inf[1])
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+				continue
+			}
+
+			semaine, err := strconv.Atoi(inf[3])
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+				continue
+			}
+
+			err = session.GuildMemberRoleAdd(viper.GetString("GuildID"), user.User.ID, "757730769023008958")
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+				continue
+			}
+
+			framework.LogsChannel("[:zzz:] " + user.User.String() + " inactif depuis " + strconv.Itoa(semaine+1) + " semaines")
+			mysql.UpdateMembresInactif(inf[1])
+		}
 	}
 }
 

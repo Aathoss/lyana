@@ -13,7 +13,7 @@ func VerifStaff(grade []string) (r int) {
 	r = 0
 	if len(grade) != 0 {
 		for _, s := range grade {
-			if s == viper.GetString("Staff.Moderateur") || s == viper.GetString("Staff.Moderatrice") && r <= 0 {
+			if s == viper.GetString("Staff.Staff") || s == viper.GetString("Staff.Moderateur") || s == viper.GetString("Staff.Moderatrice") && r <= 0 {
 				r = 1
 			}
 			if s == viper.GetString("Staff.Responsable") && r <= 2 {

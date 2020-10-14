@@ -1,8 +1,6 @@
 package command
 
 import (
-	"fmt"
-
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
@@ -14,30 +12,30 @@ func AddPlayer(ctx framework.Context) {
 	ctx.Discord.ChannelMessageDelete(ctx.Message.ChannelID, ctx.Message.ID)
 
 	if len(ctx.Args) > 1 {
-		tagdiscord := ctx.Args[0]
+		mentions := ctx.Message.Mentions
 		playermc := ctx.Args[1]
 
-		userID := tagdiscord[3 : len(tagdiscord)-1]
-		logger.DebugLogger.Println(ctx.Commande + " ( " + tagdiscord + " | " + userID + " ) " + playermc)
+		if len(mentions) == 0 {
+			framework.LogsChannel("[:x:] [" + viper.GetString("PrefixMsg") + ctx.Commande + "] Vous n'avez pas mentionné de personne !")
+			return
+		}
 
-		/* userID := strings.Replace(ctx.Args[0], "<@!", "", -1)
-		userID = strings.Replace(userID, ">", "", -1) */
-		user, err := ctx.Discord.GuildMember(viper.GetString("GuildID"), userID)
+		user, err := ctx.Discord.GuildMember(viper.GetString("GuildID"), mentions[0].ID)
 		if err != nil {
 			logger.ErrorLogger.Println(err)
-			framework.LogsChannel("[:x:] Une erreur c'est produits sur `" + ctx.Commande + " " + tagdiscord + " " + playermc + "`\n" + err.Error() + "`\n" + "uuid discord : " + user.User.ID)
+			framework.LogsChannel("[:x:] [" + viper.GetString("PrefixMsg") + ctx.Commande + " " + mentions[0].ID + " " + playermc + "] Une erreur s'est produite sur la vérification de GuildMember")
 			return
 		}
 
 		resp, err := rcon.RconCommandeWhitelistAdd(playermc)
 		if err != nil {
 			logger.ErrorLogger.Println(err)
-			framework.LogsChannel("[:x:] Une erreur c'est produits sur `" + ctx.Commande + " " + tagdiscord + " " + playermc + "`\n" + err.Error() + "`\n" + "uuid discord : " + user.User.ID)
+			framework.LogsChannel("[:x:] [" + viper.GetString("PrefixMsg") + ctx.Commande + " " + mentions[0].ID + " " + playermc + "] Une erreur c'est produits sur le whitelist rcon")
 			return
 		}
-		fmt.Println(resp)
+
 		if resp[4] == "§7Whitelisted" {
-			ctx.Discord.ChannelMessageSend(viper.GetString("ChannelID.General"), "<:CraftingTable:753547645875912736> Je viens de craft votre carte d'accès au serveur, nous vous souhaitons la bienvenue parmi nous "+tagdiscord+".")
+			ctx.Discord.ChannelMessageSend(viper.GetString("ChannelID.General"), "<:CraftingTable:753547645875912736> Je viens de craft votre carte d'accès au serveur, nous vous souhaitons la bienvenue parmi nous "+mentions[0].Mention()+".")
 			err = mysql.AddWhitelist(user.User.ID, playermc)
 			if err != nil {
 				logger.ErrorLogger.Println(err)

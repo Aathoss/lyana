@@ -94,7 +94,6 @@ func openRcon() {
 	for connect == false {
 		liaison, err := NewClient(viper.GetString("Minecraft.IP"), viper.GetInt("Minecraft.Port"), viper.GetString("Minecraft.Mdp"))
 		if err != nil {
-			logger.ErrorLogger.Println("Open failed", err)
 			connect = false
 			time.Sleep(10 * time.Second)
 			continue

@@ -27,6 +27,6 @@ func GuildMemberLeave(s *discordgo.Session, leave *discordgo.GuildMemberRemove) 
 		logger.ErrorLogger.Println(err)
 		return
 	}
-
+	mysql.DeleteUserWhitelist(leave.User.ID)
 	framework.LogsChannel("[<:downvote:742854427177648190>] " + leave.User.Username + msg)
 }

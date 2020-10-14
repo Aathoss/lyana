@@ -27,6 +27,7 @@ type sMessageCount struct {
 type sSanction struct {
 	id           int
 	uid          string
+	pseudomc     string
 	id_message   string
 	id_msg_notif string
 }

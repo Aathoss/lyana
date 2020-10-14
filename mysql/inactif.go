@@ -1,7 +1,7 @@
 package mysql
 
 import (
-	"fmt"
+	"strconv"
 	"strings"
 	"time"
 
@@ -47,38 +47,52 @@ func UpdateInactifDiscord(uuid string) {
 	insert.Exec(t2, uuid)
 }
 
-func VerifInactif() error {
+func VerifInactif() ([][]string, error) {
+	db := dbConn()
+	defer db.Close()
+
+	t1 := time.Now()
+	t2 := t1.Unix()
+	tab := [][]string{}
+
+	rows, err := db.Query("SELECT id, tag_discord, inactif, notif FROM membre")
+	if err != nil {
+		return tab, err
+	}
+
+	for rows.Next() {
+		var info []string
+
+		err := rows.Scan(&member.id, &member.uid_discord, &member.inactif, &member.notif)
+		if err != nil {
+			return tab, err
+		}
+
+		if member.inactif <= t2-604800 {
+			info = append(info, strconv.Itoa(member.id), member.uid_discord, strconv.Itoa(int(member.inactif)), strconv.Itoa(member.notif))
+			tab = append(tab, info)
+		}
+
+		err = rows.Err()
+		if err != nil {
+			return tab, err
+		}
+	}
+	return tab, nil
+}
+
+func UpdateMembresInactif(uuid string) error {
 	db := dbConn()
 	defer db.Close()
 
 	t1 := time.Now()
 	t2 := t1.Unix()
 
-	rows, err := db.Query("SELECT id, player_mc, inactif, notif FROM membre")
+	insert, err := db.Prepare("UPDATE membre SET inactif=?, notif=notif+1 WHERE tag_discord=?")
 	if err != nil {
+		logger.ErrorLogger.Println(err)
 		return err
 	}
-
-	for rows.Next() {
-		err := rows.Scan(&member.id, &member.player_mc, &member.inactif, &member.notif)
-		if err != nil {
-			return err
-		}
-
-		if member.inactif <= t2-1209600 {
-			fmt.Print(member.id)
-			fmt.Print(" ")
-			fmt.Print(member.player_mc)
-			fmt.Print(" ")
-			fmt.Print(member.inactif)
-			fmt.Print(" ")
-			fmt.Println(member.notif)
-		}
-
-		err = rows.Err()
-		if err != nil {
-			return err
-		}
-	}
+	insert.Exec(t2, uuid)
 	return nil
 }
