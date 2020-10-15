@@ -9,6 +9,7 @@ import (
 	"github.com/dustin/go-humanize"
 	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
+	"gitlab.com/lyana/mysql"
 )
 
 var (
@@ -20,6 +21,10 @@ func Statistique(ctx framework.Context) {
 
 	stats := runtime.MemStats{}
 	runtime.ReadMemStats(&stats)
+	inactif, err := mysql.CompteInactif()
+	if err != nil {
+		inactif = -1
+	}
 	tNow := time.Now()
 
 	membersgrade, err := ctx.Discord.State.Guild(ctx.Guild.ID)
@@ -40,7 +45,8 @@ func Statistique(ctx framework.Context) {
 				"\nMessage total : **"+strconv.Itoa(framework.CountMsg)+"**"+
 				"\nNombre de requête SQL : **"+strconv.Itoa(framework.SQlRequest)+"**"+
 				"\nNombre d'actualisation channel online : **"+strconv.Itoa(framework.OnlineActulise)+"**"+
-				"\nMembre : **"+strconv.Itoa(membersgrade.MemberCount)+"**", true).
+				"\nMembre : **"+strconv.Itoa(membersgrade.MemberCount)+"**"+
+				"\nInactif : **"+strconv.Itoa(inactif)+"**", true).
 		SetFooter(ctx.Message.Author.Username + " | Date : " + tNow.Format("2/1 15:04:05")).MessageEmbed
 	ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, embed)
 	return

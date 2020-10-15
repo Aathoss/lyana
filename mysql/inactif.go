@@ -96,3 +96,14 @@ func UpdateMembresInactif(uuid string) error {
 	insert.Exec(t2, uuid)
 	return nil
 }
+
+func CompteInactif() (int, error) {
+	db := dbConn()
+	defer db.Close()
+
+	err := db.QueryRow("SELECT COUNT(notif) FROM membre WHERE notif>0").Scan(&count)
+	if err != nil {
+		return 0, err
+	}
+	return count, nil
+}

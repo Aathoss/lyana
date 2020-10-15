@@ -2,6 +2,7 @@ package modules
 
 import (
 	"strconv"
+	"time"
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/spf13/viper"
@@ -41,7 +42,7 @@ func VerifInactif(session *discordgo.Session) {
 		for _, inf := range liste {
 			user, err := session.GuildMember(viper.GetString("GuildID"), inf[1])
 			if err != nil {
-				logger.ErrorLogger.Println(err)
+				logger.ErrorLogger.Println("[uuid: " + string(inf[1]) + " ]" + err.Error())
 				continue
 			}
 
@@ -59,6 +60,7 @@ func VerifInactif(session *discordgo.Session) {
 
 			framework.LogsChannel("[:zzz:] " + user.User.String() + " inactif depuis " + strconv.Itoa(semaine+1) + " semaines")
 			mysql.UpdateMembresInactif(inf[1])
+			time.Sleep(1 * time.Second)
 		}
 	}
 }
