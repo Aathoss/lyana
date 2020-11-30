@@ -1,6 +1,8 @@
 package framework
 
 import (
+	"io/ioutil"
+	"net/http"
 	"strconv"
 	"time"
 
@@ -13,7 +15,7 @@ func VerifStaff(grade []string) (r int) {
 	r = 0
 	if len(grade) != 0 {
 		for _, s := range grade {
-			if s == viper.GetString("Staff.Staff") || s == viper.GetString("Staff.Moderateur") || s == viper.GetString("Staff.Moderatrice") && r <= 0 {
+			if s == viper.GetString("Staff.Staff") || s == viper.GetString("Staff.Moderateur") && r <= 0 {
 				r = 1
 			}
 			if s == viper.GetString("Staff.Responsable") && r <= 2 {
@@ -143,4 +145,27 @@ func plural(count int, singular string) (result string) {
 		result = strconv.Itoa(count) + " " + singular + "s "
 	}
 	return
+}
+
+func RequestAPI(method string, url string) ([]byte, error) {
+	var body []byte
+
+	client := &http.Client{}
+	req, err := http.NewRequest(method, url, nil)
+	if err != nil {
+		return body, err
+	}
+	req.Header.Add("Content-Type", "application/json")
+	res, err := client.Do(req)
+	if err != nil {
+		return body, err
+	}
+	body, err = ioutil.ReadAll(res.Body)
+	if err != nil {
+		return body, err
+	}
+	defer res.Body.Close()
+
+	//fmt.Println(string(body))
+	return body, nil
 }

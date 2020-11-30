@@ -9,7 +9,7 @@ import "gitlab.com/lyana/logger"
 /*-------------------------------------------*/
 
 func AddSanctionLimit(uid_discord, pseudomc, id_message, id_message_notif string) {
-	db := dbConn()
+	db := DbConn()
 	defer db.Close()
 
 	insert, err := db.Prepare("INSERT INTO sanction(uid, pseudomc, id_message, id_msg_notif) VALUES(?, ?, ?, ?)")
@@ -20,7 +20,7 @@ func AddSanctionLimit(uid_discord, pseudomc, id_message, id_message_notif string
 }
 
 func RemoveSanctionLimit(uid_discord string) (pseudomc, sanctionID_msg, sanctionID_msg_notif string) {
-	db := dbConn()
+	db := DbConn()
 	defer db.Close()
 
 	err := db.QueryRow("SELECT * FROM sanction WHERE uid = "+uid_discord).Scan(&sanction.id, &sanction.uid, &sanction.pseudomc, &sanction.id_message, &sanction.id_msg_notif)

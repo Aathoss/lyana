@@ -16,7 +16,7 @@ import (
 /*-------------------------------------------*/
 
 // Gestion de la connexion à la base de données
-func dbConn() (db *sql.DB) {
+func DbConn() (db *sql.DB) {
 	dbDriver := "mysql"
 	dbUser := viper.GetString("MySql.dbuser")
 	dbPass := viper.GetString("MySql.dbmdp")
@@ -31,7 +31,7 @@ func dbConn() (db *sql.DB) {
 	return db
 }
 
-func dbConnMC() (db *sql.DB) {
+func DbConnMC() (db *sql.DB) {
 	dbDriver := "mysql"
 	dbUser := viper.GetString("MySql.dbuser")
 	dbPass := viper.GetString("MySql.dbmdp")

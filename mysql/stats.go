@@ -1,9 +1,11 @@
 package mysql
 
-import "gitlab.com/lyana/logger"
+import (
+	"gitlab.com/lyana/logger"
+)
 
 func SelectCount(tab, colonne, uid string) int {
-	db := dbConn()
+	db := DbConn()
 	defer db.Close()
 
 	err := db.QueryRow("SELECT COUNT(*) FROM " + tab + " WHERE " + colonne + " = " + uid).Scan(&count)
@@ -16,7 +18,7 @@ func SelectCount(tab, colonne, uid string) int {
 
 //Count le message sur le discord
 func NewCountMessage(author string) {
-	db := dbConn()
+	db := DbConn()
 	defer db.Close()
 
 	SelectCount("message_count", "uid", author)
@@ -37,4 +39,17 @@ func NewCountMessage(author string) {
 		}
 		insert.Exec(author, 1)
 	}
+}
+
+func ReturnNumMessages(uuid string) (int, error) {
+	db := DbConn()
+	defer db.Close()
+
+	err := db.QueryRow("SELECT count_msg FROM message_count WHERE uid=?", uuid).Scan(&count)
+	if err != nil {
+		logger.ErrorLogger.Println(err)
+		return 0, err
+	}
+
+	return count, nil
 }

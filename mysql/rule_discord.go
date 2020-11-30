@@ -7,7 +7,7 @@ import (
 )
 
 func VerifRule(uuid string) (int, error) {
-	db := dbConn()
+	db := DbConn()
 	defer db.Close()
 
 	err := db.QueryRow("SELECT COUNT(*) FROM rule WHERE uid=" + uuid).Scan(&count)
@@ -15,7 +15,7 @@ func VerifRule(uuid string) (int, error) {
 }
 
 func VerifRuleTimestamp() ([]string, error) {
-	db := dbConn()
+	db := DbConn()
 	defer db.Close()
 
 	t1 := time.Now()
@@ -46,7 +46,7 @@ func VerifRuleTimestamp() ([]string, error) {
 }
 
 func AddRule(uuid string, timestamp int64) {
-	db := dbConn()
+	db := DbConn()
 	defer db.Close()
 
 	insert, err := db.Prepare("INSERT INTO rule(uid, timestamp) VALUES(?,?)")
@@ -57,7 +57,7 @@ func AddRule(uuid string, timestamp int64) {
 }
 
 func RemoveRule(uuid string) error {
-	db := dbConn()
+	db := DbConn()
 	defer db.Close()
 
 	_, err := db.Query("DELETE FROM rule WHERE uid = " + uuid)

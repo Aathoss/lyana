@@ -38,7 +38,7 @@ func AddSignalement(ctx framework.Context) {
 				}
 				raisonString = strings.Replace(raisonString, "|", " ", -1)
 
-				countPlayer := mysql.VerifPlayerMC(playermc)
+				_, countPlayer := mysql.VerifPlayerMC(ctx.Message.Author.ID, playermc)
 				if countPlayer == 1 {
 
 					rcon.RconCommandeWhitelistRemove(playermc)

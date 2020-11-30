@@ -20,10 +20,13 @@ func AddPlayer(ctx framework.Context) {
 			return
 		}
 
-		user, err := ctx.Discord.GuildMember(viper.GetString("GuildID"), mentions[0].ID)
-		if err != nil {
-			logger.ErrorLogger.Println(err)
-			framework.LogsChannel("[:x:] [" + viper.GetString("PrefixMsg") + ctx.Commande + " " + mentions[0].ID + " " + playermc + "] Une erreur s'est produite sur la vérification de GuildMember")
+		countuuid, countplayer := mysql.VerifPlayerMC(mentions[0].ID, playermc)
+		if countplayer == 1 {
+			framework.LogsChannel("[:open_mouth:] [Utilisateur : " + mentions[0].String() + " | Pseudo : " + playermc + "] Ce pseudo existe déjà dans notre base de données.")
+			return
+		}
+		if countuuid == 1 {
+			framework.LogsChannel("[:open_mouth:] [Utilisateur : " + mentions[0].String() + " | Pseudo : " + playermc + "] Il n'est pas autorisé d'avoir un double compte...")
 			return
 		}
 
@@ -36,7 +39,7 @@ func AddPlayer(ctx framework.Context) {
 
 		if resp[4] == "§7Whitelisted" {
 			ctx.Discord.ChannelMessageSend(viper.GetString("ChannelID.General"), "<:CraftingTable:753547645875912736> Je viens de craft votre carte d'accès au serveur, nous vous souhaitons la bienvenue parmi nous "+mentions[0].Mention()+".")
-			err = mysql.AddWhitelist(user.User.ID, playermc)
+			err = mysql.AddWhitelist(mentions[0].ID, playermc)
 			if err != nil {
 				logger.ErrorLogger.Println(err)
 			}

@@ -8,7 +8,7 @@ import (
 )
 
 var (
-	embedMPClose = NewEmbed().
+	EmbedMPClose = NewEmbed().
 			SetTitle("J'ai un problème de communication avec mars...").
 			SetColor(0xBD0000).
 			SetDescription("Excusez-moi, mon esprit divague. \nVous n'avez pas autorisé les messages privés venant de ce discord !").MessageEmbed
@@ -59,6 +59,10 @@ func (e *Embed) SetDescription(description string) *Embed {
 
 //AddField [name] [value]
 func (e *Embed) AddField(name, value string, inline bool) *Embed {
+	if len(name) == 0 {
+		return e
+	}
+
 	if len(value) > 1024 {
 		value = value[:1024]
 	}
@@ -75,6 +79,22 @@ func (e *Embed) AddField(name, value string, inline bool) *Embed {
 
 	return e
 
+}
+
+func (e *Embed) MessageHelp(content [][]string) *Embed {
+	if len(content) != 0 {
+		for i := 0; i <= len(content)-1; i++ {
+			alias := ""
+
+			if len(content[i][1]) > 0 {
+				alias = "_" + content[i][1] + "_\n"
+			}
+
+			e.AddField(":clipboard: "+content[i][0], alias+content[i][2], true)
+		}
+	}
+
+	return e
 }
 
 func (e *Embed) TicketUserField(content [][]string) *Embed {

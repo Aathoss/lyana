@@ -10,7 +10,7 @@ import (
 )
 
 func UpdateInactifPlayer() {
-	db := dbConn()
+	db := DbConn()
 	defer db.Close()
 
 	t1 := time.Now()
@@ -30,10 +30,11 @@ func UpdateInactifPlayer() {
 		}
 		insert.Exec(t2, player)
 	}
+	return
 }
 
 func UpdateInactifDiscord(uuid string) {
-	db := dbConn()
+	db := DbConn()
 	defer db.Close()
 
 	t1 := time.Now()
@@ -48,7 +49,7 @@ func UpdateInactifDiscord(uuid string) {
 }
 
 func VerifInactif() ([][]string, error) {
-	db := dbConn()
+	db := DbConn()
 	defer db.Close()
 
 	t1 := time.Now()
@@ -82,7 +83,7 @@ func VerifInactif() ([][]string, error) {
 }
 
 func UpdateMembresInactif(uuid string) error {
-	db := dbConn()
+	db := DbConn()
 	defer db.Close()
 
 	t1 := time.Now()
@@ -98,7 +99,7 @@ func UpdateMembresInactif(uuid string) error {
 }
 
 func CompteInactif() (int, error) {
-	db := dbConn()
+	db := DbConn()
 	defer db.Close()
 
 	err := db.QueryRow("SELECT COUNT(notif) FROM membre WHERE notif>0").Scan(&count)

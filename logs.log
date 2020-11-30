@@ -88,3 +88,308 @@ ERROR: 2020/10/14 20:07:38 bot_time.go:47: HTTP 404 Not Found, {"message": "Unkn
 ERROR: 2020/10/14 20:07:42 bot_time.go:47: HTTP 404 Not Found, {"message": "Unknown Member", "code": 10007}
 ERROR: 2020/10/14 20:07:42 bot_time.go:47: HTTP 404 Not Found, {"message": "Unknown Member", "code": 10007}
 ERROR: 2020/10/14 20:07:42 bot_time.go:47: HTTP 404 Not Found, {"message": "Unknown Member", "code": 10007}
+INFO: 2020/10/20 15:01:12 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/20 15:01:14 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/20 15:01:33 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/20 15:01:34 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/10/20 15:02:40 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/10/20 15:02:41 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/18 17:01:35 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/18 17:01:36 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/18 17:04:07 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/18 17:04:08 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/18 17:05:25 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/18 17:05:26 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/18 17:06:06 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/18 17:06:07 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/18 17:11:51 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/18 17:11:52 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/18 22:38:36 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/18 22:38:37 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/18 23:12:47 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/18 23:12:48 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/18 23:13:16 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/18 23:13:17 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/18 23:13:41 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/18 23:13:42 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/18 23:14:15 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/18 23:14:16 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/18 23:15:01 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/18 23:15:01 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/18 23:15:27 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/18 23:15:28 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/19 09:19:39 main.go:48: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/19 09:19:40 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/19 09:21:06 main.go:48: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/19 09:21:07 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/19 09:21:46 main.go:48: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/19 09:21:47 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/19 09:24:17 main.go:52: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/19 09:24:17 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/19 09:26:48 main.go:48: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/19 09:26:49 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/19 09:36:40 main.go:48: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/19 09:36:41 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/19 09:37:47 main.go:48: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/19 09:37:47 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/19 10:02:39 main.go:49: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/19 10:02:41 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/20 13:54:24 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 13:54:25 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/11/20 13:54:29 minecraft.go:52: sql: no rows in result set
+INFO: 2020/11/20 13:54:59 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 13:55:00 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/11/20 13:55:06 minecraft.go:52: sql: no rows in result set
+INFO: 2020/11/20 14:01:15 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 14:01:16 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/20 14:02:29 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 14:02:30 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/20 14:03:16 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 14:03:17 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/11/20 14:03:19 InfoPlayer.go:89: Error 1054: Unknown column 'Aathoss' in 'where clause'
+INFO: 2020/11/20 14:04:37 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 14:04:38 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/11/20 14:04:40 InfoPlayer.go:89: Error 1054: Unknown column 'Aathoss' in 'where clause'
+INFO: 2020/11/20 14:05:18 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 14:05:18 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/11/20 14:06:39 minecraft.go:52: sql: no rows in result set
+INFO: 2020/11/20 14:07:39 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 14:07:39 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/11/20 14:07:46 minecraft.go:52: sql: no rows in result set
+INFO: 2020/11/20 20:49:51 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 20:49:52 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/20 20:50:54 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 20:50:55 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/20 21:02:38 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 21:02:40 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/11/20 21:02:46 stats.go:48: sql: Scan error on column index 0, name "count_msg": destination not a pointer
+INFO: 2020/11/20 21:09:52 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 21:09:54 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/11/20 21:10:04 stats.go:49: sql: Scan error on column index 0, name "count_msg": destination not a pointer
+INFO: 2020/11/20 21:11:59 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 21:12:00 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/11/20 21:12:05 stats.go:49: sql: Scan error on column index 0, name "count_msg": destination not a pointer
+INFO: 2020/11/20 21:15:05 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 21:15:06 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/11/20 21:15:11 stats.go:54: sql: Scan error on column index 0, name "count_msg": destination not a pointer
+INFO: 2020/11/20 21:18:25 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 21:18:26 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/11/20 21:18:33 stats.go:51: sql: Scan error on column index 0, name "count(count_msg)": destination not a pointer
+INFO: 2020/11/20 21:26:59 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 21:27:00 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/11/20 21:27:05 stats.go:51: sql: Scan error on column index 0, name "count_msg": destination not a pointer
+INFO: 2020/11/20 21:27:35 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 21:27:36 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/11/20 21:27:40 stats.go:51: sql: Scan error on column index 0, name "COUNT(*)": destination not a pointer
+INFO: 2020/11/20 21:30:28 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 21:30:30 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/20 21:31:13 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 21:31:15 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/20 21:33:36 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 21:33:37 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/20 21:52:07 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/20 21:52:09 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2020/11/29 14:18:46 bot_time.go:78: json: cannot unmarshal object into Go value of type []modules.jsonsheet
+ERROR: 2020/11/29 14:19:52 bot_time.go:78: json: cannot unmarshal object into Go value of type []modules.jsonsheet
+ERROR: 2020/11/29 14:20:22 bot_time.go:78: json: cannot unmarshal object into Go value of type []modules.jsonsheet
+ERROR: 2020/11/29 14:21:15 bot_time.go:78: json: cannot unmarshal object into Go value of type []modules.jsonsheet
+ERROR: 2020/11/29 14:23:35 bot_time.go:78: json: cannot unmarshal array into Go struct field .ValueRanges.values of type string
+ERROR: 2020/11/29 14:39:46 bot_time.go:78: json: cannot unmarshal array into Go struct field .ValueRanges.values of type string
+ERROR: 2020/11/29 14:45:37 bot_time.go:78: json: cannot unmarshal array into Go struct field jsonsheet.ValueRanges of type struct { Range string "json:\"range\""; MajorDimension string "json:\"majorDimension\""; Values [][]string "json:\"values\"" }
+ERROR: 2020/11/29 14:46:01 bot_time.go:78: json: cannot unmarshal array into Go struct field jsonsheet.ValueRanges of type struct { Range string "json:\"range\""; MajorDimension string "json:\"majorDimension\""; Values [][]string "json:\"values\"" }
+ERROR: 2020/11/29 14:46:31 bot_time.go:78: json: cannot unmarshal array into Go struct field jsonsheet.ValueRanges of type struct { Range string "json:\"range\""; MajorDimension string "json:\"majorDimension\""; Values []string "json:\"values\"" }
+ERROR: 2020/11/29 14:46:41 bot_time.go:78: json: cannot unmarshal array into Go struct field jsonsheet.ValueRanges of type struct { Range string "json:\"range\""; MajorDimension string "json:\"majorDimension\""; Values [][][]string "json:\"values\"" }
+ERROR: 2020/11/29 14:49:07 bot_time.go:78: json: cannot unmarshal array into Go struct field jsonsheet.ValueRanges of type struct { Range string "json:\"range\""; MajorDimension string "json:\"majorDimension\""; Values [][]string "json:\"values\"" }
+ERROR: 2020/11/29 14:54:34 bot_time.go:79: json: cannot unmarshal array into Go struct field jsonsheet.valueRanges of type struct { Range string "json:\"range\""; MajorDimension string "json:\"majorDimension\""; Values [][]string "json:\"values\"" }
+INFO: 2020/11/29 15:49:46 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 15:49:47 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:04:19 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:04:21 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:08:03 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:08:04 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:09:14 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:09:15 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:09:32 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:09:33 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:11:12 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:11:13 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:11:37 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:11:39 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:12:58 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:12:59 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:13:40 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:13:40 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:14:07 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:14:12 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:15:06 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:15:07 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:16:54 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:16:55 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:22:03 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:22:04 bot_event.go:25: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:22:29 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:22:30 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:23:55 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:23:55 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:24:58 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:24:59 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:26:47 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:26:48 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 16:29:53 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 16:29:54 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 20:35:11 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 20:35:17 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 20:36:08 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 20:36:13 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 20:37:10 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 20:37:15 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 20:40:48 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 20:40:53 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 20:45:56 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 20:46:03 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 20:51:03 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 20:51:09 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 21:01:47 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 21:01:48 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2020/11/29 21:02:28 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2020/11/29 21:02:29 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]

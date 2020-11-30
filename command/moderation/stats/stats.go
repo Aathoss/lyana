@@ -36,17 +36,17 @@ func Statistique(ctx framework.Context) {
 	embed := framework.NewEmbed().
 		SetTitle("Statistique bot :").
 		SetColor(0x5f27cd).
-		AddField("Informations basic",
+		AddField("Informations Discord", "\nMembre : **"+strconv.Itoa(membersgrade.MemberCount-3)+"**"+
+			"\nInactif : **"+strconv.Itoa(inactif)+"**/**"+strconv.Itoa(membersgrade.MemberCount-3)+"**"+
+			"\nMessage total : **"+strconv.Itoa(framework.CountMsg)+"**", false).
+		AddField("Informations Bot",
 			"V. Go : **"+runtime.Version()+"**"+
 				"\nV. Discord : **"+discordgo.VERSION+"**"+
 				"\nRoutine : **"+strconv.Itoa(runtime.NumGoroutine())+"**"+
 				"\nUptime : **"+framework.Calculetime(startTime.Unix(), 0)+"**"+
 				"\nMémoire utiliser : **"+humanize.Bytes(stats.Alloc)+"** / **"+humanize.Bytes(stats.Sys)+"**"+
-				"\nMessage total : **"+strconv.Itoa(framework.CountMsg)+"**"+
 				"\nNombre de requête SQL : **"+strconv.Itoa(framework.SQlRequest)+"**"+
-				"\nNombre d'actualisation channel online : **"+strconv.Itoa(framework.OnlineActulise)+"**"+
-				"\nMembre : **"+strconv.Itoa(membersgrade.MemberCount)+"**"+
-				"\nInactif : **"+strconv.Itoa(inactif)+"**", true).
+				"\nNombre d'actualisation channel online : **"+strconv.Itoa(framework.OnlineActulise)+"**", false).
 		SetFooter(ctx.Message.Author.Username + " | Date : " + tNow.Format("2/1 15:04:05")).MessageEmbed
 	ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, embed)
 	return

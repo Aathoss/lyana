@@ -1,6 +1,9 @@
-package command
+package moderation
 
 import (
+	"fmt"
+
+	"github.com/spf13/viper"
 	"gitlab.com/lyana/framework"
 )
 
@@ -11,4 +14,5 @@ func Test(ctx framework.Context) {
 	//modules.VerifRule(framework.Session)
 
 	//modules.VerifInactif(ctx.Discord)
+	fmt.Println(viper.GetViper().AllKeys())
 }

@@ -1,6 +1,7 @@
 package modules
 
 import (
+	"encoding/json"
 	"strconv"
 	"time"
 
@@ -20,13 +21,82 @@ func ExecuteTime() {
 	Minute30++
 
 	UpdateOnlinePlayer(framework.Session)
-	go mysql.UpdateInactifPlayer()
+	mysql.UpdateInactifPlayer()
 
 	if Minute30 >= 30 {
 		VerifRule(framework.Session)
 		VerifInactif(framework.Session)
 
 		Minute30 = 0
+	}
+}
+
+func VerifCandid(secondeboucle time.Duration) {
+	session := framework.Session
+
+	type jsonsheet struct {
+		SpreadsheetID string `json:"spreadsheetId"`
+		ValueRanges   []struct {
+			Range          string     `json:"range"`
+			MajorDimension string     `json:"majorDimension"`
+			Values         [][]string `json:"values"`
+		} `json:"valueRanges"`
+	}
+
+	clesAPI, iddoc := "AIzaSyCRv40zgbaSwTXN270cdWTAWfEwbNvSIFI", "1FPseonUXhNOxciTwtNx00HQIF5V0-RvJRek9Lu53CZc"
+	url1 := "https://sheets.googleapis.com/v4/spreadsheets/" + iddoc + "/values:batchGet?majorDimension=COLUMNS&ranges=A2%3AA1000&access_token=" + clesAPI + "&key=" + clesAPI
+	url2 := "https://sheets.googleapis.com/v4/spreadsheets/" + iddoc + "/values:batchGet?majorDimension=COLUMNS&ranges=C2%3AC1000&access_token=" + clesAPI + "&key=" + clesAPI
+
+	veriftemp := 0
+	enattente := 0
+
+	for {
+		body1, err := framework.RequestAPI("GET", url1)
+		if err != nil {
+			logger.ErrorLogger.Println(err)
+		}
+
+		var sheet jsonsheet
+		err = json.Unmarshal(body1, &sheet)
+		if err != nil {
+			logger.ErrorLogger.Println(err)
+		}
+
+		count1 := len(sheet.ValueRanges[0].Values[0])
+
+		//----------------------
+
+		body2, err := framework.RequestAPI("GET", url2)
+		if err != nil {
+			logger.ErrorLogger.Println(err)
+		}
+
+		err = json.Unmarshal(body2, &sheet)
+		if err != nil {
+			logger.ErrorLogger.Println(err)
+		}
+
+		count2 := len(sheet.ValueRanges[0].Values[0])
+		enattente = count2 - count1
+
+		if enattente > 0 && veriftemp != enattente {
+			tNow := time.Now()
+			embedNotif := framework.NewEmbed().
+				SetTitle(":open_mouth: " + strconv.Itoa(enattente) + " Candidature en attente.").
+				SetColor(0x43C2EB).
+				SetURL("https://unispace.page.link/mVFa").
+				SetDescription("Date : " + tNow.Format("2/1 15:04:05")).MessageEmbed
+
+			_, err = session.ChannelMessageSendEmbed("735273466051297433", embedNotif)
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+			}
+			veriftemp = enattente
+		}
+		if veriftemp > enattente {
+			veriftemp = 0
+		}
+		time.Sleep(time.Second * secondeboucle)
 	}
 }
 
@@ -51,14 +121,22 @@ func VerifInactif(session *discordgo.Session) {
 				logger.ErrorLogger.Println(err)
 				continue
 			}
+			semaine = semaine + 1
 
-			err = session.GuildMemberRoleAdd(viper.GetString("GuildID"), user.User.ID, "757730769023008958")
-			if err != nil {
-				logger.ErrorLogger.Println(err)
-				continue
+			if semaine == 1 {
+				err = session.GuildMemberRoleAdd(viper.GetString("GuildID"), user.User.ID, "757730769023008958")
+				if err != nil {
+					logger.ErrorLogger.Println(err)
+					continue
+				}
+				framework.LogsChannel("[:zzz:] " + user.User.String() + " inactif depuis " + strconv.Itoa(semaine) + " semaines")
+			} else {
+				if semaine := 4; semaine%4 == 0 {
+					framework.LogsChannel("[:zzz:] " + user.User.String() + " inactif depuis " + strconv.Itoa(semaine) + " semaines")
+				}
+
 			}
 
-			framework.LogsChannel("[:zzz:] " + user.User.String() + " inactif depuis " + strconv.Itoa(semaine+1) + " semaines")
 			mysql.UpdateMembresInactif(inf[1])
 			time.Sleep(1 * time.Second)
 		}

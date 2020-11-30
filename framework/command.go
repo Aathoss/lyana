@@ -33,9 +33,9 @@ func (handler CommandHandler) GetCmds() CmdMap {
 	return handler.cmds
 }
 
-func (handler CommandHandler) GetAllCmd(name string) (help string) {
+func (handler CommandHandler) GetAllCmd(name string) (cmdnum int, cmdaliase int, grade int, help string) {
 	cmd, _ := handler.cmds[name]
-	return cmd.help
+	return cmd.cmdnum, cmd.cmdalias, cmd.grade, cmd.help
 }
 
 func (handler CommandHandler) CheckCmd(content string) (name string) {
@@ -64,24 +64,33 @@ func (handler CommandHandler) Get(name string, gradelvl int) (*Command, bool, bo
 func (handler CommandHandler) Register(name string, alias []string, gradelvl int, command Command, helpmsg string) {
 	//logger.DebugLogger.Println("Chargement de la commande : " + viper.GetString("PrefixMsg") + name)
 	niveaucmd := 0
-	alias = append(alias, name)
-	//fmt.Println(len(name))
 
-	for _, aliasCmd := range alias {
-		cmdstruct := handler.cmds[aliasCmd]
-		cmdstruct.command = command
-		cmdstruct.grade = gradelvl
-		cmdstruct.help = helpmsg
-		cmdstruct.cmdalias = niveaucmd
-		cmdstruct.cmdnum = commandNumero
-		handler.cmds[aliasCmd] = cmdstruct
+	cmdstruct := handler.cmds[name]
+	cmdstruct.command = command
+	cmdstruct.grade = gradelvl
+	cmdstruct.help = helpmsg
+	cmdstruct.cmdalias = niveaucmd
+	cmdstruct.cmdnum = commandNumero
+	handler.cmds[name] = cmdstruct
 
-		niveaucmd++
-		Cmdliste = append(Cmdliste, aliasCmd)
+	niveaucmd++
 
-		//fmt.Print(aliasCmd + " | ")
-		//fmt.Println(cmdstruct)
+	if len(alias) > 0 {
+		for _, aliasCmd := range alias {
+			cmdstruct := handler.cmds[aliasCmd]
+			cmdstruct.command = command
+			cmdstruct.grade = gradelvl
+			cmdstruct.help = helpmsg
+			cmdstruct.cmdalias = niveaucmd
+			cmdstruct.cmdnum = commandNumero
+			handler.cmds[aliasCmd] = cmdstruct
+
+			niveaucmd++
+			Cmdliste = append(Cmdliste, aliasCmd)
+		}
 	}
+
+	Cmdliste = append(Cmdliste, name)
 	commandNumero++
 }
 

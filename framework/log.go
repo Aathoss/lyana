@@ -16,7 +16,7 @@ func ErrorDM(ctx Context, err error) {
 	if err != nil {
 		notmp, _ := regexp.MatchString(`50007`, err.Error())
 		if notmp == true {
-			ctx.Discord.ChannelMessageSendEmbed(ctx.TextChannel.ID, embedMPClose)
+			ctx.Discord.ChannelMessageSendEmbed(ctx.TextChannel.ID, EmbedMPClose)
 		}
 	}
 }
