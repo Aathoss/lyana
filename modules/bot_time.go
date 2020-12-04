@@ -62,6 +62,9 @@ func VerifCandid(secondeboucle time.Duration) {
 			logger.ErrorLogger.Println(err)
 		}
 
+		if len(sheet.ValueRanges) == 0 {
+			break
+		}
 		count1 := len(sheet.ValueRanges[0].Values[0])
 
 		//----------------------
@@ -131,7 +134,7 @@ func VerifInactif(session *discordgo.Session) {
 				}
 				framework.LogsChannel("[:zzz:] " + user.User.String() + " inactif depuis " + strconv.Itoa(semaine) + " semaines")
 			} else {
-				if semaine := 4; semaine%4 == 0 {
+				if semaine%4 == 0 {
 					framework.LogsChannel("[:zzz:] " + user.User.String() + " inactif depuis " + strconv.Itoa(semaine) + " semaines")
 				}
 
