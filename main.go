@@ -25,7 +25,6 @@ import (
 // Variable
 var (
 	CmdHandler *framework.CommandHandler
-	Token      = "NzQyNTA1ODUxMDc1NDI4NDIz.XzHGdQ.3e0fddUjcsxT19C1FwtussGA-fk"
 )
 
 func init() {
@@ -49,7 +48,7 @@ func main() {
 	CmdHandler = framework.NewCommandHandler()
 	registerCommands()
 
-	dg, err := bot.New("Bot " + Token)
+	dg, err := bot.New("Bot " + viper.GetString("ID"))
 	if err != nil {
 		logger.ErrorLogger.Println("Erreur lors de la session discord,", err)
 		return
