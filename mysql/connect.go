@@ -18,11 +18,11 @@ import (
 // Gestion de la connexion à la base de données
 func DbConn() (db *sql.DB) {
 	dbDriver := "mysql"
-	dbUser := viper.GetString("MySql.dbuser")
-	dbPass := viper.GetString("MySql.dbmdp")
-	dbName := "lyana"
-	dbIP := viper.GetString("MySql.dbip")
-	dbPort := viper.GetString("MySql.dbport")
+	dbUser := viper.GetString("MySql.Lyana.dbuser")
+	dbPass := viper.GetString("MySql.Lyana.dbmdp")
+	dbName := viper.GetString("MySql.Lyana.dbname")
+	dbIP := viper.GetString("MySql.Lyana.dbip")
+	dbPort := viper.GetString("MySql.Lyana.dbport")
 	db, err := sql.Open(dbDriver, dbUser+":"+dbPass+"@tcp("+dbIP+":"+dbPort+")/"+dbName)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
@@ -33,11 +33,11 @@ func DbConn() (db *sql.DB) {
 
 func DbConnMC() (db *sql.DB) {
 	dbDriver := "mysql"
-	dbUser := viper.GetString("MySql.dbuser")
-	dbPass := viper.GetString("MySql.dbmdp")
-	dbName := "mc_unispace"
-	dbIP := viper.GetString("MySql.dbip")
-	dbPort := viper.GetString("MySql.dbport")
+	dbUser := viper.GetString("MySql.Minecraft.dbuser")
+	dbPass := viper.GetString("MySql.Minecraft.dbmdp")
+	dbName := viper.GetString("MySql.Minecraft.dbname")
+	dbIP := viper.GetString("MySql.Minecraft.dbip")
+	dbPort := viper.GetString("MySql.Minecraft.dbport")
 	db, err := sql.Open(dbDriver, dbUser+":"+dbPass+"@tcp("+dbIP+":"+dbPort+")/"+dbName)
 	if err != nil {
 		logger.ErrorLogger.Println(err)

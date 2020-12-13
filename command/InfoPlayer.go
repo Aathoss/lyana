@@ -96,7 +96,10 @@ func requestSQLPlayer(player string) {
 	db := mysql.DbConnMC()
 	defer db.Close()
 
-	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='playertime'").Scan(&stats.playertime)
+	err := db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='playertime'").Scan(&stats.playertime)
+	if err != nil {
+		logger.ErrorLogger.Println(err)
+	}
 	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='jump'").Scan(&stats.jump)
 	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='deaths'").Scan(&stats.deaths)
 	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='craftitems'").Scan(&stats.craftitems)
