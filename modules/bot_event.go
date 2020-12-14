@@ -5,6 +5,7 @@ import (
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
+	"gitlab.com/lyana/rcon"
 )
 
 var (
@@ -21,5 +22,6 @@ func Ready(s *discordgo.Session, Event *discordgo.Event) {
 		logger.InfoLogger.Println("Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]")
 
 		framework.LogsChannel("[:tools:] [v:" + Version + "] **Lyana** à correctement démarré")
+		rcon.Openrcon()
 	}
 }

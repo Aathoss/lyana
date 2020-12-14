@@ -2,6 +2,7 @@ package rcon
 
 import (
 	"errors"
+	"fmt"
 	"strconv"
 	"strings"
 	"time"
@@ -17,7 +18,7 @@ var (
 )
 
 func RconCommandeList() error {
-	openRcon()
+	Openrcon()
 
 	response, err := c.SendCommand("list")
 	if err != nil {
@@ -49,9 +50,11 @@ func RconCommandeList() error {
 }
 
 func RconCommandeWhitelistAdd(player string) ([]string, error) {
-	openRcon()
+	Openrcon()
 
 	response, err := c.SendCommand("ewhitelist add " + player)
+	fmt.Println(response)
+	fmt.Println(err)
 	if err != nil {
 		logger.ErrorLogger.Println("Send Command", err)
 		connect = false
@@ -63,7 +66,7 @@ func RconCommandeWhitelistAdd(player string) ([]string, error) {
 }
 
 func RconCommandeWhitelistRemove(player string) ([]string, error) {
-	openRcon()
+	Openrcon()
 
 	response, err := c.SendCommand("ewhitelist remove " + player)
 	if err != nil {
@@ -77,7 +80,7 @@ func RconCommandeWhitelistRemove(player string) ([]string, error) {
 }
 
 func RconCommandeKick(player, raison string) ([]string, error) {
-	openRcon()
+	Openrcon()
 
 	response, err := c.SendCommand("kick " + player + " " + raison)
 	if err != nil {
@@ -90,10 +93,11 @@ func RconCommandeKick(player, raison string) ([]string, error) {
 	return messageSplit, nil
 }
 
-func openRcon() {
+func Openrcon() {
 	for connect == false {
 		liaison, err := NewClient(viper.GetString("Minecraft.IP"), viper.GetInt("Minecraft.Port"), viper.GetString("Minecraft.Mdp"))
 		if err != nil {
+			logger.ErrorLogger.Println(err)
 			connect = false
 			time.Sleep(10 * time.Second)
 			continue

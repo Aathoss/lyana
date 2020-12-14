@@ -25,6 +25,7 @@ func AddPlayer(ctx framework.Context) {
 			framework.LogsChannel("[:open_mouth:] [Utilisateur : " + mentions[0].String() + " | Pseudo : " + playermc + "] Ce pseudo existe déjà dans notre base de données.")
 			return
 		}
+
 		if countuuid == 1 {
 			framework.LogsChannel("[:open_mouth:] [Utilisateur : " + mentions[0].String() + " | Pseudo : " + playermc + "] Il n'est pas autorisé d'avoir un double compte...")
 			return
