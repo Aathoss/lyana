@@ -63,7 +63,7 @@ func VerifCandid(secondeboucle time.Duration) {
 		}
 
 		if len(sheet.ValueRanges) == 0 {
-			break
+			continue
 		}
 		count1 := len(sheet.ValueRanges[0].Values[0])
 
