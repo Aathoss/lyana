@@ -32,6 +32,8 @@ func ExecuteTime() {
 }
 
 func VerifCandid(secondeboucle time.Duration) {
+	logger.DebugLogger.Println("Starting verifCandid")
+
 	session := framework.Session
 
 	type jsonsheet struct {

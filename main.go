@@ -56,7 +56,7 @@ func main() {
 
 	dg.AddHandler(modules.Ready)
 	dg.AddHandler(modules.Stats)
-	dg.AddHandler(modules.TestVocal)
+	//dg.AddHandler(modules.TestVocal)
 	dg.AddHandler(modules.GuildMemberAdd)
 	dg.AddHandler(modules.GuildMemberLeave)
 	dg.AddHandler(modules.ReactionAdd)

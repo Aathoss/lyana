@@ -28,12 +28,12 @@ func AddWhitelist(uiddiscord, playermc string) error {
 		t1 := time.Now()
 		t2 := t1.Unix()
 
-		insert, err := db.Prepare("INSERT INTO membre(tag_discord, player_mc, date_whitelist, inactif) VALUES(?,?,?,?)")
+		insert, err := db.Prepare("INSERT INTO membre(tag_discord, player_mc, date_whitelist, inactif, notif) VALUES(?,?,?,?,?)")
 		if err != nil {
 			logger.ErrorLogger.Println(err)
 			return err
 		}
-		_, err = insert.Exec(uiddiscord, playermc, t2, t2)
+		_, err = insert.Exec(uiddiscord, playermc, t2, t2, 0)
 		if err != nil {
 			logger.ErrorLogger.Println(err)
 			return err
