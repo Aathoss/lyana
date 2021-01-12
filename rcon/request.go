@@ -2,7 +2,6 @@ package rcon
 
 import (
 	"errors"
-	"fmt"
 	"strconv"
 	"strings"
 	"time"
@@ -53,8 +52,6 @@ func RconCommandeWhitelistAdd(player string) ([]string, error) {
 	Openrcon()
 
 	response, err := c.SendCommand("ewhitelist add " + player)
-	fmt.Println(response)
-	fmt.Println(err)
 	if err != nil {
 		logger.ErrorLogger.Println("Send Command", err)
 		connect = false

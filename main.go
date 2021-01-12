@@ -16,6 +16,7 @@ import (
 	"gitlab.com/lyana/command/informations"
 	"gitlab.com/lyana/command/moderation"
 	"gitlab.com/lyana/command/moderation/stats"
+	"gitlab.com/lyana/command/vocaltemporaire"
 	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
 	"gitlab.com/lyana/modules"
@@ -56,13 +57,12 @@ func main() {
 
 	dg.AddHandler(modules.Ready)
 	dg.AddHandler(modules.Stats)
-	//dg.AddHandler(modules.TestVocal)
+	dg.AddHandler(modules.VocalTemporaire)
 	dg.AddHandler(modules.GuildMemberAdd)
 	dg.AddHandler(modules.GuildMemberLeave)
 	dg.AddHandler(modules.ReactionAdd)
 	dg.AddHandler(commandHandler)
 
-	dg.Identify.Intents = discordgo.MakeIntent(discordgo.IntentsGuildVoiceStates)
 	dg.Identify.Intents = discordgo.MakeIntent(discordgo.IntentsAll)
 	err = dg.Open()
 	if err != nil {
@@ -176,4 +176,8 @@ func registerCommands() {
 	//Commande d'informations
 	CmdHandler.Register("map", []string{}, 0, informations.DynmapDropURL, "Affiche le liens de la dynmap")
 	CmdHandler.Register("globalstats", []string{}, 1, informations.StatsUnispaceV1, "???")
+
+	//Commande vocal VocalTemporaire
+	CmdHandler.Register("vocaltitre", []string{}, 0, vocaltemporaire.VocalTempEditTitre, "Modifie le titre de votre channel vocal temporaire")
+	CmdHandler.Register("vocallimite", []string{}, 0, vocaltemporaire.VocalTempEditLimit, "Modifie le nombre de memebre dans votre channel temporaire")
 }

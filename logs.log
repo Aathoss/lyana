@@ -7,3 +7,729 @@ INFO: 2020/12/13 11:49:33 main.go:46:
 ---------------------------------
 Démarrage du bot en cours
 INFO: 2020/12/13 11:49:34 bot_event.go:21: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 20:18:07 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 20:18:08 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 20:18:08 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 20:34:26 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 20:34:27 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 20:34:27 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 20:36:03 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 20:36:04 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 20:36:04 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2021/01/07 20:36:10 testVocal.go:35: HTTP 400 Bad Request, {"type": ["Value must be one of (0, 2, 4, 6)."]}
+INFO: 2021/01/07 20:38:34 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 20:38:34 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 20:38:34 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2021/01/07 20:38:39 testVocal.go:35: HTTP 400 Bad Request, {"type": ["Value must be one of (0, 2, 4, 6)."]}
+INFO: 2021/01/07 20:40:46 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 20:40:47 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 20:40:47 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 20:46:48 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 20:46:49 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 20:46:49 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 20:49:10 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 20:49:11 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 20:49:11 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 20:54:38 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 20:54:39 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 20:54:39 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 20:55:43 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 20:55:44 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 20:55:44 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:12:51 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:12:52 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:12:52 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:15:43 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:15:44 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:15:44 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:18:26 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:18:27 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:18:27 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:20:15 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:20:16 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:20:16 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:24:01 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:24:02 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:24:02 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:25:40 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:25:41 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:25:41 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:36:11 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:36:12 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:36:12 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:37:41 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:37:42 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:37:42 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:44:35 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:44:36 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:44:36 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:47:20 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:47:21 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:47:21 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:52:06 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:52:07 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:52:07 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:53:28 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:53:29 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:53:29 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:54:33 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:54:34 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:54:34 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:56:41 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:56:42 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:56:42 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 21:59:43 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 21:59:44 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 21:59:44 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/07 22:29:21 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/07 22:29:22 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/07 22:29:22 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 13:08:40 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 13:08:41 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 13:08:41 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 13:09:30 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 13:09:31 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 13:09:31 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 13:15:10 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 13:15:11 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 13:15:11 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 13:20:28 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 13:20:29 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 13:20:29 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 13:21:24 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 13:21:25 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 13:21:25 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 13:30:17 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 13:30:17 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 13:30:17 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 13:31:44 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 13:31:45 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 13:31:45 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 13:32:42 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 13:32:42 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 13:32:42 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 13:33:23 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 13:33:24 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 13:33:24 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 13:34:16 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 13:34:17 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 13:34:17 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 13:40:36 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 13:40:37 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 13:40:37 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 13:41:33 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 13:41:33 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 13:41:33 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 13:42:27 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 13:42:28 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 13:42:28 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 13:43:25 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 13:43:26 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 13:43:26 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 18:30:58 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 18:30:59 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 18:30:59 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/08 18:31:33 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/08 18:31:34 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/08 18:31:34 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 09:58:00 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2021/01/10 09:58:01 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 09:58:01 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 10:26:01 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 10:26:02 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 10:26:02 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 10:29:21 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 10:29:22 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 10:29:22 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 10:30:39 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 10:30:40 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 10:30:40 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 10:31:33 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 10:31:33 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 10:31:33 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 10:33:48 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 10:33:49 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 10:33:49 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 10:35:44 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 10:35:44 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 10:35:44 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 10:36:55 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 10:36:56 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 10:36:56 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 10:37:15 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 10:37:16 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 10:37:16 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 10:38:25 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 10:38:26 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 10:38:26 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 10:38:30 tempvoc.go:39: Error 1364: Field 'channelid' doesn't have a default value
+ERROR: 2021/01/10 11:06:36 bot_time.go:58: Get "https://sheets.googleapis.com/v4/spreadsheets/1FPseonUXhNOxciTwtNx00HQIF5V0-RvJRek9Lu53CZc/values:batchGet?majorDimension=COLUMNS&ranges=A2%3AA1000&access_token=AIzaSyCRv40zgbaSwTXN270cdWTAWfEwbNvSIFI&key=AIzaSyCRv40zgbaSwTXN270cdWTAWfEwbNvSIFI": read tcp 192.168.1.101:54896->216.58.204.138:443: wsarecv: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+ERROR: 2021/01/10 11:06:36 bot_time.go:64: unexpected end of JSON input
+ERROR: 2021/01/10 11:06:45 request.go:24: Send Command createPayloadFromPacket: Failed reading bytes
+INFO: 2021/01/10 11:45:54 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 11:45:56 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 11:45:56 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 11:53:52 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 11:53:53 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 11:53:53 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 11:56:06 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 11:56:07 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 11:56:07 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 14:54:23 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 14:54:24 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 14:54:24 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2021/01/10 14:54:30 tempvoc.go:12: sql: Scan error on column index 0, name "channelid": destination not a pointer
+INFO: 2021/01/10 14:56:07 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 14:56:07 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 14:56:07 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 14:57:18 main.go:41: Config file changed: C:\Users\Thomas\go\src\gitlab.com\lyana\config.yml
+INFO: 2021/01/10 14:57:18 main.go:41: Config file changed: C:\Users\Thomas\go\src\gitlab.com\lyana\config.yml
+INFO: 2021/01/10 14:58:04 main.go:41: Config file changed: C:\Users\Thomas\go\src\gitlab.com\lyana\config.yml
+INFO: 2021/01/10 14:58:04 main.go:41: Config file changed: C:\Users\Thomas\go\src\gitlab.com\lyana\config.yml
+INFO: 2021/01/10 15:01:50 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 15:01:51 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 15:01:51 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 15:06:25 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 15:06:26 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 15:06:26 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2021/01/10 15:06:43 testVocal.go:39: HTTP 400 Bad Request, {"message": "Unknown Channel", "code": 10003}
+INFO: 2021/01/10 15:10:56 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 15:10:57 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 15:10:57 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2021/01/10 15:11:06 testVocal.go:44: HTTP 400 Bad Request, {"message": "Unknown Channel", "code": 10003}
+INFO: 2021/01/10 15:12:15 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 15:12:16 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 15:12:16 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2021/01/10 15:12:18 testVocal.go:44: HTTP 400 Bad Request, {"message": "Unknown Channel", "code": 10003}
+INFO: 2021/01/10 15:16:18 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 15:16:19 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 15:16:19 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 15:18:37 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 15:18:38 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 15:18:38 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2021/01/10 15:18:41 testVocal.go:42: Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE uuid = 693473406108041218' at line 1
+INFO: 2021/01/10 15:19:53 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 15:19:54 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 15:19:54 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 15:21:14 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 15:21:15 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 15:21:15 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 15:25:46 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 15:25:47 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 15:25:47 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 15:29:25 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 15:29:26 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 15:29:26 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 15:32:02 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 15:32:02 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 15:32:02 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 15:58:55 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 15:58:56 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 15:58:56 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 16:07:53 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 16:07:54 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 16:07:54 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 16:08:45 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 16:08:46 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 16:08:46 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 16:09:03 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 16:09:04 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 16:09:04 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 16:23:24 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 16:23:25 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 16:23:25 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 16:25:52 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 16:25:53 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 16:25:53 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 16:30:35 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 16:30:36 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 16:30:36 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 16:31:29 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 16:31:29 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 16:31:29 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 16:34:47 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 16:34:48 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 16:34:48 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 16:43:42 main.go:41: Config file changed: C:\Users\Thomas\go\src\gitlab.com\lyana\config.yml
+INFO: 2021/01/10 16:43:42 main.go:41: Config file changed: C:\Users\Thomas\go\src\gitlab.com\lyana\config.yml
+INFO: 2021/01/10 20:13:44 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:13:45 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:13:45 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 20:14:18 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2021/01/10 20:14:19 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 20:14:19 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:20:59 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:21:00 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:21:00 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 20:22:59 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:23:00 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:23:00 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 20:24:04 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:24:05 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:24:05 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 20:24:36 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:24:37 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:24:37 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 20:30:40 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:30:41 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:30:41 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 20:31:59 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:32:00 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:32:00 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 20:33:35 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:33:36 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:33:36 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 20:33:50 testVocal.go:113: HTTP 404 Not Found, {"message": "404: Not Found", "code": 0}
+INFO: 2021/01/10 20:34:37 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:34:38 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:34:38 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2021/01/10 20:34:45 tempvoc.go:49: Error 1054: Unknown column '' in 'field list'
+DEBUG: 2021/01/10 20:34:45 testVocal.go:118: Error 1054: Unknown column '' in 'field list'
+INFO: 2021/01/10 20:35:09 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:35:10 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:35:10 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 20:35:19 testVocal.go:113: HTTP 404 Not Found, {"message": "404: Not Found", "code": 0}
+INFO: 2021/01/10 20:35:44 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:35:45 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:35:45 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+ERROR: 2021/01/10 20:35:54 tempvoc.go:49: Error 1054: Unknown column '' in 'field list'
+DEBUG: 2021/01/10 20:35:54 testVocal.go:118: Error 1054: Unknown column '' in 'field list'
+INFO: 2021/01/10 20:36:45 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:36:46 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:36:46 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 20:38:11 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:38:12 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:38:12 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 20:41:48 main.go:41: Config file changed: C:\Users\Thomas\go\src\gitlab.com\lyana\config.yml
+INFO: 2021/01/10 20:41:48 main.go:41: Config file changed: C:\Users\Thomas\go\src\gitlab.com\lyana\config.yml
+INFO: 2021/01/10 20:51:31 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:51:32 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:51:32 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 20:51:38 vocalTemporaire.go:107: HTTP 404 Not Found, {"message": "404: Not Found", "code": 0}
+INFO: 2021/01/10 20:52:09 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:52:10 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:52:10 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 20:52:15 vocalTemporaire.go:107: HTTP 404 Not Found, {"message": "404: Not Found", "code": 0}
+INFO: 2021/01/10 20:52:36 main.go:41: Config file changed: C:\Users\Thomas\go\src\gitlab.com\lyana\config.yml
+INFO: 2021/01/10 20:52:36 main.go:41: Config file changed: C:\Users\Thomas\go\src\gitlab.com\lyana\config.yml
+INFO: 2021/01/10 20:52:40 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:52:41 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:52:41 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 20:52:47 vocalTemporaire.go:107: HTTP 404 Not Found, {"message": "404: Not Found", "code": 0}
+DEBUG: 2021/01/10 20:52:53 vocalTemporaire.go:107: HTTP 404 Not Found, {"message": "404: Not Found", "code": 0}
+DEBUG: 2021/01/10 20:54:10 vocalTemporaire.go:107: HTTP 404 Not Found, {"message": "404: Not Found", "code": 0}
+INFO: 2021/01/10 20:54:18 main.go:41: Config file changed: C:\Users\Thomas\go\src\gitlab.com\lyana\config.yml
+INFO: 2021/01/10 20:54:18 main.go:41: Config file changed: C:\Users\Thomas\go\src\gitlab.com\lyana\config.yml
+INFO: 2021/01/10 20:56:28 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 20:56:29 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 20:56:29 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 20:56:32 vocalTemporaire.go:109: HTTP 404 Not Found, {"message": "404: Not Found", "code": 0}
+INFO: 2021/01/10 21:01:42 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 21:01:42 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 21:01:42 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 21:01:58 vocalTemporaire.go:113: HTTP 404 Not Found, {"message": "404: Not Found", "code": 0}
+INFO: 2021/01/10 21:03:42 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 21:03:43 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 21:03:43 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 21:03:53 vocalTemporaire.go:114: HTTP 404 Not Found, {"message": "404: Not Found", "code": 0}
+INFO: 2021/01/10 21:04:52 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 21:04:53 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 21:04:53 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 21:05:06 vocalTemporaire.go:113: HTTP 404 Not Found, {"message": "404: Not Found", "code": 0}
+INFO: 2021/01/10 21:07:22 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 21:07:23 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 21:07:23 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 21:07:32 vocalTemporaire.go:113: HTTP 404 Not Found, {"message": "404: Not Found", "code": 0}
+INFO: 2021/01/10 22:16:44 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 22:16:45 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 22:16:45 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 22:17:01 vocalTemporaire.go:115: HTTP 404 Not Found, {"message": "404: Not Found", "code": 0}
+INFO: 2021/01/10 22:18:16 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 22:18:16 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 22:18:16 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/10 22:18:25 vocalTemporaire.go:113: HTTP 404 Not Found, {"message": "404: Not Found", "code": 0}
+INFO: 2021/01/10 22:19:06 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 22:19:07 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 22:19:07 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/10 22:19:40 main.go:46: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/10 22:19:41 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/10 22:19:41 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 16:12:14 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 16:12:15 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 16:12:15 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 16:45:04 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 16:45:05 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 16:45:05 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 16:46:22 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 16:46:23 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 16:46:23 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 16:59:07 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 16:59:08 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 16:59:08 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 17:01:13 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 17:01:14 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 17:01:14 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 17:02:57 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 17:02:58 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 17:02:58 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 17:04:05 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 17:04:06 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 17:04:06 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 17:06:44 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 17:06:45 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 17:06:45 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 17:35:41 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 17:35:42 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 17:35:42 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 17:39:43 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 17:39:43 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 17:39:43 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 17:48:42 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 17:48:42 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 17:48:42 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 17:49:08 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 17:49:09 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 17:49:09 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 17:51:17 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 17:51:18 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 17:51:18 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 17:58:06 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 17:58:07 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 17:58:07 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 17:59:02 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 17:59:03 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 17:59:03 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 17:59:25 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 17:59:26 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 17:59:26 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 18:37:35 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 18:37:36 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 18:37:36 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 18:40:35 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 18:40:37 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 18:40:37 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 18:42:56 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 18:42:57 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 18:42:57 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 18:45:47 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 18:45:47 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 18:45:47 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 18:48:29 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+INFO: 2021/01/12 18:48:30 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/01/12 18:48:30 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 18:50:37 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 18:50:38 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 18:50:38 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 18:55:19 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 18:55:20 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 18:55:20 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 18:56:12 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 18:56:13 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 18:56:13 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 18:56:48 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 18:56:49 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 18:56:49 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 18:57:22 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 18:57:23 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 18:57:23 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 18:58:10 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 18:58:11 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 18:58:11 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 19:00:55 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 19:00:56 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 19:00:56 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 19:05:20 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 19:05:21 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 19:05:21 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 19:06:06 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 19:06:07 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 19:06:07 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 19:06:31 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 19:06:35 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 19:06:35 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 19:06:55 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 19:06:56 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 19:06:56 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 19:06:59 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 19:07:01 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 19:07:01 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 19:08:34 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 19:08:35 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 19:08:35 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/12 19:09:37 main.go:47: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/12 19:09:38 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/12 19:09:38 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
