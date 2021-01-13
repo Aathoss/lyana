@@ -3,7 +3,7 @@ package modules
 import (
 	"github.com/bwmarrin/discordgo"
 	"github.com/spf13/viper"
-	"gitlab.com/lyana/command/moderation/stats"
+	"gitlab.com/lyana/command/stats"
 	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
 	"gitlab.com/lyana/rcon"

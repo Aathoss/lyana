@@ -13,9 +13,10 @@ import (
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/command"
+	"gitlab.com/lyana/command/event"
 	"gitlab.com/lyana/command/informations"
 	"gitlab.com/lyana/command/moderation"
-	"gitlab.com/lyana/command/moderation/stats"
+	"gitlab.com/lyana/command/stats"
 	"gitlab.com/lyana/command/vocaltemporaire"
 	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
@@ -180,4 +181,7 @@ func registerCommands() {
 	//Commande vocal VocalTemporaire
 	CmdHandler.Register("vocaltitre", []string{}, 0, vocaltemporaire.VocalTempEditTitre, "Modifie le titre de votre channel vocal temporaire")
 	CmdHandler.Register("vocallimite", []string{}, 0, vocaltemporaire.VocalTempEditLimit, "Modifie le nombre de memebre dans votre channel temporaire")
+
+	CmdHandler.Register("event add", []string{}, 0, event.CreationEvent, "Permet d'ajouter un event")
+
 }

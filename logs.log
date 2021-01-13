@@ -733,3 +733,13 @@ INFO: 2021/01/12 19:09:37 main.go:47:
 Démarrage du bot en cours
 DEBUG: 2021/01/12 19:09:38 bot_time.go:35: Starting verifCandid
 INFO: 2021/01/12 19:09:38 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/13 22:36:05 main.go:48: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/13 22:36:06 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/13 22:36:06 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+INFO: 2021/01/13 22:39:35 main.go:48: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/01/13 22:39:35 bot_time.go:35: Starting verifCandid
+INFO: 2021/01/13 22:39:35 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
