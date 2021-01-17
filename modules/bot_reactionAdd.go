@@ -20,4 +20,23 @@ func ReactionAdd(s *discordgo.Session, reac *discordgo.MessageReactionAdd) {
 	if reac.Emoji.Name != "✅" && reac.ChannelID == viper.GetString("ChannelID.Reglement") {
 		s.MessageReactionRemove(reac.ChannelID, reac.MessageID, reac.Emoji.Name, reac.UserID)
 	}
+
+	//Ajoute une réaction pour participé à l'événement
+	if reac.Emoji.Name == "Yes_Night" && reac.ChannelID == viper.GetString("ChannelID.Event") {
+		mysql.ReactionParticipants(0, reac.MessageID, reac.UserID)
+	} else if reac.Emoji.Name != "Yes_Night" && reac.ChannelID == viper.GetString("ChannelID.Event") {
+		s.MessageReactionRemove(reac.ChannelID, reac.MessageID, reac.Emoji.Name, reac.UserID)
+	}
+}
+
+func ReactionRemove(s *discordgo.Session, reac *discordgo.MessageReactionRemove) {
+	if reac.UserID == s.State.User.ID {
+		return
+	}
+
+	//remove une réaction pour participé à l'événement
+	if reac.Emoji.Name == "Yes_Night" && reac.ChannelID == viper.GetString("ChannelID.Event") {
+		mysql.ReactionParticipants(1, reac.MessageID, reac.UserID)
+	}
+
 }

@@ -62,6 +62,7 @@ func main() {
 	dg.AddHandler(modules.GuildMemberAdd)
 	dg.AddHandler(modules.GuildMemberLeave)
 	dg.AddHandler(modules.ReactionAdd)
+	dg.AddHandler(modules.ReactionRemove)
 	dg.AddHandler(commandHandler)
 
 	dg.Identify.Intents = discordgo.MakeIntent(discordgo.IntentsAll)
@@ -72,6 +73,7 @@ func main() {
 	}
 
 	go modules.VerifCandid(10)
+	go modules.UpdateEvent(5)
 
 	sc := make(chan os.Signal, 1)
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, os.Kill)
@@ -92,6 +94,7 @@ out:
 }
 
 func commandHandler(s *bot.Session, m *bot.MessageCreate) {
+	framework.Session = s
 	user := m.Author
 
 	if user.ID == s.State.User.ID || user.Bot {
@@ -159,7 +162,7 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 }
 
 func registerCommands() {
-	CmdHandler.Register("test6", []string{}, 1, moderation.Test, "???")
+	CmdHandler.Register("test21", []string{}, 1, moderation.Test, "???")
 
 	//Commande Modération
 	CmdHandler.Register("stats", []string{}, 1, stats.Statistique, "Returne les statistique du bot")
@@ -179,9 +182,17 @@ func registerCommands() {
 	CmdHandler.Register("globalstats", []string{}, 1, informations.StatsUnispaceV1, "???")
 
 	//Commande vocal VocalTemporaire
-	CmdHandler.Register("vocaltitre", []string{}, 0, vocaltemporaire.VocalTempEditTitre, "Modifie le titre de votre channel vocal temporaire")
-	CmdHandler.Register("vocallimite", []string{}, 0, vocaltemporaire.VocalTempEditLimit, "Modifie le nombre de memebre dans votre channel temporaire")
+	CmdHandler.Register("vtitre", []string{}, 0, vocaltemporaire.VocalTempEditTitre, "Modifie le titre de votre channel vocal temporaire")
+	CmdHandler.Register("vlimite", []string{}, 0, vocaltemporaire.VocalTempEditLimit, "Modifie le nombre de memebre dans votre channel temporaire")
 
-	CmdHandler.Register("event add", []string{}, 0, event.CreationEvent, "Permet d'ajouter un event")
-
+	//Commande event
+	CmdHandler.Register("event cree", []string{}, 1, event.ConstructionEvent, "Démarre la création d'un évent")
+	CmdHandler.Register("event titre", []string{}, 1, event.EditTitre, "Modifie le titre durant la création")
+	CmdHandler.Register("event gps", []string{}, 1, event.EditEmplacement, "Modifie la localisation durant la création")
+	CmdHandler.Register("event desc", []string{}, 1, event.EditDescription, "Modifie la description lors de la création")
+	CmdHandler.Register("event date", []string{}, 1, event.EditDate, "Modifie la date lors de la création")
+	CmdHandler.Register("event recompense", []string{}, 1, event.EditRecompense, "Modifie la liste de récompense lors de la création")
+	CmdHandler.Register("event auteur", []string{}, 1, event.EditAuteur, "Modifie l'auteur durant la création")
+	CmdHandler.Register("event publi", []string{}, 1, event.PubliEvent, "Publi la création de l'évent pour tout le monde")
+	CmdHandler.Register("event termine", []string{}, 1, event.EventTermine, "Publi la création de l'évent pour tout le monde")
 }
