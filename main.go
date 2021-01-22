@@ -30,6 +30,8 @@ var (
 )
 
 func init() {
+	os.Setenv("TZ", "Europe/Paris")
+
 	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
 	viper.AddConfigPath(".")
