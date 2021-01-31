@@ -16,7 +16,7 @@ func PubliEvent(ctx framework.Context) {
 	num, _ := strconv.Atoi(ctx.Args[0])
 	index := framework.EventContructionIndex
 
-	if len(ctx.Args[0]) != 0 {
+	if len(ctx.Args[0]) == 0 {
 		index = num
 	}
 
