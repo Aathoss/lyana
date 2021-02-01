@@ -26,6 +26,8 @@ func DbConn() (db *sql.DB) {
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
+
+	db.SetConnMaxLifetime(2000)
 	return db
 }
 
