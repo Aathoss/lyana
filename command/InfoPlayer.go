@@ -13,6 +13,7 @@ import (
 
 var (
 	stats statsv1
+	count int
 )
 
 type statsv1 struct {
@@ -36,7 +37,7 @@ func InfoPlayer(ctx framework.Context) {
 
 	if len(mentions) == 1 {
 		if mentions[0].ID == "742505851075428423" {
-			ctx.Discord.ChannelMessageSend(ctx.Message.ChannelID, "Qui t’a donné l'autorisation de me parler ?")
+			ctx.Discord.ChannelMessageSend(ctx.Message.ChannelID, "Qui t’a donné l'autorisation de me parler ? xD")
 		}
 
 		u, err := ctx.Discord.GuildMember(viper.GetString("GuildID"), mentions[0].ID)
@@ -59,8 +60,14 @@ func InfoPlayer(ctx framework.Context) {
 	_, pseudoMC, t2, _ := mysql.GetWhitelist(user.User.ID)
 
 	requestSQLPlayer(pseudoMC)
-	msgCount, err := mysql.ReturnNumMessages(user.User.ID)
-	messageCount := "\nMessages envoyés : **" + strconv.Itoa(msgCount) + "**"
+
+	//Compte le nombre de message envoyer par l'utilisateur
+	err := framework.DBLyana.QueryRow("SELECT COUNT(uuid) FROM logs WHERE categorie=? AND uuid=?", "msgcount", user.User.ID).Scan(&count)
+	if err != nil {
+		logger.ErrorLogger.Println(err)
+	}
+
+	messageCount := "\nMessages envoyés : **" + strconv.Itoa(count) + "**"
 	if err != nil {
 		messageCount = ""
 	}

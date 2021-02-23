@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"os"
 	"os/signal"
 	"strings"
@@ -20,7 +19,6 @@ import (
 	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
 	"gitlab.com/lyana/modules"
-	"gitlab.com/lyana/mysql"
 )
 
 // Variable
@@ -79,23 +77,13 @@ out:
 
 func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 	framework.Session = s
-
-	if viper.GetBool("Dev.PrintMessage") == true {
-		log.Println(m.Content)
-	}
-
-	if viper.GetBool("Dev.test") != true {
-		mysql.NewCountMessage(m.Author.ID)
-	}
 	framework.CountMsg = framework.CountMsg + 1
 
-	content := m.Content
-	content = content[len(viper.GetString("PrefixMsg")):]
+	//content = content[len(viper.GetString("PrefixMsg")):]
 	if m.Author.ID == s.State.User.ID ||
+		len(m.Content) < 1 ||
 		m.Author.Bot ||
-		len(content) <= len(viper.GetString("PrefixMsg")) ||
-		content[:len(viper.GetString("PrefixMsg"))] != viper.GetString("PrefixMsg") ||
-		len(content) < 1 {
+		len(m.Content) <= len(viper.GetString("PrefixMsg")) {
 		return
 	}
 
@@ -110,7 +98,7 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 		staff = framework.VerifStaff(m.Member.Roles)
 	}
 
-	checkCmdName := CmdHandler.CheckCmd(content)
+	checkCmdName := CmdHandler.CheckCmd(m.Content)
 	command, found, permission := CmdHandler.Get(checkCmdName, staff)
 	if !found {
 		return
@@ -127,7 +115,7 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 	}
 
 	ctx := framework.NewContext(s, guild, channel, m.Author, m, CmdHandler, checkCmdName, staff)
-	messageSplit := strings.Fields(content)
+	messageSplit := strings.Fields(m.Content)
 	if len(strings.Fields(checkCmdName)) == 1 {
 		ctx.Args = messageSplit[1:]
 	}
@@ -139,7 +127,7 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 }
 
 func registerCommands() {
-	CmdHandler.Register("test21", []string{}, 1, moderation.Test, "???")
+	CmdHandler.Register("test50", []string{}, 1, moderation.Test, "???")
 
 	//Commandes Modération
 	CmdHandler.Register("stats", []string{}, 1, stats.Statistique, "Returne les statistique du bot")
@@ -150,7 +138,6 @@ func registerCommands() {
 	//Commandes Liée à minecraft
 	CmdHandler.Register("fiche", []string{"profils", "profil"}, 0, command.InfoPlayer, "Permet de voir votre fiche utilisateur/player")
 	CmdHandler.Register("online", []string{}, 0, command.OnlinePlayer, "Affiche les joueurs connecté")
-	CmdHandler.Register("signal", []string{}, 0, command.AddSignalement, "Permets aux joueurs whitelist sur le serveur de signaler un autre joueur commettant une infraction")
 	CmdHandler.Register("pardon", []string{}, 1, command.RemoveSignalement, "Permet au staff de retiré un signalement")
 	CmdHandler.Register("addplayer", []string{}, 1, command.AddPlayer, "???")
 
