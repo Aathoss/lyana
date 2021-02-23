@@ -5,30 +5,22 @@ import (
 	"strconv"
 	"strings"
 
+	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
 )
 
 func CountIndexEvent() (count int, err error) {
-	db := DbConn()
-	defer db.Close()
-
-	err = db.QueryRow("SELECT `AUTO_INCREMENT` FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 's13_lyana' AND TABLE_NAME = 'event'").Scan(&count)
+	err = framework.DBLyana.QueryRow("SELECT `AUTO_INCREMENT` FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 's13_lyana' AND TABLE_NAME = 'event'").Scan(&count)
 	return count, err
 }
 
 func CreateEvent(status, titre, auteur, messageid, channelid, emplacement, eventdate, description, recompense, participant string) (err error) {
-	db := DbConn()
-	defer db.Close()
-
-	insert, err := db.Prepare("INSERT INTO event(status, messageid, channelid, titre, auteur, localisation, description, date, recompense, participant) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
+	insert, err := framework.DBLyana.Prepare("INSERT INTO event(status, messageid, channelid, titre, auteur, localisation, description, date, recompense, participant) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")
 	_, err = insert.Exec(status, messageid, channelid, titre, auteur, emplacement, description, eventdate, recompense, participant)
 	return err
 }
 
 func GetCreationEvent(idtab int) (info []string, err error) {
-	db := DbConn()
-	defer db.Close()
-
 	var (
 		id           int
 		status       string
@@ -45,7 +37,7 @@ func GetCreationEvent(idtab int) (info []string, err error) {
 
 	info = []string{}
 
-	err = db.QueryRow("SELECT * FROM event WHERE id = ? LIMIT 1", idtab).Scan(&id, &status, &messageid, &channelid, &titre, &auteur, &localisation, &description, &date, &recompense, &participant)
+	err = framework.DBLyana.QueryRow("SELECT * FROM event WHERE id = ? LIMIT 1", idtab).Scan(&id, &status, &messageid, &channelid, &titre, &auteur, &localisation, &description, &date, &recompense, &participant)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 		return info, err
@@ -57,9 +49,6 @@ func GetCreationEvent(idtab int) (info []string, err error) {
 }
 
 func GetMultiEvent() (content [][]string, err error) {
-	db := DbConn()
-	defer db.Close()
-
 	var (
 		id           int
 		status       string
@@ -75,7 +64,7 @@ func GetMultiEvent() (content [][]string, err error) {
 		tab          [][]string
 	)
 
-	rows, err := db.Query("SELECT * FROM event WHERE status != ? AND status != ?", "dev", "terminer")
+	rows, err := framework.DBLyana.Query("SELECT * FROM event WHERE status != ? AND status != ?", "dev", "terminer")
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -108,8 +97,6 @@ func GetMultiEvent() (content [][]string, err error) {
 //3 = prepterminer
 //4 = terminer
 func EditStatus(status, id int) (err error) {
-	db := DbConn()
-	defer db.Close()
 	situation := "dev"
 
 	if status == 1 {
@@ -122,7 +109,7 @@ func EditStatus(status, id int) (err error) {
 		situation = "terminer"
 	}
 
-	_, err = db.Query("UPDATE event SET status = ? WHERE id = ?", situation, id)
+	_, err = framework.DBLyana.Query("UPDATE event SET status = ? WHERE id = ?", situation, id)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -131,10 +118,7 @@ func EditStatus(status, id int) (err error) {
 }
 
 func EditTitre(titre string, id int) (err error) {
-	db := DbConn()
-	defer db.Close()
-
-	_, err = db.Query("UPDATE event SET titre = ? WHERE id = ?", titre, id)
+	_, err = framework.DBLyana.Query("UPDATE event SET titre = ? WHERE id = ?", titre, id)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -143,10 +127,7 @@ func EditTitre(titre string, id int) (err error) {
 }
 
 func EditAuteur(auteur string, id int) (err error) {
-	db := DbConn()
-	defer db.Close()
-
-	_, err = db.Query("UPDATE event SET auteur = ? WHERE id = ?", auteur, id)
+	_, err = framework.DBLyana.Query("UPDATE event SET auteur = ? WHERE id = ?", auteur, id)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -155,10 +136,7 @@ func EditAuteur(auteur string, id int) (err error) {
 }
 
 func EditEmplacement(emplacement string, id int) (err error) {
-	db := DbConn()
-	defer db.Close()
-
-	_, err = db.Query("UPDATE event SET localisation = ? WHERE id = ?", emplacement, id)
+	_, err = framework.DBLyana.Query("UPDATE event SET localisation = ? WHERE id = ?", emplacement, id)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -167,10 +145,7 @@ func EditEmplacement(emplacement string, id int) (err error) {
 }
 
 func EditDescription(description string, id int) (err error) {
-	db := DbConn()
-	defer db.Close()
-
-	_, err = db.Query("UPDATE event SET description = ? WHERE id = ?", description, id)
+	_, err = framework.DBLyana.Query("UPDATE event SET description = ? WHERE id = ?", description, id)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -179,10 +154,7 @@ func EditDescription(description string, id int) (err error) {
 }
 
 func EditDate(date string, id int) (err error) {
-	db := DbConn()
-	defer db.Close()
-
-	_, err = db.Query("UPDATE event SET date = ? WHERE id = ?", date, id)
+	_, err = framework.DBLyana.Query("UPDATE event SET date = ? WHERE id = ?", date, id)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -191,10 +163,7 @@ func EditDate(date string, id int) (err error) {
 }
 
 func EditRecompense(recompense string, id int) (err error) {
-	db := DbConn()
-	defer db.Close()
-
-	_, err = db.Query("UPDATE event SET recompense = ? WHERE id = ?", recompense, id)
+	_, err = framework.DBLyana.Query("UPDATE event SET recompense = ? WHERE id = ?", recompense, id)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -203,10 +172,7 @@ func EditRecompense(recompense string, id int) (err error) {
 }
 
 func EditChannelID(ChannelID string, id int) (err error) {
-	db := DbConn()
-	defer db.Close()
-
-	_, err = db.Query("UPDATE event SET channelid = ? WHERE id = ?", ChannelID, id)
+	_, err = framework.DBLyana.Query("UPDATE event SET channelid = ? WHERE id = ?", ChannelID, id)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -215,10 +181,7 @@ func EditChannelID(ChannelID string, id int) (err error) {
 }
 
 func EditMessageID(MessageID string, id int) (err error) {
-	db := DbConn()
-	defer db.Close()
-
-	_, err = db.Query("UPDATE event SET messageid = ? WHERE id = ?", MessageID, id)
+	_, err = framework.DBLyana.Query("UPDATE event SET messageid = ? WHERE id = ?", MessageID, id)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -229,13 +192,10 @@ func EditMessageID(MessageID string, id int) (err error) {
 //0 = Add participant
 //1 = Remove participant
 func ReactionParticipants(situation int, messageid, uuid string) {
-	db := DbConn()
-	defer db.Close()
-
 	listparticipants := ""
 	supp := false
 
-	err := db.QueryRow("SELECT participant FROM event WHERE messageid = ?", messageid).Scan(&listparticipants)
+	err := framework.DBLyana.QueryRow("SELECT participant FROM event WHERE messageid = ?", messageid).Scan(&listparticipants)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -263,7 +223,7 @@ func ReactionParticipants(situation int, messageid, uuid string) {
 		}
 	}
 
-	_, err = db.Query("UPDATE event SET participant = ? WHERE messageid = ?", listparticipants, messageid)
+	_, err = framework.DBLyana.Query("UPDATE event SET participant = ? WHERE messageid = ?", listparticipants, messageid)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}

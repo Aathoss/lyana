@@ -1,4 +1,4 @@
-package modules
+package event
 
 import (
 	"strconv"
@@ -29,7 +29,7 @@ func UpdateEvent(secondeboucle time.Duration) {
 				continue
 			}
 
-			framework.ConstructionEmbedEvent(0, session, tab)
+			ConstructionEmbedEvent(0, session, tab)
 		}
 
 		//Update multi évent public
@@ -56,7 +56,7 @@ func UpdateEvent(secondeboucle time.Duration) {
 					}
 				}
 
-				framework.ConstructionEmbedEvent(0, session, tab[i])
+				ConstructionEmbedEvent(0, session, tab[i])
 
 				if tab[i][1] == "prepterminer" {
 					num, _ := strconv.Atoi(tab[i][0])

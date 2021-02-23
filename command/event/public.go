@@ -35,7 +35,7 @@ func PubliEvent(ctx framework.Context) {
 		return
 	}
 
-	messageid := framework.ConstructionEmbedEvent(1, ctx.Discord, tab)
+	messageid := ConstructionEmbedEvent(1, ctx.Discord, tab)
 	ctx.Discord.MessageReactionAdd(viper.GetString("ChannelID.Event"), messageid, ":Yes_Night:742854427987148840")
 	mysql.EditMessageID(messageid, index)
 

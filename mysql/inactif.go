@@ -11,9 +11,6 @@ import (
 )
 
 func UpdateInactifPlayer() {
-	db := DbConn()
-	defer db.Close()
-
 	t1 := time.Now()
 	t2 := t1.Unix()
 
@@ -24,7 +21,7 @@ func UpdateInactifPlayer() {
 	for _, player := range framework.ListPlayer {
 		player := strings.Replace(player, ",", " ", -1)
 
-		insert, err := db.Prepare("UPDATE membre SET inactif=?, notif=0 WHERE player_mc=?")
+		insert, err := framework.DBLyana.Prepare("UPDATE membre SET inactif=?, notif=0 WHERE player_mc=?")
 		if err != nil {
 			logger.ErrorLogger.Println(err)
 			return
@@ -35,15 +32,12 @@ func UpdateInactifPlayer() {
 }
 
 func UpdateInactifDiscord(uuid string) {
-	db := DbConn()
-	defer db.Close()
-
 	t1 := time.Now()
 	t2 := t1.Unix()
 
 	fmt.Println("[Mysql] [Débug] [Ligne 44 inactif.go] uuid : " + uuid)
 
-	insert, err := db.Prepare("UPDATE membre SET inactif=?, notif=0 WHERE tag_discord=?")
+	insert, err := framework.DBLyana.Prepare("UPDATE membre SET inactif=?, notif=0 WHERE tag_discord=?")
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 		return
@@ -52,14 +46,11 @@ func UpdateInactifDiscord(uuid string) {
 }
 
 func VerifInactif() ([][]string, error) {
-	db := DbConn()
-	defer db.Close()
-
 	t1 := time.Now()
 	t2 := t1.Unix()
 	tab := [][]string{}
 
-	rows, err := db.Query("SELECT id, tag_discord, inactif, notif FROM membre")
+	rows, err := framework.DBLyana.Query("SELECT id, tag_discord, inactif, notif FROM membre")
 	if err != nil {
 		return tab, err
 	}
@@ -86,13 +77,10 @@ func VerifInactif() ([][]string, error) {
 }
 
 func UpdateMembresInactif(uuid string) error {
-	db := DbConn()
-	defer db.Close()
-
 	t1 := time.Now()
 	t2 := t1.Unix()
 
-	insert, err := db.Prepare("UPDATE membre SET inactif=?, notif=notif+1 WHERE tag_discord=?")
+	insert, err := framework.DBLyana.Prepare("UPDATE membre SET inactif=?, notif=notif+1 WHERE tag_discord=?")
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 		return err
@@ -102,10 +90,7 @@ func UpdateMembresInactif(uuid string) error {
 }
 
 func CompteInactif() (int, error) {
-	db := DbConn()
-	defer db.Close()
-
-	err := db.QueryRow("SELECT COUNT(notif) FROM membre WHERE notif>0").Scan(&count)
+	err := framework.DBLyana.QueryRow("SELECT COUNT(notif) FROM membre WHERE notif>0").Scan(&count)
 	if err != nil {
 		return 0, err
 	}

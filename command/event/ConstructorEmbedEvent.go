@@ -1,4 +1,4 @@
-package framework
+package event
 
 import (
 	"strconv"
@@ -7,6 +7,7 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/spf13/viper"
+	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
 )
 
@@ -56,7 +57,7 @@ func ConstructionEmbedEvent(situation int, session *discordgo.Session, tab []str
 		date := time.Unix(int64(dateunix), 0)
 		prepare = prepare + "\n**Programmé le :clock:** :heavy_minus_sign: " + date.Format("02/01/2006 à 15:04:05")
 		if tab[1] == "à venir" || tab[1] == "dev" {
-			prepare = prepare + "\n:heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign::heavy_minus_sign::heavy_minus_sign: :heavy_minus_sign: décompte --> " + Calculetime(date.Unix(), 1)
+			prepare = prepare + "\n:heavy_minus_sign: :heavy_minus_sign: :heavy_minus_sign::heavy_minus_sign::heavy_minus_sign: :heavy_minus_sign: décompte --> " + framework.Calculetime(date.Unix(), 1)
 		}
 	}
 

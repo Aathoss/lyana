@@ -1,6 +1,9 @@
 package mysql
 
-import "gitlab.com/lyana/logger"
+import (
+	"gitlab.com/lyana/framework"
+	"gitlab.com/lyana/logger"
+)
 
 /*-------------------------------------------*/
 /*-------------------------------------------*/
@@ -9,10 +12,7 @@ import "gitlab.com/lyana/logger"
 /*-------------------------------------------*/
 
 func AddSanctionLimit(uid_discord, pseudomc, id_message, id_message_notif string) {
-	db := DbConn()
-	defer db.Close()
-
-	insert, err := db.Prepare("INSERT INTO sanction(uid, pseudomc, id_message, id_msg_notif) VALUES(?, ?, ?, ?)")
+	insert, err := framework.DBLyana.Prepare("INSERT INTO sanction(uid, pseudomc, id_message, id_msg_notif) VALUES(?, ?, ?, ?)")
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -20,15 +20,12 @@ func AddSanctionLimit(uid_discord, pseudomc, id_message, id_message_notif string
 }
 
 func RemoveSanctionLimit(uid_discord string) (pseudomc, sanctionID_msg, sanctionID_msg_notif string) {
-	db := DbConn()
-	defer db.Close()
-
-	err := db.QueryRow("SELECT * FROM sanction WHERE uid = "+uid_discord).Scan(&sanction.id, &sanction.uid, &sanction.pseudomc, &sanction.id_message, &sanction.id_msg_notif)
+	err := framework.DBLyana.QueryRow("SELECT * FROM sanction WHERE uid = "+uid_discord).Scan(&sanction.id, &sanction.uid, &sanction.pseudomc, &sanction.id_message, &sanction.id_msg_notif)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
 
-	_, err = db.Query("DELETE FROM sanction WHERE uid = " + uid_discord)
+	_, err = framework.DBLyana.Query("DELETE FROM sanction WHERE uid = " + uid_discord)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
