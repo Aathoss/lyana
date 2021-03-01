@@ -21,7 +21,7 @@ func EditDate(ctx framework.Context) {
 		return
 	}
 
-	format := "2006/01/02 15:04"
+	format := "15h04 02/01/2006"
 	date, err := time.Parse(format, strings.Join(ctx.Args[0:2], " "))
 	if err != nil {
 		return

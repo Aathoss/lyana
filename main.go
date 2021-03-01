@@ -112,15 +112,29 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 	}
 	framework.CountMsg = framework.CountMsg + 1
 
+	user := m.Author
+	if user.ID == s.State.User.ID || user.Bot {
+		return
+	}
+	if viper.GetBool("Dev.PrintMessage") == true {
+		log.Println(m.Content)
+	}
+	if viper.GetBool("Dev.test") != true {
+		mysql.NewCountMessage(user.ID)
+	}
+	framework.CountMsg = framework.CountMsg + 1
 	content := m.Content
 	if len(content) <= len(viper.GetString("PrefixMsg")) {
 		return
 	}
 	if content[:len(viper.GetString("PrefixMsg"))] != viper.GetString("PrefixMsg") {
+<<<<<<< Updated upstream
 		return
 	}
 	content = content[len(viper.GetString("PrefixMsg")):]
 	if len(content) < 1 {
+=======
+>>>>>>> Stashed changes
 		return
 	}
 
@@ -187,14 +201,19 @@ func registerCommands() {
 	CmdHandler.Register("vtitre", []string{}, 0, vocaltemporaire.VocalTempEditTitre, "Modifie le titre de votre channel vocal temporaire")
 	CmdHandler.Register("vlimite", []string{}, 0, vocaltemporaire.VocalTempEditLimit, "Modifie le nombre de memebre dans votre channel temporaire")
 
+<<<<<<< Updated upstream
 	//Commande event
 	CmdHandler.Register("event cree", []string{}, 1, event.ConstructionEvent, "Démarre la création d'un évent")
+=======
+	//Commandes event
+	CmdHandler.Register("event cree", []string{}, 1, event.ConstructionEvent, "Démarre la création d'un évent <id optionnel>")
+>>>>>>> Stashed changes
 	CmdHandler.Register("event titre", []string{}, 1, event.EditTitre, "Modifie le titre durant la création")
 	CmdHandler.Register("event gps", []string{}, 1, event.EditEmplacement, "Modifie la localisation durant la création")
 	CmdHandler.Register("event desc", []string{}, 1, event.EditDescription, "Modifie la description lors de la création")
-	CmdHandler.Register("event date", []string{}, 1, event.EditDate, "Modifie la date lors de la création")
+	CmdHandler.Register("event date", []string{}, 1, event.EditDate, "Modifie la date lors de la création <15h04 02/01/2006>")
 	CmdHandler.Register("event recompense", []string{}, 1, event.EditRecompense, "Modifie la liste de récompense lors de la création")
 	CmdHandler.Register("event auteur", []string{}, 1, event.EditAuteur, "Modifie l'auteur durant la création")
-	CmdHandler.Register("event publi", []string{}, 1, event.PubliEvent, "Publi la création de l'évent pour tout le monde")
-	CmdHandler.Register("event termine", []string{}, 1, event.EventTermine, "Publi la création de l'évent pour tout le monde")
+	CmdHandler.Register("event publi", []string{}, 1, event.PubliEvent, "Publi la création de l'évent pour tout le monde <id>")
+	CmdHandler.Register("event termine", []string{}, 1, event.EventTermine, "Publi la création de l'évent pour tout le monde <id>")
 }

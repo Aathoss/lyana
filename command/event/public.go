@@ -13,14 +13,15 @@ import (
 func PubliEvent(ctx framework.Context) {
 	ctx.Discord.ChannelMessageDelete(ctx.Message.ChannelID, ctx.Message.ID)
 
-	num, _ := strconv.Atoi(ctx.Args[0])
 	index := framework.EventContructionIndex
 
-	if len(ctx.Args[0]) == 0 {
-		index = num
-	}
-
 	if framework.EventConstruction != true && len(ctx.Args[0]) == 0 {
+		num, _ := strconv.Atoi(ctx.Args[0])
+
+		if len(ctx.Args[0]) == 0 {
+			index = num
+		}
+
 		message, _ := ctx.Discord.ChannelMessageSend(ctx.Message.ChannelID, "**Il semble ne pas y avoir d'évent en cours de création**")
 		time.Sleep(time.Second * 10)
 		ctx.Discord.ChannelMessageDelete(message.ChannelID, message.ID)
