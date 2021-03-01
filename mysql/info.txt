@@ -19,8 +19,8 @@ func AddinfostructMember(pseudo, uid string) {
 
 // AddMembre ajoute un membre à la base de données (en vérifiant qu'il n'existe pas sinon on le mais à jour)
 func AddMembre(pseudo, uid string) {
-	db := dbConn()
-	defer db.Close()
+	
+	
 
 	VerifMember(uid)
 
@@ -33,8 +33,8 @@ func AddMembre(pseudo, uid string) {
 
 // getMember retourne toutes les informations de la base de données dans le struct member
 func structMember(uid string) {
-	db := dbConn()
-	defer db.Close()
+	
+	
 
 	VerifMember(uid)
 
@@ -49,8 +49,8 @@ func structMember(uid string) {
 
 // VerifMember vérifie l'existence d'un utilisateur dans la base de données avec son uid (return le nombre)
 func VerifMember(uid string) {
-	db := dbConn()
-	defer db.Close()
+	
+	
 
 	e := db.QueryRow("select count(*) from member where uid = " + uid).Scan(&count)
 	checkError(e)
@@ -64,8 +64,8 @@ func VerifMember(uid string) {
 
 // BanTicket ajoute l'utilisateur dans la table des ban avec la raison
 func BanTicket(uid string, reason string) {
-	db := dbConn()
-	defer db.Close()
+	
+	
 	tNow := time.Now()
 	tUnix := tNow.Unix()
 
@@ -79,8 +79,8 @@ func BanTicket(uid string, reason string) {
 
 // GetBanTicket retourne les informations du ban count / raison / time
 func GetBanTicket(uid string) (int, string, string) {
-	db := dbConn()
-	defer db.Close()
+	
+	
 
 	tNow := time.Now()
 	tUnix := tNow.Unix()
@@ -101,8 +101,8 @@ func GetBanTicket(uid string) (int, string, string) {
 func GetOpenTicket() int {
 	structMember(member.uid)
 
-	db := dbConn()
-	defer db.Close()
+	
+	
 
 	e := db.QueryRow("SELECT count(status) FROM ticket WHERE id_member=" + strconv.Itoa(int(member.id)) + " AND status=1;").Scan(&count)
 	checkError(e)
@@ -112,8 +112,8 @@ func GetOpenTicket() int {
 
 // UnBanTicket retire une personne de la table des ban
 func UnBanTicket(uid string) {
-	db := dbConn()
-	defer db.Close()
+	
+	
 
 	structMember(uid)
 	verifBanTicket(strconv.Itoa(int(member.id)))
@@ -125,8 +125,8 @@ func UnBanTicket(uid string) {
 }
 
 func verifBanTicket(id string) {
-	db := dbConn()
-	defer db.Close()
+	
+	
 
 	e := db.QueryRow("select count(*) from ban_ticket where id_member = " + id).Scan(&count)
 	checkError(e)
@@ -140,8 +140,8 @@ func verifBanTicket(id string) {
 
 // AddTicket Insert dans la table ticket le contenu du premier message / time.unix / id_membre / num du ticket
 func AddTicket(uid string, request string) {
-	db := dbConn()
-	defer db.Close()
+	
+	
 
 	tNow := time.Now()
 	tUnix := tNow.Unix()
@@ -161,8 +161,8 @@ func CloseTicket(numticket string) {
 	tNow := time.Now()
 	tUnix := tNow.Unix()
 
-	db := dbConn()
-	defer db.Close()
+	
+	
 
 	e := db.QueryRow("SELECT count(*) FROM ticket WHERE num = " + numticket).Scan(&count)
 	checkError(e)
@@ -181,8 +181,8 @@ func CloseTicket(numticket string) {
 
 // LogTicket permet de log tous les messages dans les tickets
 func LogTicket(uid string, ticket string, content string) {
-	db := dbConn()
-	defer db.Close()
+	
+	
 
 	structMember(uid)
 
@@ -193,8 +193,8 @@ func LogTicket(uid string, ticket string, content string) {
 
 // GetNumTicket retourne le nombre de tickets déjà ouvert
 func GetNumTicket() int {
-	db := dbConn()
-	defer db.Close()
+	
+	
 
 	e := db.QueryRow("select * from num_ticket").Scan(&numticket.num)
 	checkError(e)
@@ -203,16 +203,16 @@ func GetNumTicket() int {
 
 // SetNumTicket mais à jour le nombre de tickets ouverts +1
 func SetNumTicket() {
-	db := dbConn()
-	defer db.Close()
+	
+	
 
 	_, e := db.Query("update num_ticket set num = num + 1")
 	checkError(e)
 }
 
 func TicketUser(uid string) [][]string {
-	db := dbConn()
-	defer db.Close()
+	
+	
 	tab := [][]string{}
 	i := 0
 

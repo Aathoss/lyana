@@ -46,7 +46,6 @@ func StatsUnispaceV1(ctx framework.Context) {
 
 func requestSQL() {
 	db := mysql.DbConnMC()
-	defer db.Close()
 
 	db.QueryRow("SELECT SUM(CONTENT) FROM PLAYERDATA WHERE VARIABLE='playertime'").Scan(&stats.playertime)
 	db.QueryRow("SELECT SUM(CONTENT) FROM PLAYERDATA WHERE VARIABLE='jump'").Scan(&stats.jump)

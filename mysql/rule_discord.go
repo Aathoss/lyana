@@ -3,25 +3,20 @@ package mysql
 import (
 	"time"
 
+	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
 )
 
 func VerifRule(uuid string) (int, error) {
-	db := DbConn()
-	defer db.Close()
-
-	err := db.QueryRow("SELECT COUNT(*) FROM rule WHERE uid=" + uuid).Scan(&count)
+	err := framework.DBLyana.QueryRow("SELECT COUNT(*) FROM rule WHERE uid=" + uuid).Scan(&count)
 	return count, err
 }
 
 func VerifRuleTimestamp() ([]string, error) {
-	db := DbConn()
-	defer db.Close()
-
 	t1 := time.Now()
 	var temp []string
 
-	rows, err := db.Query("SELECT * FROM rule")
+	rows, err := framework.DBLyana.Query("SELECT * FROM rule")
 	if err != nil {
 		return temp, err
 	}
@@ -46,10 +41,7 @@ func VerifRuleTimestamp() ([]string, error) {
 }
 
 func AddRule(uuid string, timestamp int64) {
-	db := DbConn()
-	defer db.Close()
-
-	insert, err := db.Prepare("INSERT INTO rule(uid, timestamp) VALUES(?,?)")
+	insert, err := framework.DBLyana.Prepare("INSERT INTO rule(uid, timestamp) VALUES(?,?)")
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -57,10 +49,7 @@ func AddRule(uuid string, timestamp int64) {
 }
 
 func RemoveRule(uuid string) error {
-	db := DbConn()
-	defer db.Close()
-
-	_, err := db.Query("DELETE FROM rule WHERE uid = " + uuid)
+	_, err := framework.DBLyana.Query("DELETE FROM rule WHERE uid = " + uuid)
 	if err != nil {
 		return err
 	}

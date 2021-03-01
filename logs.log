@@ -1680,3 +1680,45 @@ Démarrage du bot en cours
 DEBUG: 2021/01/22 16:00:39 event.go:17: Starting UpdateEvent
 INFO: 2021/01/22 16:00:39 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
 DEBUG: 2021/01/22 16:00:39 bot_time.go:35: Starting verifCandid
+INFO: 2021/03/01 20:09:51 main.go:49: 
+---------------------------------
+Démarrage du bot en cours
+DEBUG: 2021/03/01 20:09:52 bot_time.go:35: Starting verifCandid
+INFO: 2021/03/01 20:09:52 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/03/01 20:09:52 event.go:17: Starting UpdateEvent
+INFO: 2021/03/01 20:12:11 config.go:20: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/01 20:12:11 config.go:21: ----- Configuration en préparation
+INFO: 2021/03/01 20:12:11 config.go:24: ----- Initialisation l'heure
+INFO: 2021/03/01 20:12:11 config.go:28: ----- Initialisation du fichier de config
+INFO: 2021/03/01 20:12:11 config.go:44: ----- Initialisation de la base de données
+INFO: 2021/03/01 20:12:11 config.go:61: ----- Configuration charger
+DEBUG: 2021/03/01 20:12:12 bot_time.go:35: Starting verifCandid
+INFO: 2021/03/01 20:12:12 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/03/01 20:12:12 event.go:17: Starting UpdateEvent
+ERROR: 2021/03/01 20:12:22 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:12:42 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:13:02 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:13:22 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:13:22 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:13:42 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:13:42 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:14:02 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:14:02 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:14:22 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:14:22 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:14:42 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:14:42 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:15:02 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:15:02 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:15:22 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:15:22 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:15:42 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:15:42 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:16:02 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:16:02 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:16:22 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:16:22 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:16:42 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:16:42 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:17:02 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/01 20:17:02 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
