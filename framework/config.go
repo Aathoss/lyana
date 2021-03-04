@@ -54,9 +54,9 @@ func LoadConfiguration() {
 		logger.ErrorLogger.Println(err)
 		os.Exit(10)
 	}
-	DBLyana.SetConnMaxLifetime(time.Minute * 5)
+	DBLyana.SetConnMaxLifetime(time.Minute * 3)
 	DBLyana.SetMaxIdleConns(0)
-	DBLyana.SetMaxOpenConns(5)
+	//DBLyana.SetMaxOpenConns(5)
 
 	logger.InfoLogger.Println("----- Configuration charger")
 }
