@@ -60,7 +60,7 @@ func main() {
 	}
 
 	go modules.VerifCandid(10)
-	go modules.UpdateEvent(5)
+	go event.UpdateEvent(5)
 	go func() {
 		for {
 			consoleReader := bufio.NewReader(os.Stdin)
