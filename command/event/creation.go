@@ -54,8 +54,11 @@ func ConstructionEvent(ctx framework.Context) {
 			"\n**!event desc** <description>" +
 			"\n**!event date** <années/mois/jours> <heure:minutes>" +
 			"\n**!event recompense** <liste des récompense>" +
-			"\n**!event auteur** <tags de la personne ou texte>",
+			"\n**!event auteur** <tags de la personne ou texte>" +
+			"\n**!event publi** publi l'embed une fois prêt" +
+			"\n**!event termine** Termine un évent en cours",
 	})
+
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 		return

@@ -13,8 +13,9 @@ import (
 )
 
 var (
-	Version   = "0.5.1"
-	startTime = time.Now()
+	Version        = "0.5.3"
+	StartTime      = time.Now()
+	DebugUserMysql = 0
 )
 
 func Statistique(ctx framework.Context) {
@@ -34,6 +35,12 @@ func Statistique(ctx framework.Context) {
 		return
 	}
 
+	//Débug mysql count le nombre d'utilisateur actif
+	err = framework.DBLyana.QueryRow("SELECT COUNT(*) FROM information_schema.PROCESSLIST WHERE Host LIKE '172.18.0.10%'").Scan(&DebugUserMysql)
+	if err != nil {
+		logger.ErrorLogger.Println(err)
+	}
+
 	embed := framework.NewEmbed().
 		SetTitle("Statistique bot :").
 		SetColor(0x5f27cd).
@@ -44,10 +51,9 @@ func Statistique(ctx framework.Context) {
 			"V. Go : **"+runtime.Version()+"**"+
 				"\nV. Discord : **"+discordgo.VERSION+"**"+
 				"\nRoutine : **"+strconv.Itoa(runtime.NumGoroutine())+"**"+
-				"\nUptime : **"+framework.Calculetime(startTime.Unix(), 0)+"**"+
+				"\nUptime : **"+framework.Calculetime(StartTime.Unix(), 0)+"**"+
 				"\nMémoire utiliser : **"+humanize.Bytes(stats.Alloc)+"** / **"+humanize.Bytes(stats.Sys)+"**"+
-				"\nNombre de requête SQL : **"+strconv.Itoa(framework.SQlRequest)+"**"+
-				"\nNombre d'actualisation channel online : **"+strconv.Itoa(framework.OnlineActulise)+"**", false).
+				"\n\n[Débug] Nombre de pool : **"+strconv.Itoa(DebugUserMysql)+"**", false).
 		SetFooter(ctx.Message.Author.Username + " | Date : " + tNow.Format("2/1 15:04:05")).MessageEmbed
 	ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, embed)
 	return
