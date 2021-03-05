@@ -1,6 +1,7 @@
 package event
 
 import (
+	"fmt"
 	"strconv"
 	"time"
 
@@ -19,13 +20,11 @@ func UpdateEvent(secondeboucle time.Duration) {
 	session := framework.Session
 
 	for {
-		logger.DebugLogger.Println("debug 1")
+		fmt.Println(count60seconde)
 		time.Sleep(time.Second * secondeboucle)
-		logger.DebugLogger.Println("debug 2")
 
 		//Update de l'embed lors de la création d'un nouvelle évent
 		if framework.EventConstruction == true {
-			logger.DebugLogger.Println("debug 3")
 			tab, err := mysql.GetCreationEvent(framework.EventContructionIndex)
 			if err != nil {
 				logger.ErrorLogger.Println(err)
@@ -37,19 +36,16 @@ func UpdateEvent(secondeboucle time.Duration) {
 
 		//Update multi évent public
 		if count60seconde >= 60 {
-			logger.DebugLogger.Println("debug 4")
 			tab, err := mysql.GetMultiEvent()
 			if err != nil {
 				logger.ErrorLogger.Println(err)
 			}
 
-			logger.DebugLogger.Println("debug 5")
 			for i := 0; i <= len(tab)-1; i++ {
 				if tab[i][1] == "terminer" {
 					continue
 				}
 
-				logger.DebugLogger.Println("debug 6")
 				if tab[i][1] != "prepterminer" {
 					t1 := time.Now()
 					t2, _ := strconv.Atoi(tab[i][7])
@@ -61,20 +57,16 @@ func UpdateEvent(secondeboucle time.Duration) {
 					}
 				}
 
-				logger.DebugLogger.Println("debug 7")
 				framework.ConstructionEmbedEvent(0, session, tab[i])
-				logger.DebugLogger.Println("debug 8")
 
 				if tab[i][1] == "prepterminer" {
 					num, _ := strconv.Atoi(tab[i][0])
 					mysql.EditStatus(4, num)
 				}
-				logger.DebugLogger.Println("debug 9")
 			}
-			logger.DebugLogger.Println("debug 10")
+
 			count60seconde = 0
 		}
-		logger.DebugLogger.Println("debug 11")
 		count60seconde = count60seconde + 5
 	}
 
