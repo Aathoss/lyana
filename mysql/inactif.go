@@ -1,6 +1,7 @@
 package mysql
 
 import (
+	"fmt"
 	"strconv"
 	"strings"
 	"time"
@@ -40,13 +41,9 @@ func UpdateInactifDiscord(uuid string) {
 	t1 := time.Now()
 	t2 := t1.Unix()
 
-<<<<<<< Updated upstream
 	fmt.Println("[Mysql] [Débug] [Ligne 44 inactif.go] uuid : " + uuid)
 
 	insert, err := db.Prepare("UPDATE membre SET inactif=?, notif=0 WHERE tag_discord=?")
-=======
-	insert, err := framework.DBLyana.Prepare("UPDATE membre SET inactif=?, notif=0 WHERE tag_discord=?")
->>>>>>> Stashed changes
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 		return

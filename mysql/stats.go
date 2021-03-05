@@ -1,12 +1,8 @@
 package mysql
 
 import (
-<<<<<<< Updated upstream
 	"fmt"
 
-=======
-	"gitlab.com/lyana/framework"
->>>>>>> Stashed changes
 	"gitlab.com/lyana/logger"
 )
 
@@ -35,6 +31,8 @@ func NewCountMessage(author string) {
 		if err != nil {
 			logger.ErrorLogger.Println(err)
 		}
+
+		fmt.Println("[Mysql] [Débug] [Ligne 35 stats.go] uuid : " + author)
 
 		insert.Exec(author)
 		return
