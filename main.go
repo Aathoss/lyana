@@ -10,6 +10,7 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 	bot "github.com/bwmarrin/discordgo"
+	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/command"
 	"gitlab.com/lyana/command/event"
@@ -20,6 +21,7 @@ import (
 	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
 	"gitlab.com/lyana/modules"
+	"gitlab.com/lyana/mysql"
 )
 
 // Variable
@@ -27,8 +29,25 @@ var (
 	CmdHandler *framework.CommandHandler
 )
 
+func init() {
+	os.Setenv("TZ", "Europe/Paris")
+
+	viper.SetConfigName("config")
+	viper.SetConfigType("yaml")
+	viper.AddConfigPath(".")
+	err := viper.ReadInConfig()
+	if err != nil {
+		logger.ErrorLogger.Println(err)
+	}
+
+	viper.WatchConfig()
+	viper.OnConfigChange(func(e fsnotify.Event) {
+		logger.InfoLogger.Println("Config file changed:", e.Name)
+	})
+}
+
 func main() {
-	framework.LoadConfiguration()
+	logger.InfoLogger.Println("\n---------------------------------\nDémarrage du bot en cours")
 
 	CmdHandler = framework.NewCommandHandler()
 	registerCommands()
@@ -88,12 +107,34 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 		log.Println(m.Content)
 	}
 
+	if viper.GetBool("Dev.test") != true {
+		mysql.NewCountMessage(user.ID)
+	}
+	framework.CountMsg = framework.CountMsg + 1
+
+	user := m.Author
+	if user.ID == s.State.User.ID || user.Bot {
+		return
+	}
+	if viper.GetBool("Dev.PrintMessage") == true {
+		log.Println(m.Content)
+	}
+	if viper.GetBool("Dev.test") != true {
+		mysql.NewCountMessage(user.ID)
+	}
 	framework.CountMsg = framework.CountMsg + 1
 	content := m.Content
 	if len(content) <= len(viper.GetString("PrefixMsg")) {
 		return
 	}
 	if content[:len(viper.GetString("PrefixMsg"))] != viper.GetString("PrefixMsg") {
+<<<<<<< Updated upstream
+		return
+	}
+	content = content[len(viper.GetString("PrefixMsg")):]
+	if len(content) < 1 {
+=======
+>>>>>>> Stashed changes
 		return
 	}
 
@@ -148,6 +189,7 @@ func registerCommands() {
 	//Commande Liée à minecraft
 	CmdHandler.Register("fiche", []string{"profils", "profil"}, 0, command.InfoPlayer, "Permet de voir votre fiche utilisateur/player")
 	CmdHandler.Register("online", []string{}, 0, command.OnlinePlayer, "Affiche les joueurs connecté")
+	CmdHandler.Register("signal", []string{}, 0, command.AddSignalement, "Permets aux joueurs whitelist sur le serveur de signaler un autre joueur commettant une infraction")
 	CmdHandler.Register("pardon", []string{}, 1, command.RemoveSignalement, "Permet au staff de retiré un signalement")
 	CmdHandler.Register("addplayer", []string{}, 1, command.AddPlayer, "???")
 
@@ -159,8 +201,13 @@ func registerCommands() {
 	CmdHandler.Register("vtitre", []string{}, 0, vocaltemporaire.VocalTempEditTitre, "Modifie le titre de votre channel vocal temporaire")
 	CmdHandler.Register("vlimite", []string{}, 0, vocaltemporaire.VocalTempEditLimit, "Modifie le nombre de memebre dans votre channel temporaire")
 
+<<<<<<< Updated upstream
+	//Commande event
+	CmdHandler.Register("event cree", []string{}, 1, event.ConstructionEvent, "Démarre la création d'un évent")
+=======
 	//Commandes event
 	CmdHandler.Register("event cree", []string{}, 1, event.ConstructionEvent, "Démarre la création d'un évent <id optionnel>")
+>>>>>>> Stashed changes
 	CmdHandler.Register("event titre", []string{}, 1, event.EditTitre, "Modifie le titre durant la création")
 	CmdHandler.Register("event gps", []string{}, 1, event.EditEmplacement, "Modifie la localisation durant la création")
 	CmdHandler.Register("event desc", []string{}, 1, event.EditDescription, "Modifie la description lors de la création")
