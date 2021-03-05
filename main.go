@@ -27,7 +27,7 @@ var (
 )
 
 func main() {
-	framework.LoadConfiguration()
+	//framework.LoadConfiguration()
 
 	CmdHandler = framework.NewCommandHandler()
 	registerCommands()

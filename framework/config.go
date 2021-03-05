@@ -3,9 +3,9 @@ package framework
 import (
 	"database/sql"
 	"os"
-	"time"
 
 	"github.com/fsnotify/fsnotify"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/logger"
 )
@@ -16,9 +16,15 @@ var (
 )
 
 //LoadConfiguration charge les paramètres / variables
+<<<<<<< Updated upstream
 func LoadConfiguration() {
 	logger.InfoLogger.Println("\n----- Démarrage du bot [Lyana]")
 	logger.InfoLogger.Println("\n----- Chargement de la configuration")
+=======
+func init() {
+	logger.InfoLogger.Println("----- Démarrage du bot [Lyana]")
+	logger.InfoLogger.Println("----- Configuration en préparation")
+>>>>>>> Stashed changes
 
 	//Configuration de l'heure sûr le serveur
 	os.Setenv("TZ", "Europe/Paris")
@@ -51,8 +57,17 @@ func LoadConfiguration() {
 		logger.ErrorLogger.Println(err)
 		os.Exit(10)
 	}
+<<<<<<< Updated upstream
 	DBLyana.SetConnMaxLifetime(time.Minute * 5)
 	DBLyana.SetMaxIdleConns(0)
 	DBLyana.SetMaxOpenConns(5)
+=======
+
+	DBLyana.SetConnMaxLifetime(150)
+	DBLyana.SetMaxOpenConns(2)
+	DBLyana.SetConnMaxIdleTime(300)
+	//DBLyana.SetMaxIdleConns(0)
+	//DBLyana.SetMaxOpenConns(5)
+>>>>>>> Stashed changes
 
 }
