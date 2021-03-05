@@ -1,33 +1,41 @@
 package mysql
 
 import (
-	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
 )
 
 func Countuser(uuiddiscord string) (usercount int, channelcount string) {
-	framework.DBLyana.QueryRow("SELECT COUNT(uuid) FROM tempvoc WHERE uuid = ?", uuiddiscord).Scan(&usercount)
-	framework.DBLyana.QueryRow("SELECT channelid FROM tempvoc WHERE uuid = ?", uuiddiscord).Scan(&channelcount)
+	db := DbConn()
+	defer db.Close()
+
+	db.QueryRow("SELECT COUNT(uuid) FROM tempvoc WHERE uuid = ?", uuiddiscord).Scan(&usercount)
+	db.QueryRow("SELECT channelid FROM tempvoc WHERE uuid = ?", uuiddiscord).Scan(&channelcount)
 
 	return usercount, channelcount
 }
 
 func ReturnConfigChannel(uuiddiscord string) (channelname string, channeluserlimit int) {
+	db := DbConn()
+	defer db.Close()
 
-	framework.DBLyana.QueryRow("SELECT channelname, channeluserlimit FROM tempvoc WHERE uuid = ?", uuiddiscord).Scan(&channelname, &channeluserlimit)
+	db.QueryRow("SELECT channelname, channeluserlimit FROM tempvoc WHERE uuid = ?", uuiddiscord).Scan(&channelname, &channeluserlimit)
 	return channelname, channeluserlimit
 }
 
 func InsertCreation(uuid, channelname string, channeluserlimit int) error {
+	db := DbConn()
+	defer db.Close()
 
-	insert, err := framework.DBLyana.Prepare("INSERT INTO tempvoc(uuid, channelname, channeluserlimit) VALUES(?, ?, ?)")
+	insert, err := db.Prepare("INSERT INTO tempvoc(uuid, channelname, channeluserlimit) VALUES(?, ?, ?)")
 	_, err = insert.Exec(uuid, channelname, channeluserlimit)
 	return err
 }
 
 func UpdateChannelID(uuiddiscord, channelid string) error {
+	db := DbConn()
+	defer db.Close()
 
-	_, err := framework.DBLyana.Query("UPDATE tempvoc SET channelid = ? WHERE uuid = ?", channelid, uuiddiscord)
+	_, err := db.Query("UPDATE tempvoc SET channelid = ? WHERE uuid = ?", channelid, uuiddiscord)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -35,8 +43,10 @@ func UpdateChannelID(uuiddiscord, channelid string) error {
 }
 
 func UpdateChannelName(uuiddiscord, channelname string) error {
+	db := DbConn()
+	defer db.Close()
 
-	_, err := framework.DBLyana.Query("UPDATE tempvoc SET channelname = ? WHERE uuid = ?", channelname, uuiddiscord)
+	_, err := db.Query("UPDATE tempvoc SET channelname = ? WHERE uuid = ?", channelname, uuiddiscord)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -44,8 +54,10 @@ func UpdateChannelName(uuiddiscord, channelname string) error {
 }
 
 func UpdateChannelUserLimit(uuiddiscord string, channeluserlimit int) error {
+	db := DbConn()
+	defer db.Close()
 
-	_, err := framework.DBLyana.Query("UPDATE tempvoc SET channeluserlimit = ? WHERE uuid = ?", channeluserlimit, uuiddiscord)
+	_, err := db.Query("UPDATE tempvoc SET channeluserlimit = ? WHERE uuid = ?", channeluserlimit, uuiddiscord)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -53,8 +65,10 @@ func UpdateChannelUserLimit(uuiddiscord string, channeluserlimit int) error {
 }
 
 func RemoveChannelID(channelid string) error {
+	db := DbConn()
+	defer db.Close()
 
-	_, err := framework.DBLyana.Query("UPDATE tempvoc SET channelid = ? WHERE channelid = ?", "", channelid)
+	_, err := db.Query("UPDATE tempvoc SET channelid = ? WHERE channelid = ?", "", channelid)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
@@ -63,13 +77,14 @@ func RemoveChannelID(channelid string) error {
 }
 
 func ReturnChannelIDAll() []string {
-
+	db := DbConn()
+	defer db.Close()
 	info := []string{}
 	i := 0
 
 	var channelid string
 
-	rows, err := framework.DBLyana.Query("SELECT channelid FROM tempvoc")
+	rows, err := db.Query("SELECT channelid FROM tempvoc")
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}

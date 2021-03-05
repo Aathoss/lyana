@@ -61,7 +61,6 @@ func VerifCandid(secondeboucle time.Duration) {
 		var sheet jsonsheet
 		err = json.Unmarshal(body1, &sheet)
 		if err != nil {
-			logger.ErrorLogger.Println(string(body1))
 			logger.ErrorLogger.Println(err)
 		}
 

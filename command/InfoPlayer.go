@@ -13,7 +13,6 @@ import (
 
 var (
 	stats statsv1
-	count int
 )
 
 type statsv1 struct {
@@ -60,12 +59,8 @@ func InfoPlayer(ctx framework.Context) {
 	_, pseudoMC, t2, _ := mysql.GetWhitelist(user.User.ID)
 
 	requestSQLPlayer(pseudoMC)
-	//Compte le nombre de message envoyer par l'utilisateur
-	err := framework.DBLyana.QueryRow("SELECT COUNT(uuid) FROM logs WHERE categorie=? AND uuid=?", "msgcount", user.User.ID).Scan(&count)
-	if err != nil {
-		logger.ErrorLogger.Println(err)
-	}
-	messageCount := "\nMessages envoyés : **" + strconv.Itoa(count) + "**"
+	msgCount, err := mysql.ReturnNumMessages(user.User.ID)
+	messageCount := "\nMessages envoyés : **" + strconv.Itoa(msgCount) + "**"
 	if err != nil {
 		messageCount = ""
 	}
@@ -99,6 +94,7 @@ func InfoPlayer(ctx framework.Context) {
 
 func requestSQLPlayer(player string) {
 	db := mysql.DbConnMC()
+	defer db.Close()
 
 	err := db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='playertime'").Scan(&stats.playertime)
 	if err != nil {
