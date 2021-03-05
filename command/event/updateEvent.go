@@ -1,7 +1,6 @@
 package event
 
 import (
-	"fmt"
 	"strconv"
 	"time"
 
@@ -20,7 +19,6 @@ func UpdateEvent(secondeboucle time.Duration) {
 	session := framework.Session
 
 	for {
-		fmt.Println(count60seconde)
 		time.Sleep(time.Second * secondeboucle)
 
 		//Update de l'embed lors de la création d'un nouvelle évent
@@ -67,6 +65,7 @@ func UpdateEvent(secondeboucle time.Duration) {
 
 			count60seconde = 0
 		}
+
 		count60seconde = count60seconde + 5
 	}
 
