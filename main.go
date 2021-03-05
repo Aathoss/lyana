@@ -14,6 +14,7 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 	bot "github.com/bwmarrin/discordgo"
+	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/command"
 	"gitlab.com/lyana/command/event"
@@ -30,6 +31,23 @@ import (
 var (
 	CmdHandler *framework.CommandHandler
 )
+
+func init() {
+	os.Setenv("TZ", "Europe/Paris")
+
+	viper.SetConfigName("config")
+	viper.SetConfigType("yaml")
+	viper.AddConfigPath(".")
+	err := viper.ReadInConfig()
+	if err != nil {
+		logger.ErrorLogger.Println(err)
+	}
+
+	viper.WatchConfig()
+	viper.OnConfigChange(func(e fsnotify.Event) {
+		logger.InfoLogger.Println("Config file changed:", e.Name)
+	})
+}
 
 func main() {
 	//framework.LoadConfiguration()
@@ -70,6 +88,10 @@ func main() {
 			input = strings.ToLower(input)
 
 			if strings.HasPrefix(input, "bye") {
+				framework.DBLyana.Close()
+				framework.DBMinecraft.Close()
+				framework.LogsChannel("[:tools:] **Lyana** s'est déconnecté de l'univers !")
+
 				fmt.Println("\nUptime : " + framework.Calculetime(stats.StartTime.Unix(), 0) +
 					"\nMessage total : " + strconv.Itoa(framework.CountMsg) +
 					"\nRoutine : " + strconv.Itoa(runtime.NumGoroutine()) +
@@ -110,11 +132,16 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 	}
 
 	framework.CountMsg = framework.CountMsg + 1
+
 	content := m.Content
 	if len(content) <= len(viper.GetString("PrefixMsg")) {
 		return
 	}
 	if content[:len(viper.GetString("PrefixMsg"))] != viper.GetString("PrefixMsg") {
+		return
+	}
+	content = content[len(viper.GetString("PrefixMsg")):]
+	if len(content) < 1 {
 		return
 	}
 
@@ -180,14 +207,14 @@ func registerCommands() {
 	CmdHandler.Register("vtitre", []string{}, 0, vocaltemporaire.VocalTempEditTitre, "Modifie le titre de votre channel vocal temporaire")
 	CmdHandler.Register("vlimite", []string{}, 0, vocaltemporaire.VocalTempEditLimit, "Modifie le nombre de memebre dans votre channel temporaire")
 
-	//Commandes event
-	CmdHandler.Register("event cree", []string{}, 1, event.ConstructionEvent, "Démarre la création d'un évent <id optionnel>")
+	//Commande event
+	CmdHandler.Register("event cree", []string{}, 1, event.ConstructionEvent, "Démarre la création d'un évent")
 	CmdHandler.Register("event titre", []string{}, 1, event.EditTitre, "Modifie le titre durant la création")
 	CmdHandler.Register("event gps", []string{}, 1, event.EditEmplacement, "Modifie la localisation durant la création")
 	CmdHandler.Register("event desc", []string{}, 1, event.EditDescription, "Modifie la description lors de la création")
-	CmdHandler.Register("event date", []string{}, 1, event.EditDate, "Modifie la date lors de la création <15h04 02/01/2006>")
+	CmdHandler.Register("event date", []string{}, 1, event.EditDate, "Modifie la date lors de la création")
 	CmdHandler.Register("event recompense", []string{}, 1, event.EditRecompense, "Modifie la liste de récompense lors de la création")
 	CmdHandler.Register("event auteur", []string{}, 1, event.EditAuteur, "Modifie l'auteur durant la création")
-	CmdHandler.Register("event publi", []string{}, 1, event.PubliEvent, "Publi la création de l'évent pour tout le monde <id>")
-	CmdHandler.Register("event termine", []string{}, 1, event.EventTermine, "Publi la création de l'évent pour tout le monde <id>")
+	CmdHandler.Register("event publi", []string{}, 1, event.PubliEvent, "Publi la création de l'évent pour tout le monde")
+	CmdHandler.Register("event termine", []string{}, 1, event.EventTermine, "Publi la création de l'évent pour tout le monde")
 }
