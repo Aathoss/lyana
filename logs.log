@@ -1759,3 +1759,2785 @@ INFO: 2021/03/04 18:28:37 config.go:61: ----- Configuration charger
 DEBUG: 2021/03/04 18:28:38 bot_time.go:35: Starting verifCandid
 INFO: 2021/03/04 18:28:38 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
 DEBUG: 2021/03/04 18:28:38 event.go:17: Starting UpdateEvent
+INFO: 2021/03/04 22:58:51 config.go:21: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/04 22:58:51 config.go:22: ----- Configuration en préparation
+INFO: 2021/03/04 22:58:51 config.go:25: ----- Initialisation l'heure
+INFO: 2021/03/04 22:58:51 config.go:29: ----- Initialisation du fichier de config
+INFO: 2021/03/04 22:58:51 config.go:45: ----- Initialisation de la base de données
+INFO: 2021/03/04 22:58:51 config.go:62: ----- Configuration charger
+INFO: 2021/03/04 22:58:52 updateEvent.go:18: ----- Démarrage de la boucle UpdateEvent
+DEBUG: 2021/03/04 22:58:52 bot_time.go:35: Starting verifCandid
+INFO: 2021/03/04 22:58:52 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/03/04 22:58:52 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 22:58:57 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 22:58:57 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 22:58:57 event.go:71: mysql 1
+DEBUG: 2021/03/04 22:58:57 event.go:78: mysql 2
+DEBUG: 2021/03/04 22:58:57 event.go:82: mysql 3
+DEBUG: 2021/03/04 22:58:57 event.go:92: mysql 4
+DEBUG: 2021/03/04 22:58:57 event.go:99: mysql 5
+DEBUG: 2021/03/04 22:58:57 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 22:58:57 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 22:58:57 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 22:59:00 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 22:59:00 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 22:59:00 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 22:59:00 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 22:59:00 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 22:59:02 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 22:59:05 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 22:59:05 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 22:59:05 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 22:59:10 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 22:59:10 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 22:59:10 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 22:59:15 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 22:59:15 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 22:59:15 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 22:59:20 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 22:59:20 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 22:59:20 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 22:59:22 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 22:59:25 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 22:59:25 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 22:59:25 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 22:59:30 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 22:59:30 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 22:59:30 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 22:59:35 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 22:59:35 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 22:59:35 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 22:59:40 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 22:59:40 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 22:59:40 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 22:59:42 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 22:59:45 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 22:59:45 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 22:59:45 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 22:59:50 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 22:59:50 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 22:59:50 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 22:59:55 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 22:59:55 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 22:59:55 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:00:00 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:00:00 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:00:00 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:00:01 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:00:01 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:00:01 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:00:01 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:00:01 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:00:01 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:00:01 updateEvent.go:65: debug 7
+ERROR: 2021/03/04 23:00:02 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:00:02 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:00:04 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:00:04 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:00:04 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:00:04 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:00:04 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:00:09 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:00:09 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:00:09 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:00:14 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:00:14 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:00:14 updateEvent.go:23: debug 1
+INFO: 2021/03/04 23:00:25 config.go:21: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/04 23:00:25 config.go:22: ----- Configuration en préparation
+INFO: 2021/03/04 23:00:25 config.go:25: ----- Initialisation l'heure
+INFO: 2021/03/04 23:00:25 config.go:29: ----- Initialisation du fichier de config
+INFO: 2021/03/04 23:00:25 config.go:45: ----- Initialisation de la base de données
+INFO: 2021/03/04 23:00:26 config.go:62: ----- Configuration charger
+DEBUG: 2021/03/04 23:00:26 bot_time.go:35: Starting verifCandid
+INFO: 2021/03/04 23:00:26 updateEvent.go:18: ----- Démarrage de la boucle UpdateEvent
+DEBUG: 2021/03/04 23:00:26 updateEvent.go:23: debug 1
+INFO: 2021/03/04 23:00:26 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/03/04 23:00:31 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:00:31 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:00:31 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:00:32 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:00:32 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:00:32 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:00:32 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:00:32 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:00:32 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:00:32 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:00:35 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:00:35 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:00:35 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:00:35 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:00:35 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:00:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:00:40 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:00:40 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:00:40 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:00:45 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:00:45 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:00:45 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:00:50 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:00:50 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:00:50 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:00:55 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:00:55 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:00:55 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:00:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:01:00 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:01:00 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:01:00 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:01:05 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:01:05 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:01:05 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:01:10 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:01:10 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:01:10 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:01:15 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:01:15 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:01:15 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:01:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:01:20 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:01:20 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:01:20 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:01:25 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:01:25 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:01:25 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:01:30 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:01:30 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:01:30 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:01:35 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:01:35 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:01:35 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:01:35 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:01:35 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:01:35 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:01:35 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:01:35 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:01:35 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:01:36 updateEvent.go:65: debug 7
+ERROR: 2021/03/04 23:01:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:01:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:01:39 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:01:39 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:01:39 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:01:39 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:01:39 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:01:44 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:01:44 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:01:44 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:01:49 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:01:49 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:01:49 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:01:54 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:01:54 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:01:54 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:01:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:01:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:01:59 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:01:59 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:01:59 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:02:04 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:02:04 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:02:04 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:02:09 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:02:09 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:02:09 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:02:14 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:02:14 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:02:14 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:02:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:02:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:02:19 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:02:19 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:02:19 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:02:24 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:02:24 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:02:24 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:02:29 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:02:29 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:02:29 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:02:34 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:02:34 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:02:34 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:02:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:02:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:02:39 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:02:39 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:02:39 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:02:39 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:02:39 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:02:39 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:02:39 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:02:39 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:02:39 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:02:39 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:02:43 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:02:43 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:02:43 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:02:43 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:02:43 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:02:48 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:02:48 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:02:48 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:02:53 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:02:53 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:02:53 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:02:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:02:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:02:58 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:02:58 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:02:58 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:03:03 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:03:03 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:03:03 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:03:08 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:03:08 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:03:08 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:03:13 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:03:13 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:03:13 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:03:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:03:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:03:18 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:03:18 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:03:18 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:03:23 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:03:23 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:03:23 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:03:28 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:03:28 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:03:28 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:03:33 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:03:33 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:03:33 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:03:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:03:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:03:38 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:03:38 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:03:38 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:03:43 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:03:43 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:03:43 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:03:43 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:03:43 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:03:43 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:03:43 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:03:43 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:03:43 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:03:43 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:03:47 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:03:47 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:03:47 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:03:47 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:03:47 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:03:52 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:03:52 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:03:52 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:03:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:03:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:03:57 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:03:57 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:03:57 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:04:02 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:04:02 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:04:02 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:04:07 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:04:07 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:04:07 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:04:12 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:04:12 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:04:12 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:04:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:04:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:04:17 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:04:17 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:04:17 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:04:22 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:04:22 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:04:22 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:04:27 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:04:27 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:04:27 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:04:32 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:04:32 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:04:32 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:04:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:04:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:04:37 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:04:37 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:04:37 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:04:42 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:04:42 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:04:42 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:04:47 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:04:47 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:04:47 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:04:47 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:04:47 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:04:47 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:04:47 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:04:47 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:04:47 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:04:47 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:04:51 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:04:51 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:04:51 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:04:51 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:04:51 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:04:56 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:04:56 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:04:56 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:04:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:04:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:05:01 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:05:01 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:05:01 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:05:06 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:05:06 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:05:06 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:05:11 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:05:11 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:05:11 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:05:16 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:05:16 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:05:16 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:05:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:05:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:05:21 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:05:21 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:05:21 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:05:26 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:05:26 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:05:26 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:05:31 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:05:31 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:05:31 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:05:36 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:05:36 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:05:36 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:05:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:05:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:05:41 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:05:41 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:05:41 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:05:46 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:05:46 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:05:46 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:05:51 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:05:51 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:05:51 event.go:71: mysql 1
+ERROR: 2021/03/04 23:05:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:05:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:06:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:06:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:06:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:06:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+INFO: 2021/03/04 23:10:23 config.go:21: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/04 23:10:23 config.go:22: ----- Configuration en préparation
+INFO: 2021/03/04 23:10:23 config.go:25: ----- Initialisation l'heure
+INFO: 2021/03/04 23:10:23 config.go:29: ----- Initialisation du fichier de config
+INFO: 2021/03/04 23:10:23 config.go:45: ----- Initialisation de la base de données
+INFO: 2021/03/04 23:10:23 config.go:62: ----- Configuration charger
+INFO: 2021/03/04 23:10:24 updateEvent.go:18: ----- Démarrage de la boucle UpdateEvent
+DEBUG: 2021/03/04 23:10:24 bot_time.go:35: Starting verifCandid
+INFO: 2021/03/04 23:10:24 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/03/04 23:10:24 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:10:29 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:10:29 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:10:29 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:10:29 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:10:29 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:10:29 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:10:29 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:10:29 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:10:29 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:10:29 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:10:33 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:10:33 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:10:33 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:10:33 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:10:33 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:10:34 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:10:38 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:10:38 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:10:38 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:10:43 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:10:43 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:10:43 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:10:48 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:10:48 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:10:48 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:10:53 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:10:53 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:10:53 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:10:54 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:10:58 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:10:58 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:10:58 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:11:03 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:11:03 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:11:03 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:11:08 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:11:08 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:11:08 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:11:13 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:11:13 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:11:13 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:11:14 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:11:18 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:11:18 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:11:18 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:11:23 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:11:23 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:11:23 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:11:28 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:11:28 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:11:28 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:11:33 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:11:33 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:11:33 event.go:71: mysql 1
+ERROR: 2021/03/04 23:11:34 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:11:34 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:11:54 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:11:54 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+INFO: 2021/03/04 23:12:13 config.go:20: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/04 23:12:13 config.go:21: ----- Configuration en préparation
+INFO: 2021/03/04 23:12:13 config.go:24: ----- Initialisation l'heure
+INFO: 2021/03/04 23:12:13 config.go:28: ----- Initialisation du fichier de config
+INFO: 2021/03/04 23:12:13 config.go:44: ----- Initialisation de la base de données
+INFO: 2021/03/04 23:12:13 config.go:61: ----- Configuration charger
+DEBUG: 2021/03/04 23:12:14 bot_time.go:35: Starting verifCandid
+INFO: 2021/03/04 23:12:14 updateEvent.go:18: ----- Démarrage de la boucle UpdateEvent
+INFO: 2021/03/04 23:12:14 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/03/04 23:12:14 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:12:19 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:12:19 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:12:19 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:12:19 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:12:19 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:12:19 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:12:19 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:12:19 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:12:19 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:12:19 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:12:23 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:12:23 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:12:23 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:12:23 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:12:23 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:12:24 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:12:28 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:12:28 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:12:28 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:12:33 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:12:33 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:12:33 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:12:38 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:12:38 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:12:38 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:12:43 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:12:43 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:12:43 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:12:44 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:12:48 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:12:48 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:12:48 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:12:53 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:12:53 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:12:53 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:12:58 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:12:58 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:12:58 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:13:03 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:13:03 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:13:03 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:13:04 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:13:08 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:13:08 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:13:08 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:13:13 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:13:13 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:13:13 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:13:18 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:13:18 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:13:18 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:13:23 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:13:23 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:13:23 event.go:71: mysql 1
+ERROR: 2021/03/04 23:13:24 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:13:24 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:13:44 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:13:44 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:14:04 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:14:04 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:14:24 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:14:24 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:14:44 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:14:44 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:15:04 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:15:04 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:15:24 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:15:24 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+INFO: 2021/03/04 23:16:55 config.go:21: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/04 23:16:55 config.go:22: ----- Configuration en préparation
+INFO: 2021/03/04 23:16:55 config.go:25: ----- Initialisation l'heure
+INFO: 2021/03/04 23:16:55 config.go:29: ----- Initialisation du fichier de config
+INFO: 2021/03/04 23:16:55 config.go:45: ----- Initialisation de la base de données
+INFO: 2021/03/04 23:16:55 config.go:62: ----- Configuration charger
+INFO: 2021/03/04 23:16:56 updateEvent.go:18: ----- Démarrage de la boucle UpdateEvent
+DEBUG: 2021/03/04 23:16:56 bot_time.go:35: Starting verifCandid
+INFO: 2021/03/04 23:16:56 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/03/04 23:16:56 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:17:01 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:17:01 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:17:01 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:17:01 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:17:01 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:17:01 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:17:01 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:17:01 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:17:01 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:17:01 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:17:05 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:17:05 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:17:05 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:17:05 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:17:05 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:17:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:17:10 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:17:10 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:17:10 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:17:15 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:17:15 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:17:15 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:17:20 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:17:20 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:17:20 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:17:25 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:17:25 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:17:25 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:17:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:17:30 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:17:30 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:17:30 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:17:35 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:17:35 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:17:35 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:17:40 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:17:40 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:17:40 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:17:45 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:17:45 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:17:45 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:17:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:17:50 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:17:50 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:17:50 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:17:55 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:17:55 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:17:55 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:18:00 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:18:00 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:18:00 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:18:05 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:18:05 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:18:05 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:18:06 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:18:06 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:18:06 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:18:06 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:18:06 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:18:06 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:18:06 updateEvent.go:65: debug 7
+ERROR: 2021/03/04 23:18:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:18:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:18:09 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:18:09 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:18:09 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:18:09 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:18:09 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:18:14 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:18:14 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:18:14 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:18:19 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:18:19 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:18:19 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:18:24 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:18:24 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:18:24 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:18:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:18:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:18:29 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:18:29 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:18:29 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:18:34 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:18:34 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:18:34 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:18:39 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:18:39 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:18:39 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:18:44 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:18:44 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:18:44 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:18:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:18:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:18:49 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:18:49 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:18:49 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:18:54 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:18:54 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:18:54 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:18:59 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:18:59 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:18:59 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:19:04 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:19:04 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:19:04 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:19:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:19:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:19:09 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:19:09 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:19:09 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:19:09 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:19:09 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:19:09 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:19:09 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:19:09 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:19:09 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:19:09 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:19:13 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:19:13 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:19:13 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:19:13 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:19:13 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:19:18 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:19:18 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:19:18 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:19:23 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:19:23 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:19:23 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:19:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:19:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:19:28 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:19:28 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:19:28 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:19:33 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:19:33 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:19:33 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:19:38 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:19:38 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:19:38 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:19:43 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:19:43 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:19:43 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:19:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:19:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:19:48 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:19:48 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:19:48 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:19:53 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:19:53 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:19:53 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:19:58 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:19:58 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:19:58 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:20:03 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:20:03 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:20:03 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:20:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:20:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:20:08 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:20:08 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:20:08 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:20:13 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:20:13 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:20:13 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:20:13 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:20:13 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:20:13 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:20:13 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:20:13 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:20:13 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:20:13 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:20:16 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:20:16 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:20:16 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:20:16 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:20:16 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:20:21 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:20:21 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:20:21 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:20:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:20:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:20:26 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:20:26 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:20:26 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:20:31 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:20:31 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:20:31 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:20:36 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:20:36 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:20:36 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:20:41 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:20:41 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:20:41 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:20:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:20:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:20:46 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:20:46 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:20:46 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:20:51 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:20:51 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:20:51 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:20:56 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:20:56 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:20:56 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:21:01 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:21:01 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:21:01 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:21:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:21:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:21:06 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:21:06 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:21:06 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:21:11 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:21:11 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:21:11 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:21:16 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:21:16 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:21:16 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:21:17 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:21:17 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:21:17 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:21:17 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:21:17 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:21:17 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:21:17 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:21:21 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:21:21 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:21:21 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:21:21 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:21:21 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:21:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:21:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:21:26 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:21:26 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:21:26 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:21:31 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:21:31 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:21:31 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:21:36 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:21:36 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:21:36 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:21:41 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:21:41 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:21:41 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:21:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:21:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:21:46 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:21:46 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:21:46 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:21:51 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:21:51 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:21:51 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:21:56 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:21:56 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:21:56 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:22:01 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:22:01 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:22:01 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:22:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:22:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:22:06 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:22:06 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:22:06 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:22:11 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:22:11 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:22:11 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:22:16 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:22:16 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:22:16 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:22:21 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:22:21 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:22:21 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:22:21 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:22:21 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:22:21 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:22:21 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:22:21 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:22:21 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:22:22 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:22:25 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:22:25 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:22:25 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:22:25 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:22:25 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:22:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:22:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:22:30 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:22:30 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:22:30 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:22:35 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:22:35 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:22:35 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:22:40 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:22:40 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:22:40 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:22:45 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:22:45 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:22:45 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:22:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:22:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:22:50 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:22:50 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:22:50 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:22:55 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:22:55 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:22:55 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:23:00 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:23:00 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:23:00 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:23:05 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:23:05 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:23:05 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:23:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:23:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:23:10 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:23:10 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:23:10 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:23:15 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:23:15 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:23:15 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:23:20 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:23:20 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:23:20 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:23:25 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:23:25 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:23:25 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:23:25 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:23:25 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:23:25 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:23:25 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:23:25 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:23:25 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:23:25 updateEvent.go:65: debug 7
+ERROR: 2021/03/04 23:23:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:23:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:23:29 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:23:29 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:23:29 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:23:29 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:23:29 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:23:34 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:23:34 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:23:34 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:23:39 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:23:39 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:23:39 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:23:44 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:23:44 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:23:44 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:23:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:23:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:23:49 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:23:49 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:23:49 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:23:54 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:23:54 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:23:54 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:23:59 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:23:59 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:23:59 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:24:04 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:24:04 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:24:04 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:24:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:24:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:24:09 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:24:09 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:24:09 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:24:14 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:24:14 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:24:14 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:24:19 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:24:19 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:24:19 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:24:24 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:24:24 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:24:24 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:24:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:24:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:24:29 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:24:29 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:24:29 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:24:29 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:24:29 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:24:29 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:24:29 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:24:29 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:24:29 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:24:29 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:24:32 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:24:32 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:24:32 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:24:32 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:24:32 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:24:37 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:24:37 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:24:37 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:24:42 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:24:42 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:24:42 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:24:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:24:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:24:47 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:24:47 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:24:47 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:24:52 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:24:52 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:24:52 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:24:57 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:24:57 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:24:57 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:25:02 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:25:02 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:25:02 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:25:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:25:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:25:07 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:25:07 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:25:07 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:25:12 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:25:12 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:25:12 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:25:17 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:25:17 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:25:17 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:25:22 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:25:22 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:25:22 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:25:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:25:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:25:27 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:25:27 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:25:27 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:25:32 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:25:32 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:25:32 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:25:33 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:25:33 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:25:33 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:25:33 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:25:33 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:25:33 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:25:33 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:25:37 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:25:37 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:25:37 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:25:37 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:25:37 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:25:42 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:25:42 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:25:42 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:25:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:25:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:25:47 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:25:47 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:25:47 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:25:52 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:25:52 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:25:52 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:25:57 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:25:57 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:25:57 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:26:02 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:26:02 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:26:02 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:26:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:26:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:26:07 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:26:07 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:26:07 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:26:12 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:26:12 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:26:12 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:26:17 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:26:17 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:26:17 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:26:22 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:26:22 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:26:22 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:26:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:26:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:26:27 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:26:27 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:26:27 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:26:32 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:26:32 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:26:32 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:26:37 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:26:37 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:26:37 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:26:37 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:26:37 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:26:37 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:26:37 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:26:37 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:26:37 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:26:37 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:26:41 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:26:41 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:26:41 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:26:41 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:26:41 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:26:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:26:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:26:46 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:26:46 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:26:46 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:26:51 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:26:51 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:26:51 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:26:56 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:26:56 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:26:56 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:27:01 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:27:01 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:27:01 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:27:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:27:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:27:06 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:27:06 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:27:06 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:27:11 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:27:11 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:27:11 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:27:16 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:27:16 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:27:16 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:27:21 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:27:21 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:27:21 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:27:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:27:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:27:26 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:27:26 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:27:26 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:27:31 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:27:31 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:27:31 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:27:36 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:27:36 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:27:36 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:27:41 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:27:41 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:27:41 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:27:41 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:27:41 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:27:41 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:27:41 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:27:41 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:27:41 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:27:41 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:27:45 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:27:45 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:27:45 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:27:45 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:27:45 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:27:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:27:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:27:50 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:27:50 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:27:50 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:27:55 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:27:55 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:27:55 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:28:00 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:28:00 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:28:00 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:28:05 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:28:05 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:28:05 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:28:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:28:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:28:10 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:28:10 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:28:10 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:28:15 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:28:15 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:28:15 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:28:20 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:28:20 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:28:20 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:28:25 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:28:25 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:28:25 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:28:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:28:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:28:30 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:28:30 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:28:30 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:28:35 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:28:35 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:28:35 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:28:40 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:28:40 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:28:40 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:28:45 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:28:45 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:28:45 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:28:45 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:28:45 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:28:45 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:28:45 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:28:45 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:28:45 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:28:45 updateEvent.go:65: debug 7
+ERROR: 2021/03/04 23:28:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:28:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:28:49 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:28:49 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:28:49 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:28:49 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:28:49 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:28:54 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:28:54 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:28:54 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:28:59 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:28:59 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:28:59 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:29:04 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:29:04 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:29:04 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:29:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:29:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:29:09 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:29:09 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:29:09 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:29:14 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:29:14 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:29:14 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:29:19 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:29:19 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:29:19 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:29:24 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:29:24 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:29:24 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:29:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:29:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:29:29 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:29:29 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:29:29 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:29:34 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:29:34 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:29:34 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:29:39 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:29:39 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:29:39 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:29:44 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:29:44 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:29:44 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:29:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:29:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:29:49 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:29:49 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:29:49 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:29:49 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:29:49 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:29:49 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:29:49 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:29:49 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:29:49 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:29:50 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:29:53 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:29:53 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:29:53 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:29:53 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:29:53 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:29:58 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:29:58 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:29:58 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:30:03 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:30:03 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:30:03 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:30:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:30:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:30:08 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:30:08 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:30:08 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:30:13 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:30:13 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:30:13 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:30:18 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:30:18 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:30:18 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:30:23 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:30:23 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:30:23 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:30:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:30:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:30:28 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:30:28 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:30:28 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:30:33 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:30:33 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:30:33 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:30:38 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:30:38 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:30:38 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:30:43 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:30:43 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:30:43 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:30:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:30:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:30:48 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:30:48 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:30:48 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:30:53 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:30:53 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:30:53 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:30:53 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:30:53 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:30:53 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:30:53 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:30:53 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:30:53 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:30:53 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:30:57 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:30:57 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:30:57 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:30:57 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:30:57 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:31:02 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:31:02 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:31:02 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:31:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:31:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:31:07 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:31:07 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:31:07 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:31:12 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:31:12 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:31:12 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:31:17 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:31:17 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:31:17 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:31:22 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:31:22 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:31:22 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:31:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:31:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:31:27 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:31:27 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:31:27 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:31:32 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:31:32 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:31:32 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:31:37 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:31:37 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:31:37 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:31:42 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:31:42 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:31:42 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:31:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:31:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:31:47 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:31:47 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:31:47 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:31:52 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:31:52 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:31:52 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:31:57 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:31:57 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:31:57 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:31:57 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:31:57 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:31:57 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:31:57 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:31:57 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:31:57 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:31:57 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:32:00 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:32:00 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:32:00 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:32:00 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:32:00 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:32:05 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:32:05 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:32:05 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:32:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:32:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:32:10 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:32:10 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:32:10 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:32:15 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:32:15 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:32:15 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:32:20 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:32:20 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:32:20 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:32:26 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:32:26 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:32:26 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:32:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:32:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:32:31 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:32:31 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:32:31 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:32:36 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:32:36 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:32:36 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:32:41 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:32:41 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:32:41 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:32:46 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:32:46 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:32:46 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:32:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:32:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:32:51 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:32:51 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:32:51 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:32:56 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:32:56 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:32:56 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:33:01 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:33:01 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:33:01 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:33:01 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:33:01 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:33:01 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:33:01 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:33:01 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:33:01 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:33:01 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:33:05 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:33:05 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:33:05 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:33:05 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:33:05 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:33:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:33:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:33:10 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:33:10 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:33:10 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:33:15 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:33:15 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:33:15 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:33:20 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:33:20 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:33:20 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:33:25 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:33:25 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:33:25 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:33:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:33:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:33:30 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:33:30 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:33:30 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:33:35 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:33:35 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:33:35 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:33:40 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:33:40 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:33:40 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:33:45 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:33:45 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:33:45 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:33:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:33:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:33:50 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:33:50 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:33:50 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:33:55 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:33:55 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:33:55 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:34:00 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:34:00 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:34:00 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:34:05 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:34:05 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:34:05 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:34:05 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:34:05 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:34:05 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:34:05 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:34:05 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:34:05 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:34:06 updateEvent.go:65: debug 7
+ERROR: 2021/03/04 23:34:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:34:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:34:09 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:34:09 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:34:09 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:34:09 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:34:09 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:34:14 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:34:14 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:34:14 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:34:19 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:34:19 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:34:19 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:34:24 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:34:24 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:34:24 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:34:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:34:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:34:29 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:34:29 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:34:29 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:34:34 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:34:34 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:34:34 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:34:39 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:34:39 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:34:39 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:34:44 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:34:44 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:34:44 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:34:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:34:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:34:49 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:34:49 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:34:49 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:34:54 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:34:54 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:34:54 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:34:59 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:34:59 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:34:59 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:35:04 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:35:04 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:35:04 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:35:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:35:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:35:09 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:35:09 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:35:09 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:35:09 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:35:09 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:35:09 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:35:09 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:35:09 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:35:09 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:35:09 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:35:13 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:35:13 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:35:13 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:35:13 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:35:13 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:35:18 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:35:18 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:35:18 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:35:23 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:35:23 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:35:23 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:35:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:35:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:35:28 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:35:28 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:35:28 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:35:33 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:35:33 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:35:33 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:35:38 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:35:38 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:35:38 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:35:43 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:35:43 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:35:43 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:35:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:35:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:35:48 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:35:48 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:35:48 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:35:53 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:35:53 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:35:53 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:35:58 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:35:58 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:35:58 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:36:03 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:36:03 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:36:03 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:36:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:36:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:36:08 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:36:08 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:36:08 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:36:13 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:36:13 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:36:13 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:36:13 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:36:13 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:36:13 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:36:13 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:36:13 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:36:13 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:36:13 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:36:16 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:36:16 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:36:16 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:36:16 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:36:16 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:36:21 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:36:21 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:36:21 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:36:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:36:26 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:36:26 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:36:26 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:36:26 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:36:31 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:36:31 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:36:31 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:36:36 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:36:36 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:36:36 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:36:41 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:36:41 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:36:41 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:36:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:36:46 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:36:46 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:36:46 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:36:46 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:36:51 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:36:51 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:36:51 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:36:56 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:36:56 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:36:56 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:37:01 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:37:01 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:37:01 updateEvent.go:23: debug 1
+ERROR: 2021/03/04 23:37:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/04 23:37:06 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/04 23:37:06 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:37:06 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:37:06 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:37:11 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:37:11 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:37:11 updateEvent.go:23: debug 1
+DEBUG: 2021/03/04 23:37:16 updateEvent.go:25: debug 2
+DEBUG: 2021/03/04 23:37:16 updateEvent.go:41: debug 4
+DEBUG: 2021/03/04 23:37:16 event.go:71: mysql 1
+DEBUG: 2021/03/04 23:37:17 event.go:78: mysql 2
+DEBUG: 2021/03/04 23:37:17 event.go:82: mysql 3
+DEBUG: 2021/03/04 23:37:17 event.go:92: mysql 4
+DEBUG: 2021/03/04 23:37:17 event.go:99: mysql 5
+DEBUG: 2021/03/04 23:37:17 updateEvent.go:47: debug 5
+DEBUG: 2021/03/04 23:37:17 updateEvent.go:53: debug 6
+DEBUG: 2021/03/04 23:37:17 updateEvent.go:65: debug 7
+DEBUG: 2021/03/04 23:37:20 updateEvent.go:67: debug 8
+DEBUG: 2021/03/04 23:37:20 updateEvent.go:73: debug 9
+DEBUG: 2021/03/04 23:37:20 updateEvent.go:75: debug 10
+DEBUG: 2021/03/04 23:37:20 updateEvent.go:78: debug 11
+DEBUG: 2021/03/04 23:37:20 updateEvent.go:23: debug 1
+INFO: 2021/03/04 23:37:28 config.go:21: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/04 23:37:28 config.go:22: ----- Configuration en préparation
+INFO: 2021/03/04 23:37:28 config.go:25: ----- Initialisation l'heure
+INFO: 2021/03/04 23:37:28 config.go:29: ----- Initialisation du fichier de config
+INFO: 2021/03/04 23:37:28 config.go:45: ----- Initialisation de la base de données
+INFO: 2021/03/04 23:37:57 config.go:21: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/04 23:37:57 config.go:22: ----- Configuration en préparation
+INFO: 2021/03/04 23:37:57 config.go:25: ----- Initialisation l'heure
+INFO: 2021/03/04 23:37:57 config.go:29: ----- Initialisation du fichier de config
+INFO: 2021/03/04 23:37:57 config.go:45: ----- Initialisation de la base de données
+INFO: 2021/03/04 23:38:11 config.go:20: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/04 23:38:12 config.go:21: ----- Configuration en préparation
+INFO: 2021/03/04 23:38:12 config.go:24: ----- Initialisation l'heure
+INFO: 2021/03/04 23:38:12 config.go:28: ----- Initialisation du fichier de config
+INFO: 2021/03/04 23:38:12 config.go:44: ----- Initialisation de la base de données
+INFO: 2021/03/04 23:38:20 config.go:20: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/04 23:38:20 config.go:21: ----- Configuration en préparation
+INFO: 2021/03/04 23:38:20 config.go:24: ----- Initialisation l'heure
+INFO: 2021/03/04 23:38:20 config.go:28: ----- Initialisation du fichier de config
+INFO: 2021/03/04 23:38:20 config.go:44: ----- Initialisation de la base de données
+INFO: 2021/03/04 23:39:03 config.go:20: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/04 23:39:03 config.go:21: ----- Configuration en préparation
+INFO: 2021/03/04 23:39:03 config.go:24: ----- Initialisation l'heure
+INFO: 2021/03/04 23:39:03 config.go:28: ----- Initialisation du fichier de config
+INFO: 2021/03/04 23:39:03 config.go:44: ----- Initialisation de la base de données
+INFO: 2021/03/04 23:39:21 config.go:21: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/04 23:39:21 config.go:22: ----- Configuration en préparation
+INFO: 2021/03/04 23:39:21 config.go:25: ----- Initialisation l'heure
+INFO: 2021/03/04 23:39:21 config.go:29: ----- Initialisation du fichier de config
+INFO: 2021/03/04 23:39:21 config.go:45: ----- Initialisation de la base de données
+INFO: 2021/03/04 23:39:22 config.go:62: ----- Configuration charger
+INFO: 2021/03/04 23:39:22 updateEvent.go:18: ----- Démarrage de la boucle UpdateEvent
+DEBUG: 2021/03/04 23:39:22 bot_time.go:35: Starting verifCandid
+INFO: 2021/03/04 23:39:22 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/03/04 23:39:22 updateEvent.go:23: debug 1
+INFO: 2021/03/04 23:39:32 config.go:22: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/04 23:39:32 config.go:23: ----- Configuration en préparation
+INFO: 2021/03/04 23:39:32 config.go:26: ----- Initialisation l'heure
+INFO: 2021/03/04 23:39:32 config.go:30: ----- Initialisation du fichier de config
+INFO: 2021/03/04 23:39:32 config.go:46: ----- Initialisation de la base de données
+INFO: 2021/03/04 23:39:32 config.go:65: ----- Configuration charger
+INFO: 2021/03/04 23:39:33 updateEvent.go:18: ----- Démarrage de la boucle UpdateEvent
+DEBUG: 2021/03/04 23:39:33 bot_time.go:35: Starting verifCandid
+INFO: 2021/03/04 23:39:33 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/03/04 23:39:33 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:36:59 main.go:58: Erreur lors de la connexion, websocket: close 4004: Authentication failed.
+ERROR: 2021/03/05 13:37:17 main.go:58: Erreur lors de la connexion, websocket: close 4004: Authentication failed.
+ERROR: 2021/03/05 13:37:31 main.go:58: Erreur lors de la connexion, websocket: close 4004: Authentication failed.
+ERROR: 2021/03/05 13:38:52 main.go:58: Erreur lors de la connexion, websocket: close 4004: Authentication failed.
+ERROR: 2021/03/05 13:40:58 main.go:58: Erreur lors de la connexion, websocket: close 4004: Authentication failed.
+INFO: 2021/03/05 13:42:34 config.go:21: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/05 13:42:34 config.go:22: ----- Configuration en préparation
+INFO: 2021/03/05 13:42:34 config.go:25: ----- Initialisation l'heure
+INFO: 2021/03/05 13:42:34 config.go:29: ----- Initialisation du fichier de config
+INFO: 2021/03/05 13:42:34 config.go:45: ----- Initialisation de la base de données
+INFO: 2021/03/05 13:42:34 config.go:62: ----- Configuration charger
+DEBUG: 2021/03/05 13:42:35 bot_time.go:35: Starting verifCandid
+INFO: 2021/03/05 13:42:35 updateEvent.go:18: ----- Démarrage de la boucle UpdateEvent
+DEBUG: 2021/03/05 13:42:35 updateEvent.go:23: debug 1
+INFO: 2021/03/05 13:42:35 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/03/05 13:42:40 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:42:40 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:42:40 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:42:40 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:42:40 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:42:40 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:42:40 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:42:40 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:42:40 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:42:40 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:42:44 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:42:44 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:42:44 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:42:44 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:42:44 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:42:45 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:42:49 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:42:49 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:42:49 updateEvent.go:23: debug 1
+INFO: 2021/03/05 13:43:45 config.go:20: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/05 13:43:45 config.go:21: ----- Configuration en préparation
+INFO: 2021/03/05 13:43:45 config.go:24: ----- Initialisation l'heure
+INFO: 2021/03/05 13:43:45 config.go:28: ----- Initialisation du fichier de config
+INFO: 2021/03/05 13:43:45 config.go:44: ----- Initialisation de la base de données
+INFO: 2021/03/05 13:43:46 config.go:62: ----- Configuration charger
+INFO: 2021/03/05 13:43:46 updateEvent.go:18: ----- Démarrage de la boucle UpdateEvent
+DEBUG: 2021/03/05 13:43:46 updateEvent.go:23: debug 1
+INFO: 2021/03/05 13:43:46 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/03/05 13:43:46 bot_time.go:35: Starting verifCandid
+DEBUG: 2021/03/05 13:43:51 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:43:51 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:43:51 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:43:52 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:43:52 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:43:52 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:43:52 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:43:52 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:43:52 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:43:52 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:43:56 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:43:56 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:43:56 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:43:56 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:43:56 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:43:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:44:01 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:44:01 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:44:01 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:44:06 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:44:06 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:44:06 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:44:11 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:44:11 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:44:11 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:44:16 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:44:16 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:44:16 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:44:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:44:21 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:44:21 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:44:21 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:44:26 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:44:26 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:44:26 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:44:31 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:44:31 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:44:31 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:44:36 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:44:36 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:44:36 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:44:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:44:41 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:44:41 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:44:41 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:44:46 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:44:46 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:44:46 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:44:51 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:44:51 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:44:51 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:44:56 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:44:56 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:44:56 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:44:56 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:44:56 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:44:56 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:44:56 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:44:56 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:44:56 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:44:56 updateEvent.go:65: debug 7
+ERROR: 2021/03/05 13:44:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:44:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:45:00 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:45:00 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:45:00 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:45:00 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:45:00 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:45:05 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:45:05 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:45:05 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:45:10 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:45:10 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:45:10 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:45:15 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:45:15 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:45:15 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:45:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:45:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:45:20 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:45:20 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:45:20 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:45:25 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:45:25 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:45:25 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:45:30 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:45:30 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:45:30 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:45:35 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:45:35 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:45:35 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:45:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:45:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:45:40 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:45:40 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:45:40 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:45:45 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:45:45 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:45:45 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:45:50 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:45:50 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:45:50 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:45:55 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:45:55 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:45:55 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:45:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:45:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:46:00 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:46:00 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:46:00 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:46:00 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:46:00 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:46:00 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:46:00 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:46:00 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:46:00 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:46:00 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:46:04 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:46:04 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:46:04 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:46:04 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:46:04 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:46:09 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:46:09 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:46:09 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:46:14 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:46:14 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:46:14 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:46:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:46:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:46:19 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:46:19 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:46:19 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:46:24 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:46:24 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:46:24 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:46:29 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:46:29 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:46:29 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:46:34 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:46:34 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:46:34 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:46:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:46:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:46:39 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:46:39 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:46:39 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:46:44 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:46:44 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:46:44 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:46:49 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:46:49 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:46:49 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:46:54 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:46:54 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:46:54 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:46:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:46:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:46:59 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:46:59 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:46:59 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:47:04 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:47:04 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:47:04 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:47:04 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:47:04 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:47:04 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:47:04 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:47:04 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:47:04 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:47:04 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:47:08 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:47:08 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:47:08 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:47:08 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:47:08 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:47:13 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:47:13 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:47:13 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:47:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:47:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:47:18 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:47:18 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:47:18 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:47:23 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:47:23 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:47:23 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:47:28 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:47:28 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:47:28 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:47:33 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:47:33 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:47:33 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:47:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:47:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:47:38 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:47:38 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:47:38 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:47:43 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:47:43 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:47:43 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:47:48 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:47:48 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:47:48 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:47:53 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:47:53 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:47:53 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:47:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:47:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:47:58 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:47:58 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:47:58 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:48:03 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:48:03 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:48:03 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:48:08 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:48:08 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:48:08 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:48:08 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:48:08 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:48:08 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:48:08 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:48:08 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:48:08 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:48:08 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:48:12 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:48:12 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:48:12 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:48:12 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:48:12 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:48:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:48:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:48:17 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:48:17 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:48:17 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:48:22 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:48:22 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:48:22 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:48:27 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:48:27 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:48:27 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:48:32 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:48:32 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:48:32 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:48:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:48:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:48:37 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:48:37 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:48:37 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:48:42 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:48:42 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:48:42 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:48:47 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:48:47 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:48:47 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:48:52 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:48:52 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:48:52 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:48:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:48:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:48:57 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:48:57 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:48:57 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:49:02 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:49:02 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:49:02 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:49:07 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:49:07 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:49:07 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:49:12 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:49:12 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:49:12 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:49:12 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:49:12 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:49:12 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:49:12 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:49:12 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:49:12 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:49:13 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:49:16 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:49:16 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:49:16 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:49:16 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:49:16 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:49:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:49:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:49:21 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:49:21 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:49:21 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:49:26 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:49:26 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:49:26 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:49:31 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:49:31 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:49:31 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:49:36 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:49:36 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:49:36 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:49:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:49:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:49:41 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:49:41 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:49:41 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:49:46 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:49:46 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:49:46 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:49:51 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:49:51 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:49:51 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:49:56 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:49:56 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:49:56 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:49:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:49:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:50:01 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:50:01 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:50:01 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:50:06 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:50:06 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:50:06 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:50:11 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:50:11 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:50:11 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:50:16 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:50:16 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:50:16 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:50:16 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:50:16 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:50:16 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:50:16 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:50:16 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:50:16 updateEvent.go:53: debug 6
+ERROR: 2021/03/05 13:50:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:50:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:50:17 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:50:20 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:50:20 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:50:20 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:50:20 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:50:20 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:50:25 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:50:25 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:50:25 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:50:30 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:50:30 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:50:30 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:50:35 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:50:35 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:50:35 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:50:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:50:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:50:40 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:50:40 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:50:40 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:50:45 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:50:45 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:50:45 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:50:50 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:50:50 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:50:50 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:50:55 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:50:55 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:50:55 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:50:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:50:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:51:00 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:51:00 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:51:00 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:51:05 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:51:05 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:51:05 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:51:10 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:51:10 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:51:10 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:51:15 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:51:15 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:51:15 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:51:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:51:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:51:20 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:51:20 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:51:20 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:51:20 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:51:20 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:51:20 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:51:20 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:51:20 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:51:20 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:51:21 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:51:24 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:51:24 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:51:24 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:51:24 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:51:24 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:51:29 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:51:29 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:51:29 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:51:34 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:51:34 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:51:34 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:51:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:51:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:51:39 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:51:39 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:51:39 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:51:44 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:51:44 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:51:44 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:51:49 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:51:49 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:51:49 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:51:54 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:51:54 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:51:54 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:51:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:51:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:51:59 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:51:59 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:51:59 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:52:04 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:52:04 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:52:04 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:52:09 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:52:09 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:52:09 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:52:14 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:52:14 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:52:14 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:52:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:52:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:52:19 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:52:19 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:52:19 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:52:24 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:52:24 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:52:24 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:52:24 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:52:24 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:52:24 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:52:24 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:52:24 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:52:24 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:52:25 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:52:28 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:52:28 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:52:28 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:52:28 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:52:28 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:52:33 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:52:33 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:52:33 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:52:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:52:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:52:38 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:52:38 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:52:38 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:52:43 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:52:43 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:52:43 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:52:48 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:52:48 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:52:48 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:52:53 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:52:53 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:52:53 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:52:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:52:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:52:58 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:52:58 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:52:58 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:53:03 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:53:03 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:53:03 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:53:08 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:53:08 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:53:08 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:53:13 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:53:13 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:53:13 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:53:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:53:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:53:18 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:53:18 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:53:18 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:53:23 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:53:23 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:53:23 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:53:28 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:53:28 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:53:28 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:53:28 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:53:28 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:53:28 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:53:28 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:53:28 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:53:28 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:53:29 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:53:32 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:53:32 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:53:32 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:53:32 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:53:32 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:53:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:53:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:53:37 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:53:37 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:53:37 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:53:42 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:53:42 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:53:42 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:53:47 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:53:47 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:53:47 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:53:52 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:53:52 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:53:52 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:53:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:53:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:53:57 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:53:57 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:53:57 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:54:02 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:54:02 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:54:02 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:54:07 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:54:07 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:54:07 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:54:12 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:54:12 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:54:12 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:54:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:54:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:54:17 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:54:17 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:54:17 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:54:22 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:54:22 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:54:22 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:54:27 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:54:27 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:54:27 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:54:32 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:54:32 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:54:32 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:54:32 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:54:32 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:54:32 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:54:32 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:54:32 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:54:32 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:54:33 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:54:36 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:54:36 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:54:36 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:54:36 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:54:36 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:54:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:54:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:54:41 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:54:41 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:54:41 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:54:46 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:54:46 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:54:46 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:54:51 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:54:51 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:54:51 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:54:56 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:54:56 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:54:56 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:54:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:54:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:55:01 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:55:01 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:55:01 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:55:06 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:55:06 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:55:06 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:55:11 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:55:11 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:55:11 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:55:16 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:55:16 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:55:16 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:55:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:55:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:55:21 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:55:21 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:55:21 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:55:26 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:55:26 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:55:26 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:55:31 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:55:31 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:55:31 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:55:36 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:55:36 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:55:36 event.go:71: mysql 1
+ERROR: 2021/03/05 13:55:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:55:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:55:37 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:55:37 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:55:37 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:55:37 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:55:37 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:55:37 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:55:37 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:55:40 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:55:40 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:55:40 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:55:40 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:55:40 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:55:45 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:55:45 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:55:45 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:55:50 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:55:50 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:55:50 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:55:55 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:55:55 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:55:55 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:55:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:55:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:56:00 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:56:00 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:56:00 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:56:05 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:56:05 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:56:05 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:56:10 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:56:10 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:56:10 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:56:15 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:56:15 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:56:15 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:56:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:56:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:56:20 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:56:20 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:56:20 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:56:25 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:56:25 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:56:25 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:56:30 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:56:30 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:56:30 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:56:35 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:56:35 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:56:35 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:56:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:56:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:56:40 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:56:40 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:56:40 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:56:41 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:56:41 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:56:41 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:56:41 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:56:41 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:56:41 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:56:41 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:56:44 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:56:44 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:56:44 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:56:44 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:56:44 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:56:49 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:56:49 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:56:49 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:56:54 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:56:54 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:56:54 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:56:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:56:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:56:59 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:56:59 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:56:59 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:57:04 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:57:04 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:57:04 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:57:09 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:57:09 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:57:09 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:57:14 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:57:14 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:57:14 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:57:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:57:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:57:19 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:57:19 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:57:19 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:57:24 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:57:24 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:57:24 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:57:29 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:57:29 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:57:29 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:57:34 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:57:34 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:57:34 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:57:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:57:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:57:39 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:57:39 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:57:39 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:57:44 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:57:44 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:57:44 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:57:45 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:57:45 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:57:45 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:57:45 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:57:45 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:57:45 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:57:45 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:57:48 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:57:48 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:57:48 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:57:48 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:57:48 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:57:53 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:57:53 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:57:53 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:57:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:57:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:57:58 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:57:58 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:57:58 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:58:03 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:58:03 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:58:03 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:58:08 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:58:08 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:58:08 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:58:13 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:58:13 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:58:13 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:58:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:58:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:58:18 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:58:18 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:58:18 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:58:23 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:58:23 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:58:23 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:58:28 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:58:28 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:58:28 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:58:33 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:58:33 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:58:33 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:58:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:58:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:58:38 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:58:38 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:58:38 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:58:43 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:58:43 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:58:43 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:58:48 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:58:48 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:58:48 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:58:48 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:58:48 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:58:48 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:58:48 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:58:48 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:58:48 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:58:49 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:58:52 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:58:52 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:58:52 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:58:52 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:58:52 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:58:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:58:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:58:57 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:58:57 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:58:57 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:59:02 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:59:02 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:59:02 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:59:07 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:59:07 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:59:07 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:59:12 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:59:12 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:59:12 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:59:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:59:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:59:17 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:59:17 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:59:17 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:59:22 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:59:22 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:59:22 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:59:27 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:59:27 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:59:27 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:59:32 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:59:32 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:59:32 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:59:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:59:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 13:59:37 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:59:37 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:59:37 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:59:42 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:59:42 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:59:42 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:59:47 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:59:47 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:59:47 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 13:59:52 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 13:59:52 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 13:59:52 event.go:71: mysql 1
+DEBUG: 2021/03/05 13:59:52 event.go:78: mysql 2
+DEBUG: 2021/03/05 13:59:52 event.go:82: mysql 3
+DEBUG: 2021/03/05 13:59:52 event.go:92: mysql 4
+DEBUG: 2021/03/05 13:59:52 event.go:99: mysql 5
+DEBUG: 2021/03/05 13:59:52 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 13:59:52 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 13:59:53 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 13:59:56 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 13:59:56 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 13:59:56 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 13:59:56 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 13:59:56 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 13:59:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 13:59:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:00:01 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:00:01 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:00:01 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:00:06 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:00:06 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:00:06 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:00:11 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:00:11 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:00:11 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:00:16 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:00:16 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:00:16 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 14:00:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:00:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:00:21 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:00:21 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:00:21 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:00:26 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:00:26 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:00:26 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:00:31 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:00:31 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:00:31 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:00:36 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:00:36 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:00:36 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 14:00:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:00:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:00:41 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:00:41 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:00:41 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:00:46 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:00:46 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:00:46 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:00:51 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:00:51 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:00:51 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:00:56 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:00:56 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 14:00:56 event.go:71: mysql 1
+ERROR: 2021/03/05 14:00:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:00:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:00:57 event.go:78: mysql 2
+DEBUG: 2021/03/05 14:00:57 event.go:82: mysql 3
+DEBUG: 2021/03/05 14:00:57 event.go:92: mysql 4
+DEBUG: 2021/03/05 14:00:57 event.go:99: mysql 5
+DEBUG: 2021/03/05 14:00:57 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 14:00:57 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 14:00:57 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 14:01:00 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 14:01:00 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 14:01:00 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 14:01:00 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:01:00 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:01:05 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:01:05 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:01:05 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:01:10 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:01:10 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:01:10 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:01:15 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:01:15 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:01:15 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 14:01:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:01:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:01:20 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:01:20 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:01:20 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:01:25 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:01:25 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:01:25 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:01:30 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:01:30 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:01:30 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:01:35 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:01:35 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:01:35 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 14:01:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:01:36 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:01:40 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:01:40 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:01:40 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:01:45 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:01:45 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:01:45 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:01:50 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:01:50 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:01:50 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:01:55 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:01:55 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:01:55 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 14:01:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:01:56 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:02:00 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:02:00 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 14:02:00 event.go:71: mysql 1
+DEBUG: 2021/03/05 14:02:01 event.go:78: mysql 2
+DEBUG: 2021/03/05 14:02:01 event.go:82: mysql 3
+DEBUG: 2021/03/05 14:02:01 event.go:92: mysql 4
+DEBUG: 2021/03/05 14:02:01 event.go:99: mysql 5
+DEBUG: 2021/03/05 14:02:01 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 14:02:01 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 14:02:01 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 14:02:05 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 14:02:05 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 14:02:05 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 14:02:05 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:02:05 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:02:10 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:02:10 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:02:10 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:02:15 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:02:15 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:02:15 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 14:02:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:02:16 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:02:20 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:02:20 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:02:20 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:02:25 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:02:25 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:02:25 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:02:30 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:02:30 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:02:30 updateEvent.go:23: debug 1
+INFO: 2021/03/05 14:02:37 config.go:20: ----- Démarrage du bot [Lyana]
+INFO: 2021/03/05 14:02:37 config.go:21: ----- Configuration en préparation
+INFO: 2021/03/05 14:02:37 config.go:24: ----- Initialisation l'heure
+INFO: 2021/03/05 14:02:37 config.go:28: ----- Initialisation du fichier de config
+INFO: 2021/03/05 14:02:37 config.go:44: ----- Initialisation de la base de données
+INFO: 2021/03/05 14:02:37 config.go:64: ----- Configuration charger
+DEBUG: 2021/03/05 14:02:38 bot_time.go:35: Starting verifCandid
+INFO: 2021/03/05 14:02:38 updateEvent.go:18: ----- Démarrage de la boucle UpdateEvent
+DEBUG: 2021/03/05 14:02:38 updateEvent.go:23: debug 1
+INFO: 2021/03/05 14:02:38 bot_event.go:22: Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]
+DEBUG: 2021/03/05 14:02:43 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:02:43 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 14:02:43 event.go:71: mysql 1
+DEBUG: 2021/03/05 14:02:43 event.go:78: mysql 2
+DEBUG: 2021/03/05 14:02:43 event.go:82: mysql 3
+DEBUG: 2021/03/05 14:02:43 event.go:92: mysql 4
+DEBUG: 2021/03/05 14:02:43 event.go:99: mysql 5
+DEBUG: 2021/03/05 14:02:43 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 14:02:43 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 14:02:43 updateEvent.go:65: debug 7
+DEBUG: 2021/03/05 14:02:47 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 14:02:47 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 14:02:47 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 14:02:47 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:02:47 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 14:02:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:02:52 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:02:52 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:02:52 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:02:57 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:02:57 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:02:57 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:03:02 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:03:02 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:03:02 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:03:07 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:03:07 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:03:07 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 14:03:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:03:12 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:03:12 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:03:12 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:03:17 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:03:17 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:03:17 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:03:22 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:03:22 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:03:22 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:03:27 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:03:27 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:03:27 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 14:03:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:03:32 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:03:32 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:03:32 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:03:37 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:03:37 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:03:37 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:03:42 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:03:42 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:03:42 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:03:47 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:03:47 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 14:03:47 event.go:71: mysql 1
+DEBUG: 2021/03/05 14:03:47 event.go:78: mysql 2
+DEBUG: 2021/03/05 14:03:47 event.go:82: mysql 3
+DEBUG: 2021/03/05 14:03:47 event.go:92: mysql 4
+DEBUG: 2021/03/05 14:03:47 event.go:99: mysql 5
+DEBUG: 2021/03/05 14:03:47 updateEvent.go:47: debug 5
+DEBUG: 2021/03/05 14:03:47 updateEvent.go:53: debug 6
+DEBUG: 2021/03/05 14:03:47 updateEvent.go:65: debug 7
+ERROR: 2021/03/05 14:03:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:03:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:03:51 updateEvent.go:67: debug 8
+DEBUG: 2021/03/05 14:03:51 updateEvent.go:73: debug 9
+DEBUG: 2021/03/05 14:03:51 updateEvent.go:75: debug 10
+DEBUG: 2021/03/05 14:03:51 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:03:51 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:03:56 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:03:56 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:03:56 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:04:01 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:04:01 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:04:01 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:04:06 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:04:06 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:04:06 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 14:04:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:04:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:04:11 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:04:11 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:04:11 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:04:16 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:04:16 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:04:16 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:04:21 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:04:21 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:04:21 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:04:26 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:04:26 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:04:26 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 14:04:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:04:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:04:31 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:04:31 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:04:31 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:04:36 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:04:36 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:04:36 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:04:41 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:04:41 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:04:41 updateEvent.go:23: debug 1
+DEBUG: 2021/03/05 14:04:46 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:04:46 updateEvent.go:78: debug 11
+DEBUG: 2021/03/05 14:04:46 updateEvent.go:23: debug 1
+ERROR: 2021/03/05 14:04:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:04:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+DEBUG: 2021/03/05 14:04:51 updateEvent.go:25: debug 2
+DEBUG: 2021/03/05 14:04:51 updateEvent.go:41: debug 4
+DEBUG: 2021/03/05 14:04:51 event.go:71: mysql 1
+ERROR: 2021/03/05 14:05:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:05:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:05:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:05:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:05:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:05:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:06:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:06:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:06:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:06:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:06:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:06:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:07:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:07:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:07:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:07:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:07:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:07:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:08:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:08:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:08:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:08:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:08:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:08:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:09:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:09:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:09:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:09:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:09:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:09:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:10:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:10:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:10:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:10:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:10:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:10:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:11:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:11:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:11:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:11:28 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:11:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:11:48 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:12:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout
+ERROR: 2021/03/05 14:12:08 request.go:97: dial tcp 151.80.230.103:32526: i/o timeout

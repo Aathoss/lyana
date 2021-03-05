@@ -3,9 +3,9 @@ package framework
 import (
 	"database/sql"
 	"os"
-	"time"
 
 	"github.com/fsnotify/fsnotify"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/logger"
 )
@@ -16,7 +16,7 @@ var (
 )
 
 //LoadConfiguration charge les paramètres / variables
-func LoadConfiguration() {
+func init() {
 	logger.InfoLogger.Println("----- Démarrage du bot [Lyana]")
 	logger.InfoLogger.Println("----- Configuration en préparation")
 
@@ -54,8 +54,11 @@ func LoadConfiguration() {
 		logger.ErrorLogger.Println(err)
 		os.Exit(10)
 	}
-	DBLyana.SetConnMaxLifetime(time.Minute * 3)
-	DBLyana.SetMaxIdleConns(0)
+
+	DBLyana.SetConnMaxLifetime(150)
+	DBLyana.SetMaxOpenConns(2)
+	DBLyana.SetConnMaxIdleTime(300)
+	//DBLyana.SetMaxIdleConns(0)
 	//DBLyana.SetMaxOpenConns(5)
 
 	logger.InfoLogger.Println("----- Configuration charger")
