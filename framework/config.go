@@ -11,25 +11,22 @@ import (
 )
 
 var (
-	err     error
-	DBLyana *sql.DB
+	err         error
+	DBLyana     *sql.DB
+	DBMinecraft *sql.DB
 )
 
 //LoadConfiguration charge les paramètres / variables
-<<<<<<< Updated upstream
-func LoadConfiguration() {
-	logger.InfoLogger.Println("\n----- Démarrage du bot [Lyana]")
-	logger.InfoLogger.Println("\n----- Chargement de la configuration")
-=======
 func init() {
-	logger.InfoLogger.Println("----- Démarrage du bot [Lyana]")
-	logger.InfoLogger.Println("----- Configuration en préparation")
->>>>>>> Stashed changes
+	logger.InfoLogger.Println("----- [Lyana] Démarrage du bot")
+	logger.InfoLogger.Println("----- [Config] en préparation")
 
 	//Configuration de l'heure sûr le serveur
+	logger.InfoLogger.Println("----- [Config] Initialisation l'heure")
 	os.Setenv("TZ", "Europe/Paris")
 
 	//Chargement de la configuration du serveur
+	logger.InfoLogger.Println("----- [Config] Initialisation du fichier de config")
 	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
 	viper.AddConfigPath(".")
@@ -45,29 +42,34 @@ func init() {
 	})
 
 	//Connexion à la base de données lyana
-	dbDriver := "mysql"
+	logger.InfoLogger.Println("----- [Config] Initialisation de la base de données [-Lyana-]")
 	dbUser := viper.GetString("MySql.Lyana.dbuser")
 	dbPass := viper.GetString("MySql.Lyana.dbmdp")
 	dbName := viper.GetString("MySql.Lyana.dbname")
 	dbIP := viper.GetString("MySql.Lyana.dbip")
 	dbPort := viper.GetString("MySql.Lyana.dbport")
 
-	DBLyana, err = sql.Open(dbDriver, dbUser+":"+dbPass+"@tcp("+dbIP+":"+dbPort+")/"+dbName)
-	if err = DBLyana.Ping(); err != nil {
+	DBLyana, err = sql.Open("mysql", dbUser+":"+dbPass+"@tcp("+dbIP+":"+dbPort+")/"+dbName)
+	if err != nil {
 		logger.ErrorLogger.Println(err)
 		os.Exit(10)
 	}
-<<<<<<< Updated upstream
-	DBLyana.SetConnMaxLifetime(time.Minute * 5)
-	DBLyana.SetMaxIdleConns(0)
-	DBLyana.SetMaxOpenConns(5)
-=======
+	//DBLyana.SetConnMaxLifetime(180)
+	//DBLyana.SetMaxIdleConns(5)
+	//DBLyana.SetMaxOpenConns(7)
 
-	DBLyana.SetConnMaxLifetime(150)
-	DBLyana.SetMaxOpenConns(2)
-	DBLyana.SetConnMaxIdleTime(300)
-	//DBLyana.SetMaxIdleConns(0)
-	//DBLyana.SetMaxOpenConns(5)
->>>>>>> Stashed changes
+	//Connexion à la base de données minecraft
+	logger.InfoLogger.Println("----- [Config] Initialisation de la base de données [-Minecraft-]")
+	dbUserMC := viper.GetString("MySql.Minecraft.dbuser")
+	dbPassMC := viper.GetString("MySql.Minecraft.dbmdp")
+	dbNameMC := viper.GetString("MySql.Minecraft.dbname")
+	dbIPMC := viper.GetString("MySql.Minecraft.dbip")
+	dbPortMC := viper.GetString("MySql.Minecraft.dbport")
+	DBMinecraft, err = sql.Open("mysql", dbUserMC+":"+dbPassMC+"@tcp("+dbIPMC+":"+dbPortMC+")/"+dbNameMC)
+	if err != nil {
+		logger.ErrorLogger.Println(err)
+		os.Exit(10)
+	}
 
+	logger.InfoLogger.Println("----- [Config] Configuration charger")
 }

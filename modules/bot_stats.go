@@ -38,4 +38,5 @@ func Stats(s *discordgo.Session, m *discordgo.MessageCreate) {
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
+	insert.Close()
 }

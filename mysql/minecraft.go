@@ -33,6 +33,7 @@ func AddWhitelist(uiddiscord, playermc string) error {
 			logger.ErrorLogger.Println(err)
 			return err
 		}
+		insert.Close()
 	}
 	return nil
 }
@@ -49,14 +50,15 @@ func GetWhitelist(uuid string) (string, string, int64, error) {
 }
 
 func DeleteUserWhitelist(uuid string) {
-	insert, err := framework.DBLyana.Prepare("DELETE FROM membre WHERE tag_discord=?")
+	delete, err := framework.DBLyana.Prepare("DELETE FROM membre WHERE tag_discord=?")
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 		return
 	}
-	_, err = insert.Exec(uuid)
+	_, err = delete.Exec(uuid)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 		return
 	}
+	delete.Close()
 }

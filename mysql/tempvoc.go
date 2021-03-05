@@ -20,39 +20,43 @@ func ReturnConfigChannel(uuiddiscord string) (channelname string, channeluserlim
 func InsertCreation(uuid, channelname string, channeluserlimit int) error {
 	insert, err := framework.DBLyana.Prepare("INSERT INTO tempvoc(uuid, channelname, channeluserlimit) VALUES(?, ?, ?)")
 	_, err = insert.Exec(uuid, channelname, channeluserlimit)
+	insert.Close()
 	return err
 }
 
 func UpdateChannelID(uuiddiscord, channelid string) error {
-	_, err := framework.DBLyana.Query("UPDATE tempvoc SET channelid = ? WHERE uuid = ?", channelid, uuiddiscord)
+	update, err := framework.DBLyana.Query("UPDATE tempvoc SET channelid = ? WHERE uuid = ?", channelid, uuiddiscord)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
+	update.Close()
 	return err
 }
 
 func UpdateChannelName(uuiddiscord, channelname string) error {
-	_, err := framework.DBLyana.Query("UPDATE tempvoc SET channelname = ? WHERE uuid = ?", channelname, uuiddiscord)
+	update, err := framework.DBLyana.Query("UPDATE tempvoc SET channelname = ? WHERE uuid = ?", channelname, uuiddiscord)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
+	update.Close()
 	return err
 }
 
 func UpdateChannelUserLimit(uuiddiscord string, channeluserlimit int) error {
-	_, err := framework.DBLyana.Query("UPDATE tempvoc SET channeluserlimit = ? WHERE uuid = ?", channeluserlimit, uuiddiscord)
+	update, err := framework.DBLyana.Query("UPDATE tempvoc SET channeluserlimit = ? WHERE uuid = ?", channeluserlimit, uuiddiscord)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
+	update.Close()
 	return err
 }
 
 func RemoveChannelID(channelid string) error {
-	_, err := framework.DBLyana.Query("UPDATE tempvoc SET channelid = ? WHERE channelid = ?", "", channelid)
+	update, err := framework.DBLyana.Query("UPDATE tempvoc SET channelid = ? WHERE channelid = ?", "", channelid)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
-
+	update.Close()
 	return err
 }
 
@@ -66,6 +70,7 @@ func ReturnChannelIDAll() []string {
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
+	defer rows.Close()
 
 	for rows.Next() {
 

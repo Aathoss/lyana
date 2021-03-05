@@ -31,8 +31,9 @@ func ExecuteTime() {
 	}
 }
 
+//VerifCandid [GoRoutine]
 func VerifCandid(secondeboucle time.Duration) {
-	logger.DebugLogger.Println("Starting verifCandid")
+	logger.InfoLogger.Println("----- [GoRoutine] Démarrage de la boucle VerifCandid")
 
 	session := framework.Session
 
@@ -103,6 +104,7 @@ func VerifCandid(secondeboucle time.Duration) {
 		}
 		time.Sleep(time.Second * secondeboucle)
 	}
+	logger.InfoLogger.Println("----- [GoRoutine] Arrêt de la boucle VerifCandid")
 }
 
 //VerifInactif Vérifie la liste des inactif discord/mc

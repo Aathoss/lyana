@@ -14,7 +14,7 @@ var (
 )
 
 func UpdateEvent(secondeboucle time.Duration) {
-	logger.DebugLogger.Println("Starting UpdateEvent")
+	logger.InfoLogger.Println("----- [GoRoutine] Démarrage de la boucle UpdateEvent")
 
 	session := framework.Session
 
@@ -37,7 +37,6 @@ func UpdateEvent(secondeboucle time.Duration) {
 			tab, err := mysql.GetMultiEvent()
 			if err != nil {
 				logger.ErrorLogger.Println(err)
-				return
 			}
 
 			for i := 0; i <= len(tab)-1; i++ {
@@ -63,10 +62,10 @@ func UpdateEvent(secondeboucle time.Duration) {
 					mysql.EditStatus(4, num)
 				}
 			}
-
 			count60seconde = 0
 		}
-
 		count60seconde = count60seconde + 5
 	}
+
+	logger.InfoLogger.Println("----- [GoRoutine]  Arrêt de la boucle UpdateEvent")
 }

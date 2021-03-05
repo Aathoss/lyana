@@ -26,6 +26,7 @@ func UpdateInactifPlayer() {
 			return
 		}
 		insert.Exec(t2, player)
+		insert.Close()
 	}
 	return
 }
@@ -40,6 +41,7 @@ func UpdateInactifDiscord(uuid string) {
 		return
 	}
 	insert.Exec(t2, uuid)
+	insert.Close()
 }
 
 func VerifInactif() ([][]string, error) {
@@ -51,6 +53,7 @@ func VerifInactif() ([][]string, error) {
 	if err != nil {
 		return tab, err
 	}
+	defer rows.Close()
 
 	for rows.Next() {
 		var info []string
@@ -83,6 +86,7 @@ func UpdateMembresInactif(uuid string) error {
 		return err
 	}
 	insert.Exec(t2, uuid)
+	insert.Close()
 	return nil
 }
 

@@ -4,7 +4,6 @@ import bot "github.com/bwmarrin/discordgo"
 
 var (
 	CountMsg       int
-	SQlRequest     int
 	OnlineActulise int
 	Session        *bot.Session
 

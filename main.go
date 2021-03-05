@@ -1,14 +1,20 @@
 package main
 
 import (
+	"bufio"
+	"fmt"
+	"log"
 	"os"
 	"os/signal"
+	"runtime"
+	"strconv"
 	"strings"
 	"syscall"
 	"time"
 
 	"github.com/bwmarrin/discordgo"
 	bot "github.com/bwmarrin/discordgo"
+	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/command"
 	"gitlab.com/lyana/command/event"
@@ -25,6 +31,23 @@ import (
 var (
 	CmdHandler *framework.CommandHandler
 )
+
+func init() {
+	os.Setenv("TZ", "Europe/Paris")
+
+	viper.SetConfigName("config")
+	viper.SetConfigType("yaml")
+	viper.AddConfigPath(".")
+	err := viper.ReadInConfig()
+	if err != nil {
+		logger.ErrorLogger.Println(err)
+	}
+
+	viper.WatchConfig()
+	viper.OnConfigChange(func(e fsnotify.Event) {
+		logger.InfoLogger.Println("Config file changed:", e.Name)
+	})
+}
 
 func main() {
 	//framework.LoadConfiguration()
@@ -56,6 +79,27 @@ func main() {
 
 	go modules.VerifCandid(10)
 	go event.UpdateEvent(5)
+	go func() {
+		for {
+			consoleReader := bufio.NewReader(os.Stdin)
+
+			input, _ := consoleReader.ReadString('\n')
+
+			input = strings.ToLower(input)
+
+			if strings.HasPrefix(input, "bye") {
+				framework.DBLyana.Close()
+				framework.DBMinecraft.Close()
+				framework.LogsChannel("[:tools:] **Lyana** s'est déconnecté de l'univers !")
+
+				fmt.Println("\nUptime : " + framework.Calculetime(stats.StartTime.Unix(), 0) +
+					"\nMessage total : " + strconv.Itoa(framework.CountMsg) +
+					"\nRoutine : " + strconv.Itoa(runtime.NumGoroutine()) +
+					"\n\nAllez bonne route ++ \n")
+				os.Exit(100)
+			}
+		}
+	}()
 
 	sc := make(chan os.Signal, 1)
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, os.Kill)
@@ -77,13 +121,27 @@ out:
 
 func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 	framework.Session = s
+	user := m.Author
+
+	if user.ID == s.State.User.ID || user.Bot {
+		return
+	}
+
+	if viper.GetBool("Dev.PrintMessage") == true {
+		log.Println(m.Content)
+	}
+
 	framework.CountMsg = framework.CountMsg + 1
 
-	//content = content[len(viper.GetString("PrefixMsg")):]
-	if m.Author.ID == s.State.User.ID ||
-		len(m.Content) < 1 ||
-		m.Author.Bot ||
-		len(m.Content) <= len(viper.GetString("PrefixMsg")) {
+	content := m.Content
+	if len(content) <= len(viper.GetString("PrefixMsg")) {
+		return
+	}
+	if content[:len(viper.GetString("PrefixMsg"))] != viper.GetString("PrefixMsg") {
+		return
+	}
+	content = content[len(viper.GetString("PrefixMsg")):]
+	if len(content) < 1 {
 		return
 	}
 
@@ -98,7 +156,7 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 		staff = framework.VerifStaff(m.Member.Roles)
 	}
 
-	checkCmdName := CmdHandler.CheckCmd(m.Content)
+	checkCmdName := CmdHandler.CheckCmd(content)
 	command, found, permission := CmdHandler.Get(checkCmdName, staff)
 	if !found {
 		return
@@ -114,8 +172,8 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 		return
 	}
 
-	ctx := framework.NewContext(s, guild, channel, m.Author, m, CmdHandler, checkCmdName, staff)
-	messageSplit := strings.Fields(m.Content)
+	ctx := framework.NewContext(s, guild, channel, user, m, CmdHandler, checkCmdName, staff)
+	messageSplit := strings.Fields(content)
 	if len(strings.Fields(checkCmdName)) == 1 {
 		ctx.Args = messageSplit[1:]
 	}
@@ -127,29 +185,29 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 }
 
 func registerCommands() {
-	CmdHandler.Register("test50", []string{}, 1, moderation.Test, "???")
+	CmdHandler.Register("test21", []string{}, 1, moderation.Test, "???")
 
-	//Commandes Modération
+	//Commande Modération
 	CmdHandler.Register("stats", []string{}, 1, stats.Statistique, "Returne les statistique du bot")
 	CmdHandler.Register("purge", []string{}, 1, moderation.Purges, "La commande permet d'effectuer un netoyage d'un channel limite à 2.500 Message")
 	CmdHandler.Register("grade", []string{}, 0, moderation.Grade, "Affiche la conversion des grade")
 	CmdHandler.Register("help", []string{}, 0, moderation.HelpCommand, "Affiche la liste des commande")
 
-	//Commandes Liée à minecraft
+	//Commande Liée à minecraft
 	CmdHandler.Register("fiche", []string{"profils", "profil"}, 0, command.InfoPlayer, "Permet de voir votre fiche utilisateur/player")
 	CmdHandler.Register("online", []string{}, 0, command.OnlinePlayer, "Affiche les joueurs connecté")
 	CmdHandler.Register("pardon", []string{}, 1, command.RemoveSignalement, "Permet au staff de retiré un signalement")
 	CmdHandler.Register("addplayer", []string{}, 1, command.AddPlayer, "???")
 
-	//Commandes d'informations
+	//Commande d'informations
 	CmdHandler.Register("map", []string{}, 0, informations.DynmapDropURL, "Affiche le liens de la dynmap")
 	CmdHandler.Register("globalstats", []string{}, 1, informations.StatsUnispaceV1, "???")
 
-	//Commandes vocal VocalTemporaire
+	//Commande vocal VocalTemporaire
 	CmdHandler.Register("vtitre", []string{}, 0, vocaltemporaire.VocalTempEditTitre, "Modifie le titre de votre channel vocal temporaire")
 	CmdHandler.Register("vlimite", []string{}, 0, vocaltemporaire.VocalTempEditLimit, "Modifie le nombre de memebre dans votre channel temporaire")
 
-	//Commandes event
+	//Commande event
 	CmdHandler.Register("event cree", []string{}, 1, event.ConstructionEvent, "Démarre la création d'un évent")
 	CmdHandler.Register("event titre", []string{}, 1, event.EditTitre, "Modifie le titre durant la création")
 	CmdHandler.Register("event gps", []string{}, 1, event.EditEmplacement, "Modifie la localisation durant la création")

@@ -20,6 +20,7 @@ func VerifRuleTimestamp() ([]string, error) {
 	if err != nil {
 		return temp, err
 	}
+	defer rows.Close()
 
 	for rows.Next() {
 		err := rows.Scan(&rule.id, &rule.uid, &rule.timestamp)
@@ -46,12 +47,14 @@ func AddRule(uuid string, timestamp int64) {
 		logger.ErrorLogger.Println(err)
 	}
 	insert.Exec(uuid, timestamp+(60*60*24*3))
+	insert.Close()
 }
 
 func RemoveRule(uuid string) error {
-	_, err := framework.DBLyana.Query("DELETE FROM rule WHERE uid = " + uuid)
+	delete, err := framework.DBLyana.Query("DELETE FROM rule WHERE uid = " + uuid)
 	if err != nil {
 		return err
 	}
+	delete.Close()
 	return nil
 }

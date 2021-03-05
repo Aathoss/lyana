@@ -17,6 +17,7 @@ func AddSanctionLimit(uid_discord, pseudomc, id_message, id_message_notif string
 		logger.ErrorLogger.Println(err)
 	}
 	insert.Exec(uid_discord, pseudomc, id_message, id_message_notif)
+	insert.Close()
 }
 
 func RemoveSanctionLimit(uid_discord string) (pseudomc, sanctionID_msg, sanctionID_msg_notif string) {
@@ -25,10 +26,11 @@ func RemoveSanctionLimit(uid_discord string) (pseudomc, sanctionID_msg, sanction
 		logger.ErrorLogger.Println(err)
 	}
 
-	_, err = framework.DBLyana.Query("DELETE FROM sanction WHERE uid = " + uid_discord)
+	delete, err := framework.DBLyana.Query("DELETE FROM sanction WHERE uid = " + uid_discord)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
+	delete.Close()
 
 	return sanction.pseudomc, sanction.id_message, sanction.id_msg_notif
 }

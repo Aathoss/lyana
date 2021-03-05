@@ -100,8 +100,7 @@ func InfoPlayer(ctx framework.Context) {
 }
 
 func requestSQLPlayer(player string) {
-	db := mysql.DbConnMC()
-	defer db.Close()
+	db := framework.DBMinecraft
 
 	err := db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='playertime'").Scan(&stats.playertime)
 	if err != nil {
