@@ -68,18 +68,14 @@ func GetMultiEvent() (content [][]string, err error) {
 		tab          [][]string
 	)
 
-	logger.DebugLogger.Println("mysql 1")
 	rows, err := framework.DBLyana.Query("SELECT * FROM event WHERE status != ? AND status != ?", "dev", "terminer")
 	if err != nil {
 		logger.ErrorLogger.Println(err)
-		return tab, err
 	}
 
-	logger.DebugLogger.Println("mysql 2")
 	for rows.Next() {
 		var info []string
 
-		logger.DebugLogger.Println("mysql 3")
 		err := rows.Scan(&id, &status, &messageid, &channelid, &titre, &auteur, &localisation, &description, &date, &recompense, &participant)
 		if err != nil {
 			logger.ErrorLogger.Println(err)
@@ -89,14 +85,13 @@ func GetMultiEvent() (content [][]string, err error) {
 		info = append(info, strconv.Itoa(id), status, messageid, channelid, titre, localisation, description, date, recompense, participant, auteur)
 		tab = append(tab, info)
 
-		logger.DebugLogger.Println("mysql 4")
 		err = rows.Err()
 		if err != nil {
 			logger.ErrorLogger.Println(err)
 			return tab, err
 		}
 	}
-	logger.DebugLogger.Println("mysql 5")
+
 	return tab, nil
 }
 

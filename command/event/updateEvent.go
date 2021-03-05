@@ -13,7 +13,6 @@ var (
 	count60seconde = 60
 )
 
-//UpdateEvent goroutine permet d'actualiser les event du serveur
 func UpdateEvent(secondeboucle time.Duration) {
 	logger.InfoLogger.Println("----- Démarrage de la boucle UpdateEvent")
 
