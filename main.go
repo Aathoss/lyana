@@ -1,13 +1,9 @@
 package main
 
 import (
-	"bufio"
-	"fmt"
 	"log"
 	"os"
 	"os/signal"
-	"runtime"
-	"strconv"
 	"strings"
 	"syscall"
 	"time"
@@ -61,23 +57,6 @@ func main() {
 
 	go modules.VerifCandid(10)
 	go modules.UpdateEvent(5)
-	go func() {
-		for {
-			consoleReader := bufio.NewReader(os.Stdin)
-
-			input, _ := consoleReader.ReadString('\n')
-
-			input = strings.ToLower(input)
-
-			if strings.HasPrefix(input, "bye") {
-				fmt.Println("\nUptime : " + framework.Calculetime(stats.StartTime.Unix(), 0) +
-					"\nMessage total : " + strconv.Itoa(framework.CountMsg) +
-					"\nRoutine : " + strconv.Itoa(runtime.NumGoroutine()) +
-					"\n\nAllez bonne route ++ \n")
-				os.Exit(100)
-			}
-		}
-	}()
 
 	sc := make(chan os.Signal, 1)
 	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, os.Kill)
