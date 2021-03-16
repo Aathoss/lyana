@@ -5,7 +5,6 @@ import (
 	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
 	"gitlab.com/lyana/mysql"
-	"gitlab.com/lyana/rcon"
 )
 
 func GuildMemberLeave(s *discordgo.Session, leave *discordgo.GuildMemberRemove) {
@@ -22,11 +21,11 @@ func GuildMemberLeave(s *discordgo.Session, leave *discordgo.GuildMemberRemove) 
 	}
 	msg = " Viens de partir, il vient d'être retiré retiré de la whitelist pseudo : " + playermc
 
-	_, err = rcon.RconCommandeWhitelistRemove(playermc)
+	/* _, err = rcon.RconCommandeWhitelistRemove(playermc)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 		return
-	}
+	} */
 	mysql.DeleteUserWhitelist(leave.User.ID)
 	framework.LogsChannel("[<:downvote:742854427177648190>] " + leave.User.Username + msg)
 }

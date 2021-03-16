@@ -13,7 +13,6 @@ import (
 )
 
 var (
-	Version        = "0.5.3"
 	StartTime      = time.Now()
 	DebugUserMysql = 0
 )

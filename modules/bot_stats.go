@@ -1,11 +1,9 @@
 package modules
 
 import (
-	"log"
 	"time"
 
 	"github.com/bwmarrin/discordgo"
-	"github.com/spf13/viper"
 	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
 	"gitlab.com/lyana/mysql"
@@ -16,10 +14,6 @@ func Stats(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	if user.ID == s.State.User.ID || user.Bot {
 		return
-	}
-
-	if viper.GetBool("Dev.PrintMessage") == true {
-		log.Println(m.Content)
 	}
 
 	count := framework.VerifGrade(m.Member.Roles)

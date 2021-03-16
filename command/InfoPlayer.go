@@ -59,7 +59,7 @@ func InfoPlayer(ctx framework.Context) {
 	t1, _ := user.JoinedAt.Parse()
 	_, pseudoMC, t2, _ := mysql.GetWhitelist(user.User.ID)
 
-	requestSQLPlayer(pseudoMC)
+	//requestSQLPlayer(pseudoMC)
 
 	//Compte le nombre de message envoyer par l'utilisateur
 	err := framework.DBLyana.QueryRow("SELECT COUNT(uuid) FROM logs WHERE categorie=? AND uuid=?", "msgcount", user.User.ID).Scan(&count)

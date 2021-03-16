@@ -92,16 +92,18 @@ func RconCommandeKick(player, raison string) ([]string, error) {
 
 func Openrcon() {
 	for connect == false {
-		liaison, err := NewClient(viper.GetString("Minecraft.IP"), viper.GetInt("Minecraft.Port"), viper.GetString("Minecraft.Mdp"))
-		if err != nil {
-			logger.ErrorLogger.Println(err)
-			connect = false
-			time.Sleep(10 * time.Second)
-			continue
-		} else {
-			connect = true
-			c = liaison
-			break
+		if viper.GetBool("Minecraft.Vanilla.Actif") == true {
+			liaison, err := NewClient(viper.GetString("Minecraft.Vanilla.IP"), viper.GetInt("Minecraft.Vanilla.Port"), viper.GetString("Minecraft.Vanilla.Mdp"))
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+				connect = false
+				time.Sleep(10 * time.Second)
+				continue
+			} else {
+				connect = true
+				c = liaison
+				break
+			}
 		}
 	}
 }

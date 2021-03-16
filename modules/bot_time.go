@@ -10,7 +10,6 @@ import (
 	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
 	"gitlab.com/lyana/mysql"
-	"gitlab.com/lyana/rcon"
 )
 
 var (
@@ -20,7 +19,6 @@ var (
 func ExecuteTime() {
 	Minute30++
 
-	UpdateOnlinePlayer(framework.Session)
 	mysql.UpdateInactifPlayer()
 
 	if Minute30 >= 30 {
@@ -182,20 +180,25 @@ func VerifRule(session *discordgo.Session) {
 	}
 }
 
-func UpdateOnlinePlayer(session *discordgo.Session) {
-	err := rcon.RconCommandeList()
-	if err != nil {
-		return
-	}
+func UpdateOnlinePlayer(secondeboucle time.Duration) {
+	for {
+		time.Sleep(time.Second * secondeboucle)
+		var count int
+		session := framework.Session
 
-	editchannel := &discordgo.ChannelEdit{
-		Name:     "🪐  Online : " + strconv.Itoa(framework.OnlinePlayer),
-		Position: 2,
-	}
+		for _, val := range framework.OnlinePlayer {
+			count = count + val
+		}
 
-	_, err = session.ChannelEditComplex(viper.GetString("ChannelID.OnlinePlayer"), editchannel)
-	if err != nil {
-		logger.ErrorLogger.Println(err)
-		return
+		editchannel := &discordgo.ChannelEdit{
+			Name:     "🪐  Online : " + strconv.Itoa(count),
+			Position: 2,
+		}
+
+		_, err := session.ChannelEditComplex(viper.GetString("ChannelID.OnlinePlayer"), editchannel)
+		if err != nil {
+			logger.ErrorLogger.Println(err)
+			continue
+		}
 	}
 }

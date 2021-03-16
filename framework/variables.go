@@ -1,6 +1,8 @@
 package framework
 
-import bot "github.com/bwmarrin/discordgo"
+import (
+	bot "github.com/bwmarrin/discordgo"
+)
 
 var (
 	CountMsg       int
@@ -15,9 +17,10 @@ var (
 	BuildMC    string
 	Connection bool
 
-	OnlinePlayer    int
-	MaxOnlinePlayer int
+	OnlinePlayer    []int
 	ListPlayer      []string
+	PositionServeur []string
+	OnlineServer    []string
 	Sanction        [][]string
 
 	//Gestion de la création d'évent

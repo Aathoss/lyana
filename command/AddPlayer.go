@@ -1,11 +1,12 @@
 package command
 
 import (
+	"time"
+
 	"github.com/spf13/viper"
 	"gitlab.com/lyana/framework"
 	"gitlab.com/lyana/logger"
 	"gitlab.com/lyana/mysql"
-	"gitlab.com/lyana/rcon"
 )
 
 func AddPlayer(ctx framework.Context) {
@@ -31,7 +32,23 @@ func AddPlayer(ctx framework.Context) {
 			return
 		}
 
-		resp, err := rcon.RconCommandeWhitelistAdd(playermc)
+		//Ajoute de la personne en base de données + move des grade
+		ctx.Discord.ChannelMessageSend(viper.GetString("ChannelID.General"), "<:CraftingTable:753547645875912736> Je viens de craft votre carte d'accès au serveur, nous vous souhaitons la bienvenue parmi nous "+mentions[0].Mention()+".")
+		err := mysql.AddWhitelist(mentions[0].ID, playermc)
+		if err != nil {
+			logger.ErrorLogger.Println(err)
+		}
+
+		err = ctx.Discord.GuildMemberRoleRemove(viper.GetString("GuildID"), mentions[0].ID, "735281835080286291")
+		if err != nil {
+			logger.ErrorLogger.Println(err)
+		}
+		err = ctx.Discord.GuildMemberRoleAdd(viper.GetString("GuildID"), mentions[0].ID, "820404799119818793")
+		if err != nil {
+			logger.ErrorLogger.Println(err)
+		}
+
+		/* resp, err := rcon.RconCommandeWhitelistAdd(playermc)
 		if err != nil {
 			logger.ErrorLogger.Println(err)
 			framework.LogsChannel("[:x:] [" + viper.GetString("PrefixMsg") + ctx.Commande + " " + mentions[0].ID + " " + playermc + "] Une erreur c'est produits sur le whitelist rcon")
@@ -44,8 +61,17 @@ func AddPlayer(ctx framework.Context) {
 			if err != nil {
 				logger.ErrorLogger.Println(err)
 			}
+
+			err = ctx.Discord.GuildMemberRoleRemove(viper.GetString("GuildID"), mentions[0].ID, "735281835080286291")
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+			}
+			err = ctx.Discord.GuildMemberRoleAdd(viper.GetString("GuildID"), mentions[0].ID, "820404799119818793")
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+			}
 			return
-		}
+		} */
 	}
 
 	if len(ctx.Args) <= 1 {
@@ -54,6 +80,8 @@ func AddPlayer(ctx framework.Context) {
 			SetColor(viper.GetInt("EmbedColor.Error")).
 			SetDescription("Veuillez respecter ce format : " + viper.GetString("PrefixMsg") + "addplayer <tag_discord> <player_mc>").MessageEmbed
 
-		ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, embed)
+		message, _ := ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, embed)
+		time.Sleep(time.Second * 10)
+		ctx.Discord.ChannelMessageDelete(message.ChannelID, message.ID)
 	}
 }

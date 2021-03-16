@@ -1,0 +1,13 @@
+'Alt+Enter' // Ajoute un todo
+'Alt+D' // Termine une todo
+'Alt+C' // Annule une todo
+'Alt+S' // Début une todo
+
+Lyana feature:
+  ☐ Ajoute d'un système de ticket
+  ☐ Modification du système de log
+
+
+Debut:
+  ☐ Prise en compte d'une deuxième commande dans un texte envoyer par le bot !
+  ☐ Remise en place du système de whitelist

@@ -9,7 +9,7 @@ func DynmapDropURL(ctx framework.Context) {
 	embed := framework.NewEmbed().
 		SetTitle("Liens de la dynmap").
 		SetColor(0x33E2F0).
-		SetDescription("https://map.unispace.fr/" +
+		SetDescription("https://map.unispace.games/" +
 			"\n\nSur minecraft vous avez accès à la commande `/marker` afin ajouter des marqueurs :" +
 			"\n`/marker home` Permet d'ajouter un marquer exemple : :homes: Home Aathoss" +
 			"\n`/marker projets <nom>` Le nom du projet doit être attaché exemple : :flag_white: **Portail-du-Nether**" +
