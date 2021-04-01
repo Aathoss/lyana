@@ -12,20 +12,19 @@ import (
 )
 
 var (
-	conn  *mcrcon.MCConn
 	notif bool
 	pause = time.Second * 10
 )
 
-func connect(nom string, num int) {
+func connect(num int) {
 	for {
-		address := viper.GetString("Minecraft."+nom+".IP") + ":" + viper.GetString("Minecraft."+nom+".Port")
+		address := viper.GetString("Minecraft."+strconv.Itoa(num)+".IP") + ":" + viper.GetString("Minecraft."+strconv.Itoa(num)+".Port")
 
 		connnect := new(mcrcon.MCConn)
-		err := connnect.Open(address, viper.GetString("Minecraft."+nom+".Mdp"))
+		err := connnect.Open(address, viper.GetString("Minecraft."+strconv.Itoa(num)+".Mdp"))
 		if err != nil {
 			if notif != true {
-				logger.ErrorLogger.Println("MC-Host : "+nom+" | Open failed", err)
+				logger.ErrorLogger.Println("MC-Host : "+viper.GetString("Minecraft."+strconv.Itoa(num)+".Name")+" | Open failed", err)
 				notif = true
 			}
 			time.Sleep(pause)
@@ -34,55 +33,84 @@ func connect(nom string, num int) {
 
 		err = connnect.Authenticate()
 		if err != nil {
-			logger.ErrorLogger.Println("MC-Host : "+nom+" | Auth failed", err)
+			logger.ErrorLogger.Println("MC-Host : "+viper.GetString("Minecraft."+strconv.Itoa(num)+".Name")+" | Auth failed", err)
 			time.Sleep(pause)
 			continue
 		}
 
-		conn = connnect
+		ConnectMC[num] = connnect
 		OnlineServer[num] = "online"
 		notif = false
-		logger.InfoLogger.Println("MC-Host : " + nom + " | Connexion rcon réussi")
+		logger.InfoLogger.Println("MC-Host : " + viper.GetString("Minecraft."+strconv.Itoa(num)+".Name") + " | Connexion rcon réussi")
 		break
 	}
 }
 
-func StartRCON(nom string, num int) {
+func StartRCON(num int) {
 	OnlinePlayer[num] = 0
 	ListPlayer[num] = ""
 	OnlineServer[num] = "offline"
 
-	connect(nom, num)
+	connect(num)
 
 	for {
-		err := conn.Authenticate()
+
+		err := ConnectMC[num].Authenticate()
 		if err != nil {
 			OnlineServer[num] = "offline"
-			connect(nom, num)
+			connect(num)
 		}
 
 		//Count le nombre de joueurs en ligne / liste les pseudo
-		resp, err := conn.SendCommand("list")
+		resp, err := ConnectMC[num].SendCommand("list")
 		if err != nil {
-			logger.ErrorLogger.Println("MC-Host : "+nom+" | Command failed : ", err)
-			continue
-		}
-		//fmt.Println("Session : " + nom + " | ID : " + strconv.Itoa(num) + " | Retour : " + resp)
-
-		respFix, err := after(resp, "There")
-		if err != nil {
+			logger.ErrorLogger.Println("MC-Host : "+viper.GetString("Minecraft."+strconv.Itoa(num)+".Name")+" | Command failed : ", err)
 			continue
 		}
 
-		messageSplit := strings.Fields(respFix)
-		OnlinePlayer[num], err = strconv.Atoi(messageSplit[2])
-		if err != nil {
-			logger.DebugLogger.Println(resp)
-			continue
+		if viper.GetString("Minecraft."+strconv.Itoa(num)+".Version") == "1.12" { //There are 1/100 players online:
+			respFix, err := after(resp, "There")
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+				time.Sleep(pause)
+				continue
+			}
+
+			messageSplit := strings.Fields(respFix)
+			infoPlayer := strings.Split(messageSplit[2], "/")
+			OnlinePlayer[num], err = strconv.Atoi(infoPlayer[0])
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+				time.Sleep(pause)
+				continue
+			}
+
+			result1 := strings.Join(messageSplit[4:], " ")
+			ListPlayer[num] = strings.Replace(result1, "online:", " ", -1)
+
 		}
 
-		result1 := strings.Join(messageSplit[10:], " ")
-		ListPlayer[num] = result1
+		if viper.GetString("Minecraft."+strconv.Itoa(num)+".Version") == "1.17" { //There are 0 of a max of 100 players online:
+			respFix, err := after(resp, "There")
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+				time.Sleep(pause)
+				continue
+			}
+
+			messageSplit := strings.Fields(respFix)
+			OnlinePlayer[num], err = strconv.Atoi(messageSplit[2])
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+				time.Sleep(pause)
+				continue
+			}
+
+			result1 := strings.Join(messageSplit[10:], " ")
+			ListPlayer[num] = result1
+
+		}
+
 		time.Sleep(pause)
 	}
 }

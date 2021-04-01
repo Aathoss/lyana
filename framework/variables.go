@@ -1,6 +1,7 @@
 package framework
 
 import (
+	mcrcon "github.com/Kelwing/mc-rcon"
 	bot "github.com/bwmarrin/discordgo"
 )
 
@@ -17,11 +18,11 @@ var (
 	BuildMC    string
 	Connection bool
 
-	OnlinePlayer    []int
-	ListPlayer      []string
-	PositionServeur []string
-	OnlineServer    []string
-	Sanction        [][]string
+	OnlinePlayer []int
+	ListPlayer   []string
+	OnlineServer []string
+	Sanction     [][]string
+	ConnectMC    []*mcrcon.MCConn
 
 	//Gestion de la création d'évent
 	EventConstruction            bool

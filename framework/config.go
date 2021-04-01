@@ -3,7 +3,10 @@ package framework
 import (
 	"database/sql"
 	"os"
+	"strconv"
+	"time"
 
+	mcrcon "github.com/Kelwing/mc-rcon"
 	"github.com/fsnotify/fsnotify"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/spf13/viper"
@@ -49,15 +52,17 @@ func init() {
 	//Démarrage des goroutine pour les connexion rcon
 	OnlinePlayer = make([]int, len(viper.GetStringMapString("Minecraft")))
 	ListPlayer = make([]string, len(viper.GetStringMapString("Minecraft")))
-	PositionServeur = make([]string, len(viper.GetStringMapString("Minecraft")))
 	OnlineServer = make([]string, len(viper.GetStringMapString("Minecraft")))
-	for val, _ := range viper.GetStringMapString("Minecraft") {
+	ConnectMC = make([]*mcrcon.MCConn, len(viper.GetStringMapString("Minecraft")))
 
-		PositionServeur[countGoRoutineMC] = val
-		logger.InfoLogger.Println("----- [Config] Initialisation de la connexion rcon [-" + val + "-]")
-		go StartRCON(val, countGoRoutineMC)
+	//for val, _ := range viper.GetStringMapString("Minecraft") {
+	countMAP := len(viper.GetStringMapString("Minecraft"))
+	for i := 0; i < countMAP; i++ {
 
-		countGoRoutineMC++
+		logger.InfoLogger.Println("----- [Config] Initialisation de la connexion rcon [-" + viper.GetString("Minecraft."+strconv.Itoa(i)+".Name") + "-]")
+		go StartRCON(i)
+
+		time.Sleep(time.Second * 1)
 	}
 
 	if viper.GetBool("MySql.Lyana.online") == true {

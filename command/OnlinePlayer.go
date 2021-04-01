@@ -1,7 +1,6 @@
 package command
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 	"time"
@@ -12,17 +11,25 @@ import (
 
 func OnlinePlayer(ctx framework.Context) {
 	if ctx.TextChannel.ParentID != viper.GetString("Categorie.Information") {
-		var onlineliste string
+		var (
+			onlineliste string
+			domaine     string
+		)
+
 		ctx.Discord.ChannelMessageDelete(ctx.TextChannel.ID, ctx.Message.ID)
 
-		fmt.Println(framework.PositionServeur)
-		for num, val := range framework.PositionServeur {
+		countMAP := len(viper.GetStringMapString("Minecraft"))
+		for num := 0; num < countMAP; num++ {
 			listeplayers := strings.Replace(framework.ListPlayer[num], ",", " <:tirer:804348409024741408> ", -1)
 
+			if len(viper.GetString("Minecraft."+strconv.Itoa(num)+".Domaine")) != 0 {
+				domaine = "\n:white_small_square: **IP :** " + viper.GetString("Minecraft."+strconv.Itoa(num)+".Domaine")
+			}
+
 			if framework.OnlineServer[num] == "online" {
-				onlineliste = onlineliste + ":green_circle: **" + strings.Title(val) + "**\n**" + strconv.Itoa(framework.OnlinePlayer[num]) + "** Joueurs : " + listeplayers
+				onlineliste = onlineliste + ":green_circle: **" + viper.GetString("Minecraft."+strconv.Itoa(num)+".Name") + domaine + "**\n:white_small_square: **" + strconv.Itoa(framework.OnlinePlayer[num]) + "** Joueurs : " + listeplayers
 			} else {
-				onlineliste = onlineliste + ":red_circle: **" + strings.Title(val) + "**"
+				onlineliste = onlineliste + ":red_circle: **" + viper.GetString("Minecraft."+strconv.Itoa(num)+".Name") + "**"
 			}
 
 			onlineliste = onlineliste + "\n\n"
