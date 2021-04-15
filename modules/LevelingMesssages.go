@@ -48,8 +48,8 @@ func LevelingMessages(s *discordgo.Session, m *discordgo.MessageCreate) {
 	framework.DBLyana.QueryRow("SELECT niveau,xp FROM level WHERE uuid=?", lvl.uuid).Scan(&lvl.niveau, &lvl.xp)
 
 	lvl.xp = lvl.xp + (rand.Intn(10) + 10)
-	calculNiveau := (5 * lvl.niveau) + (50 * lvl.niveau) + 100
-	calculNiveauUP := (5 * (lvl.niveau + 1)) + (50 * (lvl.niveau + 1)) + 100
+	calculNiveau := (5 * lvl.niveau) + (100 * lvl.niveau) + 100
+	calculNiveauUP := (5 * (lvl.niveau + 1)) + (100 * (lvl.niveau + 1)) + 100
 
 	if lvl.xp >= calculNiveau {
 		lvl.niveau++
