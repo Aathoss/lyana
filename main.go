@@ -50,6 +50,7 @@ func main() {
 	dg.AddHandler(modules.GuildMemberLeave)
 	dg.AddHandler(modules.ReactionAdd)
 	dg.AddHandler(modules.ReactionRemove)
+	dg.AddHandler(modules.LevelingMessages)
 	dg.AddHandler(commandHandler)
 
 	dg.Identify.Intents = discordgo.MakeIntent(discordgo.IntentsAll)
@@ -60,7 +61,7 @@ func main() {
 	}
 
 	go modules.VerifCandid(10)
-	go modules.UpdateOnlinePlayer(10)
+	go modules.UpdateOnlinePlayer(5)
 	go event.UpdateEvent(5)
 	go func() {
 		for {
@@ -179,6 +180,7 @@ func registerCommands() {
 	CmdHandler.Register("grade", []string{}, 0, moderation.Grade, "Affiche la conversion des grade")
 	CmdHandler.Register("help", []string{}, 0, moderation.HelpCommand, "Affiche la liste des commande")
 	CmdHandler.Register("lyana", []string{}, 1, moderation.PubliMessage, "Publi un message avec Lyana")
+	CmdHandler.Register("globalmp", []string{}, 1, moderation.MessageGlobalMp, "Envoie un message global à tout les membres")
 
 	//Commande Liée à minecraft
 	CmdHandler.Register("fiche", []string{"profils", "profil"}, 0, command.InfoPlayer, "Permet de voir votre fiche utilisateur/player")

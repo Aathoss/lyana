@@ -181,6 +181,8 @@ func VerifRule(session *discordgo.Session) {
 }
 
 func UpdateOnlinePlayer(secondeboucle time.Duration) {
+	onlineplayer := 0
+
 	for {
 		time.Sleep(time.Second * secondeboucle)
 		var count int
@@ -190,15 +192,19 @@ func UpdateOnlinePlayer(secondeboucle time.Duration) {
 			count = count + val
 		}
 
-		editchannel := &discordgo.ChannelEdit{
-			Name:     "🪐  Online : " + strconv.Itoa(count),
-			Position: 2,
+		if onlineplayer != count {
+			editchannel := &discordgo.ChannelEdit{
+				Name:     "🪐  Online : " + strconv.Itoa(count),
+				Position: 2,
+			}
+
+			_, err := session.ChannelEditComplex(viper.GetString("ChannelID.OnlinePlayer"), editchannel)
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+				continue
+			}
+			onlineplayer = count
 		}
 
-		_, err := session.ChannelEditComplex(viper.GetString("ChannelID.OnlinePlayer"), editchannel)
-		if err != nil {
-			logger.ErrorLogger.Println(err)
-			continue
-		}
 	}
 }

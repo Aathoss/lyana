@@ -54,15 +54,15 @@ func init() {
 	ListPlayer = make([]string, len(viper.GetStringMapString("Minecraft")))
 	OnlineServer = make([]string, len(viper.GetStringMapString("Minecraft")))
 	ConnectMC = make([]*mcrcon.MCConn, len(viper.GetStringMapString("Minecraft")))
-
-	//for val, _ := range viper.GetStringMapString("Minecraft") {
 	countMAP := len(viper.GetStringMapString("Minecraft"))
-	for i := 0; i < countMAP; i++ {
+	if viper.GetBool("Dev.test") != true {
+		for i := 0; i < countMAP; i++ {
 
-		logger.InfoLogger.Println("----- [Config] Initialisation de la connexion rcon [-" + viper.GetString("Minecraft."+strconv.Itoa(i)+".Name") + "-]")
-		go StartRCON(i)
+			logger.InfoLogger.Println("----- [Config] Initialisation de la connexion rcon [-" + viper.GetString("Minecraft."+strconv.Itoa(i)+".Name") + "-]")
+			go StartRCON(i)
 
-		time.Sleep(time.Second * 1)
+			time.Sleep(time.Second * 1)
+		}
 	}
 
 	if viper.GetBool("MySql.Lyana.online") == true {
