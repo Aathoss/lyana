@@ -2,6 +2,7 @@ package framework
 
 import (
 	"database/sql"
+	"fmt"
 	"os"
 	"strconv"
 
@@ -25,6 +26,10 @@ var (
 
 //LoadConfiguration charge les paramètres / variables
 func init() {
+
+	path := os.Getenv("GOPATH")
+	fmt.Println(path)
+
 	logger.InfoLogger.Println("----- [Lyana] Démarrage du bot")
 	logger.InfoLogger.Println("----- [Config] en préparation")
 
