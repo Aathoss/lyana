@@ -89,7 +89,7 @@ func LevelingMessages(s *discordgo.Session, m *discordgo.MessageCreate) {
 		dc.InvertMask()
 
 		// Ajoute du texte de félicitation
-		if err := dc.LoadFontFace("./MrDafoe.ttf", 52); err != nil {
+		if err := dc.LoadFontFace("library/fonts/MrDafoe.ttf", 52); err != nil {
 			logger.ErrorLogger.Println(err)
 			return
 		}
@@ -97,7 +97,7 @@ func LevelingMessages(s *discordgo.Session, m *discordgo.MessageCreate) {
 		dc.DrawStringAnchored("Félicitation pour le level up.", x/2+75, 50, 0.5, 0.5)
 
 		// Ajoute du texte
-		if err := dc.LoadFontFace("./Raleway-Medium.ttf", 32); err != nil {
+		if err := dc.LoadFontFace("library/fonts/Raleway-Medium.ttf", 32); err != nil {
 			logger.ErrorLogger.Println(err)
 			return
 		}
