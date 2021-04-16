@@ -6,10 +6,10 @@ import (
 	"strconv"
 	"time"
 
-	mcrcon "github.com/Kelwing/mc-rcon"
 	"github.com/fsnotify/fsnotify"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/spf13/viper"
+	mcrcon "gitlab.com/lyana/library/package/mc_rcon"
 	"gitlab.com/lyana/logger"
 )
 

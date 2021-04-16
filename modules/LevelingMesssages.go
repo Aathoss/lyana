@@ -90,14 +90,16 @@ func LevelingMessages(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 		// Ajoute du texte de félicitation
 		if err := dc.LoadFontFace("library/fonts/MrDafoe.ttf", 52); err != nil {
-			panic(err)
+			logger.ErrorLogger.Println(err)
+			return
 		}
 		dc.SetHexColor("#373B4D")
 		dc.DrawStringAnchored("Félicitation pour le level up.", x/2+75, 50, 0.5, 0.5)
 
 		// Ajoute du texte
 		if err := dc.LoadFontFace("library/fonts/Raleway-Medium.ttf", 32); err != nil {
-			panic(err)
+			logger.ErrorLogger.Println(err)
+			return
 		}
 		dc.SetHexColor("#AD9F91")
 		dc.DrawStringAnchored("Niveau : "+strconv.Itoa(lvl.niveau)+" | Expérience : "+strconv.Itoa(lvl.xp)+"/"+strconv.Itoa(calculNiveauUP), x/2+75, 120, 0.5, 0.5)

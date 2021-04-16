@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	mcrcon "github.com/Kelwing/mc-rcon"
 	"github.com/spf13/viper"
+	mcrcon "gitlab.com/lyana/library/package/mc_rcon"
 	"gitlab.com/lyana/logger"
 )
 
