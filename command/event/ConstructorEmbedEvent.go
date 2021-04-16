@@ -5,10 +5,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/Aathoss/lyana/framework"
+	"github.com/Aathoss/lyana/logger"
 	"github.com/bwmarrin/discordgo"
 	"github.com/spf13/viper"
-	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/logger"
 )
 
 //0 = Update de l'embed

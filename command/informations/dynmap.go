@@ -1,6 +1,6 @@
 package informations
 
-import "gitlab.com/lyana/framework"
+import "github.com/Aathoss/lyana/framework"
 
 //DynmapDropURL retourne un message avec les informations de la dynmap
 func DynmapDropURL(ctx framework.Context) {

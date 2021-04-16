@@ -5,8 +5,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/Aathoss/lyana/framework"
 	"github.com/spf13/viper"
-	"gitlab.com/lyana/framework"
 )
 
 func OnlinePlayer(ctx framework.Context) {

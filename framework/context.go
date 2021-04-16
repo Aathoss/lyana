@@ -1,8 +1,8 @@
 package framework
 
 import (
+	"github.com/Aathoss/lyana/logger"
 	bot "github.com/bwmarrin/discordgo"
-	"gitlab.com/lyana/logger"
 )
 
 type Context struct {

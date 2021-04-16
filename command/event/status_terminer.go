@@ -3,8 +3,8 @@ package event
 import (
 	"strconv"
 
-	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/mysql"
+	"github.com/Aathoss/lyana/framework"
+	"github.com/Aathoss/lyana/mysql"
 )
 
 func EventTermine(ctx framework.Context) {

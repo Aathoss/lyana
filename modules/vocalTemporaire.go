@@ -3,10 +3,10 @@ package modules
 import (
 	"regexp"
 
+	"github.com/Aathoss/lyana/logger"
+	"github.com/Aathoss/lyana/mysql"
 	"github.com/bwmarrin/discordgo"
 	"github.com/spf13/viper"
-	"gitlab.com/lyana/logger"
-	"gitlab.com/lyana/mysql"
 )
 
 func VocalTemporaire(s *discordgo.Session, m *discordgo.VoiceStateUpdate) {

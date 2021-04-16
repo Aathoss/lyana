@@ -3,8 +3,8 @@ package mysql
 import (
 	"time"
 
-	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/logger"
+	"github.com/Aathoss/lyana/framework"
+	"github.com/Aathoss/lyana/logger"
 )
 
 func VerifRule(uuid string) (int, error) {

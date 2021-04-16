@@ -1,10 +1,10 @@
 package modules
 
 import (
+	"github.com/Aathoss/lyana/framework"
+	"github.com/Aathoss/lyana/logger"
+	"github.com/Aathoss/lyana/mysql"
 	"github.com/bwmarrin/discordgo"
-	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/logger"
-	"gitlab.com/lyana/mysql"
 )
 
 func GuildMemberLeave(s *discordgo.Session, leave *discordgo.GuildMemberRemove) {

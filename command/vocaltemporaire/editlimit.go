@@ -3,10 +3,10 @@ package vocaltemporaire
 import (
 	"strconv"
 
+	"github.com/Aathoss/lyana/framework"
+	"github.com/Aathoss/lyana/logger"
+	"github.com/Aathoss/lyana/mysql"
 	"github.com/bwmarrin/discordgo"
-	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/logger"
-	"gitlab.com/lyana/mysql"
 )
 
 func VocalTempEditLimit(ctx framework.Context) {

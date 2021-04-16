@@ -1,7 +1,7 @@
 package moderation
 
 import (
-	"gitlab.com/lyana/framework"
+	"github.com/Aathoss/lyana/framework"
 )
 
 func Test(ctx framework.Context) {

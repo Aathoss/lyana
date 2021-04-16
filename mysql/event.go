@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"strings"
 
-	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/logger"
+	"github.com/Aathoss/lyana/framework"
+	"github.com/Aathoss/lyana/logger"
 )
 
 func CountIndexEvent() (count int, err error) {

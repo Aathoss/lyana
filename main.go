@@ -12,18 +12,18 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/Aathoss/lyana/command"
+	"github.com/Aathoss/lyana/command/event"
+	"github.com/Aathoss/lyana/command/informations"
+	"github.com/Aathoss/lyana/command/moderation"
+	"github.com/Aathoss/lyana/command/stats"
+	"github.com/Aathoss/lyana/command/vocaltemporaire"
+	"github.com/Aathoss/lyana/framework"
+	"github.com/Aathoss/lyana/logger"
+	"github.com/Aathoss/lyana/modules"
 	"github.com/bwmarrin/discordgo"
 	bot "github.com/bwmarrin/discordgo"
 	"github.com/spf13/viper"
-	"gitlab.com/lyana/command"
-	"gitlab.com/lyana/command/event"
-	"gitlab.com/lyana/command/informations"
-	"gitlab.com/lyana/command/moderation"
-	"gitlab.com/lyana/command/stats"
-	"gitlab.com/lyana/command/vocaltemporaire"
-	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/logger"
-	"gitlab.com/lyana/modules"
 )
 
 // Variable

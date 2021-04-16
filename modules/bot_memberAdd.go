@@ -1,11 +1,11 @@
 package modules
 
 import (
+	"github.com/Aathoss/lyana/framework"
+	"github.com/Aathoss/lyana/logger"
+	"github.com/Aathoss/lyana/mysql"
 	"github.com/bwmarrin/discordgo"
 	"github.com/spf13/viper"
-	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/logger"
-	"gitlab.com/lyana/mysql"
 )
 
 func GuildMemberAdd(s *discordgo.Session, join *discordgo.GuildMemberAdd) {

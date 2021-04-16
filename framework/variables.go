@@ -1,8 +1,8 @@
 package framework
 
 import (
+	mcrcon "github.com/Aathoss/lyana/library/package/mc_rcon"
 	bot "github.com/bwmarrin/discordgo"
-	mcrcon "gitlab.com/lyana/library/package/mc_rcon"
 )
 
 var (

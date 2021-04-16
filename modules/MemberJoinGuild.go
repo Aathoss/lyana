@@ -9,10 +9,10 @@ import (
 	"os"
 	"time"
 
+	"github.com/Aathoss/lyana/logger"
 	"github.com/BurntSushi/graphics-go/graphics"
 	"github.com/flopp/go-findfont"
 	"github.com/fogleman/gg"
-	"gitlab.com/lyana/logger"
 )
 
 const (

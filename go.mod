@@ -1,4 +1,4 @@
-module gitlab.com/lyana
+module github.com/Aathoss/lyana
 
 go 1.16
 

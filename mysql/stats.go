@@ -1,8 +1,8 @@
 package mysql
 
 import (
-	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/logger"
+	"github.com/Aathoss/lyana/framework"
+	"github.com/Aathoss/lyana/logger"
 )
 
 func SelectCount(tab, colonne, uid string) int {

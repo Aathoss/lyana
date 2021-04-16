@@ -5,11 +5,11 @@ import (
 	"os"
 	"strconv"
 
+	mcrcon "github.com/Aathoss/lyana/library/package/mc_rcon"
+	"github.com/Aathoss/lyana/logger"
 	"github.com/fsnotify/fsnotify"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/spf13/viper"
-	mcrcon "gitlab.com/lyana/library/package/mc_rcon"
-	"gitlab.com/lyana/logger"
 )
 
 var (

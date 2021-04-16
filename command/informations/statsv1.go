@@ -1,8 +1,8 @@
 package informations
 
 import (
+	"github.com/Aathoss/lyana/framework"
 	"github.com/dustin/go-humanize"
-	"gitlab.com/lyana/framework"
 )
 
 var (

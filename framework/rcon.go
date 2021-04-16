@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
+	mcrcon "github.com/Aathoss/lyana/library/package/mc_rcon"
+	"github.com/Aathoss/lyana/logger"
 	"github.com/spf13/viper"
-	mcrcon "gitlab.com/lyana/library/package/mc_rcon"
-	"gitlab.com/lyana/logger"
 )
 
 var (

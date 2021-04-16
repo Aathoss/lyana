@@ -1,6 +1,6 @@
 package moderation
 
-import "gitlab.com/lyana/framework"
+import "github.com/Aathoss/lyana/framework"
 
 func Grade(ctx framework.Context) {
 	ctx.Discord.ChannelMessageDelete(ctx.Message.ChannelID, ctx.Message.ID)

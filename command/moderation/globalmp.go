@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strconv"
 
+	"github.com/Aathoss/lyana/framework"
+	"github.com/Aathoss/lyana/logger"
 	"github.com/spf13/viper"
-	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/logger"
 )
 
 func MessageGlobalMp(ctx framework.Context) {

@@ -4,9 +4,9 @@ import (
 	"strconv"
 	"time"
 
-	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/logger"
-	"gitlab.com/lyana/mysql"
+	"github.com/Aathoss/lyana/framework"
+	"github.com/Aathoss/lyana/logger"
+	"github.com/Aathoss/lyana/mysql"
 )
 
 var (

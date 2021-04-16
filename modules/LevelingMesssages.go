@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/Aathoss/lyana/framework"
+	"github.com/Aathoss/lyana/logger"
 	"github.com/bwmarrin/discordgo"
 	"github.com/fogleman/gg"
-	"gitlab.com/lyana/framework"
-	"gitlab.com/lyana/logger"
 )
 
 type leveling struct {
