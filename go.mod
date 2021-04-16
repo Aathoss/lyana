@@ -4,7 +4,6 @@ go 1.15
 
 require (
 	github.com/BurntSushi/graphics-go v0.0.0-20160129215708-b43f31a4a966
-	github.com/Kelwing/mc-rcon v0.0.0-20191221214055-1f327b337f77 // indirect
 	github.com/bwmarrin/discordgo v0.22.0
 	github.com/dustin/go-humanize v1.0.0
 	github.com/flopp/go-findfont v0.0.0-20201114153133-e7393a00c15b
