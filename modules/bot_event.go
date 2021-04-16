@@ -16,7 +16,7 @@ func Ready(s *discordgo.Session, Event *discordgo.Event) {
 
 	if Event.Type == "READY" && ready == false {
 		ready = true
-		s.UpdateStatus(0, viper.GetString("Motd"))
+		s.UpdateGameStatus(0, viper.GetString("Motd"))
 		logger.InfoLogger.Println("Le bot est dispo. [Appuyez sur CTRL+C pour l'arrêter !]")
 
 		framework.LogsChannel("[:tools:] [v:" + framework.Version + "] **Lyana** à correctement démarré")
