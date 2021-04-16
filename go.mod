@@ -1,4 +1,4 @@
-module gitlab.com/lyana
+module gitlab.com/Aathoss/lyana
 
 go 1.15
 
