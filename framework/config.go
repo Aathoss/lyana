@@ -2,9 +2,11 @@ package framework
 
 import (
 	"database/sql"
+	"fmt"
+	"log"
 	"os"
+	"path/filepath"
 	"strconv"
-	"time"
 
 	"github.com/fsnotify/fsnotify"
 	_ "github.com/go-sql-driver/mysql"
@@ -26,6 +28,19 @@ var (
 
 //LoadConfiguration charge les paramètres / variables
 func init() {
+
+	err := filepath.Walk(".",
+		func(path string, info os.FileInfo, err error) error {
+			if err != nil {
+				return err
+			}
+			fmt.Println(path, info.Size())
+			return nil
+		})
+	if err != nil {
+		log.Println(err)
+	}
+
 	logger.InfoLogger.Println("----- [Lyana] Démarrage du bot")
 	logger.InfoLogger.Println("----- [Config] en préparation")
 
@@ -61,7 +76,7 @@ func init() {
 			logger.InfoLogger.Println("----- [Config] Initialisation de la connexion rcon [-" + viper.GetString("Minecraft."+strconv.Itoa(i)+".Name") + "-]")
 			go StartRCON(i)
 
-			time.Sleep(time.Second * 1)
+			//time.Sleep(time.Second * 1)
 		}
 	}
 
