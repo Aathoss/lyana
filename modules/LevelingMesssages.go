@@ -36,21 +36,16 @@ func LevelingMessages(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	// Logs chaque messages pour compter le nombre de message envoyer
 	t1 := time.Now()
-	insert, err := framework.DBLyana.Prepare("INSERT INTO logs(uuid, categorie, timestamp, content) VALUES(?, ?, ?, ?)")
-	if err != nil {
-		logger.ErrorLogger.Println(err)
-	}
-	defer insert.Close()
-	_, err = insert.Exec(m.Author.ID, "msgcount", t1.Unix(), "")
-	if err != nil {
-		logger.ErrorLogger.Println(err)
-	}
 
 	// Système de leveling
 	lvl.uuid = m.Author.ID
-	lvl.timestamp = int(t1.Unix())
-	framework.DBLyana.QueryRow("SELECT niveau,xp FROM level WHERE uuid=?", lvl.uuid).Scan(&lvl.niveau, &lvl.xp)
+	framework.DBLyana.QueryRow("SELECT niveau,xp,timestamp FROM level WHERE uuid=?", lvl.uuid).Scan(&lvl.niveau, &lvl.xp, &lvl.timestamp)
 
+	if lvl.timestamp >= (int(t1.Unix()) - cooldownMsg) {
+		return
+	}
+
+	lvl.timestamp = int(t1.Unix())
 	lvl.xp = lvl.xp + (rand.Intn(10) + 10)
 	calculNiveau := (5 * lvl.niveau) + (100 * lvl.niveau) + 100
 	calculNiveauUP := (5 * (lvl.niveau + 1)) + (100 * (lvl.niveau + 1)) + 100
@@ -130,22 +125,23 @@ func LevelingMessages(s *discordgo.Session, m *discordgo.MessageCreate) {
 			logger.ErrorLogger.Println(err)
 		}
 	}
-
-	insert, err = framework.DBLyana.Prepare(`
+	insert, err := framework.DBLyana.Prepare(`
 	INSERT INTO level(uuid, niveau, xp, timestamp)
 	VALUES(?, ?, ?, ?)
 	ON DUPLICATE KEY UPDATE
 		niveau = ?,
 		xp = ?,
 		timestamp = ?
-	WHERE timestamp<=?
 		`)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
+		return
 	}
 	defer insert.Close()
-	_, err = insert.Exec(lvl.uuid, lvl.niveau, lvl.xp, lvl.timestamp, lvl.niveau, lvl.xp, lvl.timestamp, (lvl.timestamp - cooldownMsg))
+	_, err = insert.Exec(lvl.uuid, lvl.niveau, lvl.xp, lvl.timestamp, lvl.niveau, lvl.xp, lvl.timestamp)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
+		return
 	}
+
 }

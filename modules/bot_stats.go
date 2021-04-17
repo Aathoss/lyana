@@ -28,9 +28,9 @@ func Stats(s *discordgo.Session, m *discordgo.MessageCreate) {
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
+	defer insert.Close()
 	_, err = insert.Exec(t1.Unix(), m.Author.ID, "msgcount", "")
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
-	insert.Close()
 }
