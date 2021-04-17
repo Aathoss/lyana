@@ -14,6 +14,10 @@ import (
 	"github.com/fogleman/gg"
 )
 
+var (
+	cooldownMsg = 10
+)
+
 type leveling struct {
 	uuid      string
 	niveau    int
@@ -134,12 +138,13 @@ func LevelingMessages(s *discordgo.Session, m *discordgo.MessageCreate) {
 		niveau = ?,
 		xp = ?,
 		timestamp = ?
+	WHERE timestamp<=?
 		`)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
 	defer insert.Close()
-	_, err = insert.Exec(lvl.uuid, lvl.niveau, lvl.xp, lvl.timestamp, lvl.niveau, lvl.xp, lvl.timestamp)
+	_, err = insert.Exec(lvl.uuid, lvl.niveau, lvl.xp, lvl.timestamp, lvl.niveau, lvl.xp, lvl.timestamp, (lvl.timestamp - cooldownMsg))
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 	}
