@@ -44,6 +44,10 @@ func VocalTemporaire(s *discordgo.Session, m *discordgo.VoiceStateUpdate) {
 				notmp, _ := regexp.MatchString(`10003`, err.Error())
 				if notmp == true {
 					err = mysql.UpdateChannelID(user.User.ID, "")
+					if err != nil {
+						logger.ErrorLogger.Println(err)
+						return
+					}
 				} else {
 					lvlerr = 1
 					logger.ErrorLogger.Println(err)
@@ -57,7 +61,11 @@ func VocalTemporaire(s *discordgo.Session, m *discordgo.VoiceStateUpdate) {
 		}
 
 		if usercount == 0 {
-			mysql.InsertCreation(m.UserID, channelname, channellimite)
+			err = mysql.InsertCreation(m.UserID, channelname, channellimite)
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+				return
+			}
 		} else {
 			channelname, channellimite = mysql.ReturnConfigChannel(m.UserID)
 		}
@@ -76,7 +84,11 @@ func VocalTemporaire(s *discordgo.Session, m *discordgo.VoiceStateUpdate) {
 		}
 
 		//Insert le nouveau channel id dans la table
-		mysql.UpdateChannelID(m.UserID, channel.ID)
+		err = mysql.UpdateChannelID(m.UserID, channel.ID)
+		if err != nil {
+			logger.ErrorLogger.Println(err)
+			return
+		}
 
 		//déplacement du membre dans le nouveau channel
 		err = s.GuildMemberMove(viper.GetString("GuildID"), user.User.ID, &channel.ID)
