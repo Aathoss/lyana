@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"os"
 	"strconv"
+	"time"
 
 	mcrcon "github.com/Aathoss/lyana/library/package/mc_rcon"
 	"github.com/Aathoss/lyana/logger"
@@ -30,7 +31,7 @@ func init() {
 
 	//Configuration de l'heure sûr le serveur
 	logger.InfoLogger.Println("----- [Config] Initialisation l'heure")
-	os.Setenv("TZ", "Europe/Paris")
+	time.FixedZone("UTF+2",2*60*60)
 
 	//Chargement de la configuration du serveur
 	logger.InfoLogger.Println("----- [Config] Initialisation du fichier de config")

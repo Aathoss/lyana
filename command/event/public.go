@@ -13,11 +13,13 @@ import (
 func PubliEvent(ctx framework.Context) {
 	ctx.Discord.ChannelMessageDelete(ctx.Message.ChannelID, ctx.Message.ID)
 
-	num, _ := strconv.Atoi(ctx.Args[0])
-	index := framework.EventContructionIndex
-
-	if len(ctx.Args[0]) == 0 {
+	var index int
+	
+	if len(ctx.Args[0]) != 0 {
+		num, _ := strconv.Atoi(ctx.Args[0])
 		index = num
+	} else {
+		index = framework.EventContructionIndex
 	}
 
 	if framework.EventConstruction != true && len(ctx.Args[0]) == 0 {
