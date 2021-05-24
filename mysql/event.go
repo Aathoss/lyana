@@ -7,10 +7,11 @@ import (
 
 	"github.com/Aathoss/lyana/framework"
 	"github.com/Aathoss/lyana/logger"
+	"github.com/spf13/viper"
 )
 
 func CountIndexEvent() (count int, err error) {
-	err = framework.DBLyana.QueryRow("SELECT `AUTO_INCREMENT` FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 's13_lyana' AND TABLE_NAME = 'event'").Scan(&count)
+	err = framework.DBLyana.QueryRow("SELECT `AUTO_INCREMENT` FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = '"+viper.GetString("MySql.Lyana.dbname")+"' AND TABLE_NAME = 'event'").Scan(&count)
 	return count, err
 }
 
