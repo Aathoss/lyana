@@ -15,7 +15,6 @@ func VocalTemporaire(s *discordgo.Session, m *discordgo.VoiceStateUpdate) {
 	if verifchannel.ParentID != viper.GetString("Categorie.TempVoc") {
 		return
 	} */
-
 	if m.ChannelID == viper.GetString("ChannelID.VocalGeneral") {
 		return
 	}

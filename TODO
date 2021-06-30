@@ -3,14 +3,19 @@
 'Alt+C' // Annule une todo
 'Alt+S' // Début une todo
 
-Lyana feature:
+(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE)
+
+Lyana feature: 
   ☐ Ajoute d'un système de ticket
   ☐ Modification du système de log
 
 
-Débug:
-  ☐ Prise en compte d'une deuxième commande dans un texte envoyer par le bot !
-  ☐ Remise en place du système de whitelist
+Débug: @[est-finished-percentage]
+  ✔ Prise en compte d'une deuxième commande dans un texte envoyer par le bot ! @BUG
+  ☐ Remise en place du système de whitelist @30m
 
 Modification:
-  ✔ Ajoute d'un anti-spam sûr le système de leveling discord ~ 10 seconde @done(21-04-17 15:04)
+  ✔ Ajoute d'un anti-spam sûr le système de leveling discord ~ 10 seconde @started(25-06-2021 16:35) @done(25-06-2021 16:35)
+
+
+Archive:

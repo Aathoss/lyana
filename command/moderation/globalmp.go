@@ -19,6 +19,11 @@ func MessageGlobalMp(ctx framework.Context) {
 		return
 	}
 
+	if len(viper.GetString("GlobalMsgSend")) == 0 {
+		framework.LogsChannel("[!globalmp] Veuillez définir un message à envoyer !")
+		return
+	}
+
 	countMembersTemp := 100
 	countMembers := membersgrade.MemberCount
 	idMembers := ""
@@ -60,7 +65,7 @@ func MessageGlobalMp(ctx framework.Context) {
 					logger.DebugLogger.Println(err)
 					continue
 				}
-				_, err = ctx.Discord.ChannelMessageSend(dm.ID, ``)
+				_, err = ctx.Discord.ChannelMessageSend(dm.ID, viper.GetString("GlobalMsgSend"))
 				if err != nil {
 					logger.DebugLogger.Println(err)
 					continue
