@@ -18,15 +18,14 @@ func Stats(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	channel, err := s.State.Channel(m.ChannelID)
 	if err != nil {
-		logger.ErrorLogger.Println("Erreur lors de l'obtention du channel,", err)
-		return
-	}
-
-	if channel.Type == discordgo.ChannelTypeDM {
 		logger.InfoLogger.Println("-------------------------------------------------")
 		logger.InfoLogger.Println(m.Author.Username)
 		logger.InfoLogger.Println(m.Message)
 		logger.InfoLogger.Println("-------------------------------------------------")
+		return
+	}
+
+	if channel.Type == discordgo.ChannelTypeDM {
 		return
 	}
 
