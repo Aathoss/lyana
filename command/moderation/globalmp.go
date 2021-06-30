@@ -49,11 +49,11 @@ func MessageGlobalMp(ctx framework.Context) {
 
 		for _, key := range membre {
 			count++
+			logger.InfoLogger.Println(strconv.Itoa(count) + " | " + key.User.ID + " | " + key.User.Username)
 			if count <= viper.GetInt("GlobalMsgSendReprise") {
 				continue
 			}
 
-			logger.InfoLogger.Println(strconv.Itoa(count) + " | " + key.User.ID + " | " + key.User.Username)
 			idMembers = key.User.ID
 
 			_, err := ctx.Discord.GuildMember(viper.GetString("GuildID"), key.User.ID)
