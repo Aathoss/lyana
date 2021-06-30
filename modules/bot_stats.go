@@ -20,7 +20,7 @@ func Stats(s *discordgo.Session, m *discordgo.MessageCreate) {
 	if err != nil {
 		logger.InfoLogger.Println("-------------------------------------------------")
 		logger.InfoLogger.Println(m.Author.Username)
-		logger.InfoLogger.Println(m.Message)
+		logger.InfoLogger.Println(m.Message.Content)
 		logger.InfoLogger.Println("-------------------------------------------------")
 		return
 	}
