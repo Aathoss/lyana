@@ -71,6 +71,9 @@ func MessageGlobalMp(ctx framework.Context) {
 				_, err = ctx.Discord.ChannelMessageSend(dm.ID, viper.GetString("GlobalMsgSend"))
 				if err != nil {
 					logger.DebugLogger.Println(err)
+					countMP++
+					logger.ErrorLogger.Println("-> Mp Close")
+					framework.LogsChannel(":mailbox_with_mail: **Erreur mp :x: ** : N°**" + strconv.Itoa(count) + "** | " + key.User.ID + " | " + key.User.Username)
 					continue
 				}
 			}
