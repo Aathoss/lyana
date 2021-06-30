@@ -16,6 +16,20 @@ func Stats(s *discordgo.Session, m *discordgo.MessageCreate) {
 		return
 	}
 
+	channel, err := s.State.Channel(m.ChannelID)
+	if err != nil {
+		logger.ErrorLogger.Println("Erreur lors de l'obtention du channel,", err)
+		return
+	}
+
+	if channel.Type == discordgo.ChannelTypeDM {
+		logger.InfoLogger.Println("-------------------------------------------------")
+		logger.InfoLogger.Println(m.Author.Username)
+		logger.InfoLogger.Println(m.Message)
+		logger.InfoLogger.Println("-------------------------------------------------")
+		return
+	}
+
 	count := framework.VerifGrade(m.Member.Roles)
 	if count == 1 {
 		s.GuildMemberRoleRemove(m.Message.GuildID, m.Author.ID, "757730769023008958")
