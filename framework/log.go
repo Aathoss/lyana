@@ -12,6 +12,10 @@ func LogsChannel(msg string) {
 	}
 }
 
+func LogsRolePolicier(msg string) {
+	Session.ChannelMessageSend("785611617026834432", msg)
+}
+
 func ErrorDM(ctx Context, err error) {
 	if err != nil {
 		notmp, _ := regexp.MatchString(`50007`, err.Error())

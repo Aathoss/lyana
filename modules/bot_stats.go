@@ -7,10 +7,15 @@ import (
 	"github.com/Aathoss/lyana/logger"
 	"github.com/Aathoss/lyana/mysql"
 	"github.com/bwmarrin/discordgo"
+	"github.com/spf13/viper"
 )
 
 func Stats(s *discordgo.Session, m *discordgo.MessageCreate) {
 	user := m.Author
+
+	if viper.GetBool("Dev.test") == true {
+		return
+	}
 
 	if user.ID == s.State.User.ID || user.Bot {
 		return
@@ -35,7 +40,7 @@ func Stats(s *discordgo.Session, m *discordgo.MessageCreate) {
 	}
 	mysql.UpdateInactifDiscord(m.Author.ID)
 
-	//Logs le nom de message envoyer par les Utilisateur
+	//Logs le nombre de message envoyer par les Utilisateur
 	t1 := time.Now()
 	insert, err := framework.DBLyana.Prepare("INSERT INTO logs(timestamp, uuid, categorie, content) VALUES(?, ?, ?, ?)")
 	if err != nil {

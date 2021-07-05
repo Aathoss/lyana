@@ -68,11 +68,13 @@ func LevelingMessages(s *discordgo.Session, m *discordgo.MessageCreate) {
 		response, err := http.Get(m.Author.AvatarURL("128"))
 		if err != nil {
 			logger.ErrorLogger.Println(err)
+			return
 		}
 		defer response.Body.Close()
 		mdecode, _, err := image.Decode(response.Body)
 		if err != nil {
 			logger.ErrorLogger.Println(err)
+			return
 		}
 
 		// Ajoute d'un coutour autour du profil en couleurs
@@ -106,12 +108,14 @@ func LevelingMessages(s *discordgo.Session, m *discordgo.MessageCreate) {
 		err = dc.SavePNG("library/leveling/" + lvl.uuid + ".png")
 		if err != nil {
 			logger.ErrorLogger.Println(err)
+			return
 		}
 
 		// Ouverture de l'image pour l'envoie
 		png, err := os.Open("library/leveling/" + lvl.uuid + ".png")
 		if err != nil {
 			logger.ErrorLogger.Println(err)
+			return
 		}
 		defer png.Close()
 
@@ -123,6 +127,7 @@ func LevelingMessages(s *discordgo.Session, m *discordgo.MessageCreate) {
 		})
 		if err != nil {
 			logger.ErrorLogger.Println(err)
+			return
 		}
 	}
 	insert, err := framework.DBLyana.Prepare(`

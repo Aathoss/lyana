@@ -52,6 +52,11 @@ func VerifCandid(secondeboucle time.Duration) {
 	enattente := 0
 
 	for {
+		if viper.GetBool("Dev.test") == true {
+			time.Sleep(time.Second * secondeboucle)
+			continue
+		}
+
 		body1, err := framework.RequestAPI("GET", url1)
 		if err != nil {
 			logger.ErrorLogger.Println(err)

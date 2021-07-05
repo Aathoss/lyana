@@ -1,6 +1,7 @@
 package command
 
 import (
+	"strconv"
 	"time"
 
 	"github.com/Aathoss/lyana/framework"
@@ -48,30 +49,7 @@ func AddPlayer(ctx framework.Context) {
 			logger.ErrorLogger.Println(err)
 		}
 
-		/* resp, err := rcon.RconCommandeWhitelistAdd(playermc)
-		if err != nil {
-			logger.ErrorLogger.Println(err)
-			framework.LogsChannel("[:x:] [" + viper.GetString("PrefixMsg") + ctx.Commande + " " + mentions[0].ID + " " + playermc + "] Une erreur c'est produits sur le whitelist rcon")
-			return
-		}
-
-		if resp[4] == "§7Whitelisted" {
-			ctx.Discord.ChannelMessageSend(viper.GetString("ChannelID.General"), "<:CraftingTable:753547645875912736> Je viens de craft votre carte d'accès au serveur, nous vous souhaitons la bienvenue parmi nous "+mentions[0].Mention()+".")
-			err = mysql.AddWhitelist(mentions[0].ID, playermc)
-			if err != nil {
-				logger.ErrorLogger.Println(err)
-			}
-
-			err = ctx.Discord.GuildMemberRoleRemove(viper.GetString("GuildID"), mentions[0].ID, "735281835080286291")
-			if err != nil {
-				logger.ErrorLogger.Println(err)
-			}
-			err = ctx.Discord.GuildMemberRoleAdd(viper.GetString("GuildID"), mentions[0].ID, "820404799119818793")
-			if err != nil {
-				logger.ErrorLogger.Println(err)
-			}
-			return
-		} */
+		WhitelistPlayerMC(playermc)
 	}
 
 	if len(ctx.Args) <= 1 {
@@ -83,5 +61,23 @@ func AddPlayer(ctx framework.Context) {
 		message, _ := ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, embed)
 		time.Sleep(time.Second * 10)
 		ctx.Discord.ChannelMessageDelete(message.ChannelID, message.ID)
+	}
+}
+
+func WhitelistPlayerMC(player string) {
+	for {
+		err := framework.ConnectMC[0].Authenticate()
+		if err != nil {
+			framework.OnlineServer[0] = "offline"
+			framework.Connect(0)
+		}
+
+		_, err = framework.ConnectMC[0].SendCommand("ewhitelist add " + player)
+		if err != nil {
+			logger.ErrorLogger.Println("MC-Host : "+viper.GetString("Minecraft."+strconv.Itoa(0)+".Name")+" | Command failed : ", err)
+			time.Sleep(time.Second * 5)
+			continue
+		}
+		break
 	}
 }

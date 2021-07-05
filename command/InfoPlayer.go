@@ -18,6 +18,11 @@ var (
 
 type statsv1 struct {
 	playertime        int64
+	shop1             bool
+	shop2             bool
+	questsMax         int64
+	questsFini        int64
+	jobLvl            int64
 	jump              int64
 	deaths            int64
 	craftitems        int64
@@ -59,7 +64,7 @@ func InfoPlayer(ctx framework.Context) {
 	t1, _ := user.JoinedAt.Parse()
 	_, pseudoMC, t2, _ := mysql.GetWhitelist(user.User.ID)
 
-	//requestSQLPlayer(pseudoMC)
+	requestSQLPlayer(pseudoMC)
 
 	//Compte le nombre de message envoyer par l'utilisateur
 	err := framework.DBLyana.QueryRow("SELECT COUNT(uuid) FROM logs WHERE categorie=? AND uuid=?", "msgcount", user.User.ID).Scan(&count)
@@ -78,13 +83,13 @@ func InfoPlayer(ctx framework.Context) {
 	if len(pseudoMC) > 1 {
 		messagewhitelist = "\nVous êtes whitelist depuis : **" + framework.Calculetime(int64(t2), 0) + "**"
 		messagepseudo = " | <:CraftingTable:753547645875912736> Pseudo : " + pseudoMC
-		statsminecraft = "Minecraft Stats"
+		statsminecraft = ":radio_button: Minecraft Stats"
 	}
 
 	embed := framework.NewEmbed().
-		SetTitle("Votre Carte d'identité : "+user.User.Username+messagepseudo).
+		SetTitle(":radio_button: Votre Carte d'identité : "+user.User.Username+messagepseudo).
 		SetColor(viper.GetInt("EmbedColor.Informations")).
-		AddField("Discord", "Vous êtes arrivé il y à : **"+framework.Calculetime(t1.Unix(), 0)+"**"+messagewhitelist+messageCount, true).
+		AddField(":radio_button: Discord", "Vous êtes arrivé il y à : **"+framework.Calculetime(t1.Unix(), 0)+"**"+messagewhitelist+messageCount, true).
 		AddField(statsminecraft, "Temps de jeux : **"+framework.Calculetime(stats.playertime, 2)+"**"+
 			"\nNombre de sautes : **"+humanize.Comma(stats.jump)+"**"+
 			"\nNombre de morts : **"+humanize.Comma(stats.deaths)+"**"+
@@ -99,22 +104,28 @@ func InfoPlayer(ctx framework.Context) {
 	ctx.Discord.ChannelMessageSendEmbed(ctx.Message.ChannelID, embed)
 }
 
-func requestSQLPlayer(player string) {
+func requestSQLPlayer(player string) error {
 	db := framework.DBMinecraft
 
 	err := db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='playertime'").Scan(&stats.playertime)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
+		return err
 	}
-	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='jump'").Scan(&stats.jump)
-	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='deaths'").Scan(&stats.deaths)
-	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='craftitems'").Scan(&stats.craftitems)
-	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='mineblocks'").Scan(&stats.mineblocks)
-	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='breakitems'").Scan(&stats.breakitems)
-	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='mobkills'").Scan(&stats.mobkills)
-	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='useitems'").Scan(&stats.useitems)
-	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='mine_diamond_ore'").Scan(&stats.minediamondore)
-	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='mine_ancient_debris'").Scan(&stats.mineancientdebris)
+	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='sautes'").Scan(&stats.jump)
+	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='quests_fini'").Scan(&stats.questsFini)
+	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='quests_max'").Scan(&stats.questsMax)
+	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='shop1_define'").Scan(&stats.shop1)
+	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='shop2_define'").Scan(&stats.shop2)
+	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='jobs_level'").Scan(&stats.jobLvl)
+	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='mort'").Scan(&stats.deaths)
+	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='item_craft'").Scan(&stats.craftitems)
+	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='bloc_mine'").Scan(&stats.mineblocks)
+	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='item_briser'").Scan(&stats.breakitems)
+	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='mob_kill'").Scan(&stats.mobkills)
+	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='item_utilise'").Scan(&stats.useitems)
+	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='minerais_diamond'").Scan(&stats.minediamondore)
+	db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='minarais_netherite'").Scan(&stats.mineancientdebris)
 
-	return
+	return nil
 }

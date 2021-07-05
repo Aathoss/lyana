@@ -60,6 +60,7 @@ func main() {
 		return
 	}
 
+	go modules.MinecraftCheckShop(10)
 	go modules.VerifCandid(10)
 	go modules.UpdateOnlinePlayer(5)
 	go event.UpdateEvent(5)
@@ -172,7 +173,7 @@ func commandHandler(s *bot.Session, m *bot.MessageCreate) {
 }
 
 func registerCommands() {
-	CmdHandler.Register("t", []string{}, 1, moderation.Test, "???")
+	CmdHandler.Register("test", []string{}, 1, moderation.Test, "???")
 
 	//Commande Modération
 	CmdHandler.Register("stats", []string{}, 1, stats.Statistique, "Returne les statistique du bot")

@@ -31,7 +31,7 @@ func init() {
 
 	//Configuration de l'heure sûr le serveur
 	logger.InfoLogger.Println("----- [Config] Initialisation l'heure")
-	time.FixedZone("UTF+2",2*60*60)
+	time.FixedZone("UTF+2", 2*60*60)
 
 	//Chargement de la configuration du serveur
 	logger.InfoLogger.Println("----- [Config] Initialisation du fichier de config")
@@ -55,7 +55,7 @@ func init() {
 	OnlineServer = make([]string, len(viper.GetStringMapString("Minecraft")))
 	ConnectMC = make([]*mcrcon.MCConn, len(viper.GetStringMapString("Minecraft")))
 	countMAP := len(viper.GetStringMapString("Minecraft"))
-	if viper.GetBool("Dev.test") != true {
+	if viper.GetBool("Dev.test") != false {
 		for i := 0; i < countMAP; i++ {
 
 			logger.InfoLogger.Println("----- [Config] Initialisation de la connexion rcon [-" + viper.GetString("Minecraft."+strconv.Itoa(i)+".Name") + "-]")

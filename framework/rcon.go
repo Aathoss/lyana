@@ -12,11 +12,12 @@ import (
 )
 
 var (
+	numInstance int
 	notif bool
 	pause = time.Second * 10
 )
 
-func connect(num int) {
+func Connect(num int) {
 	for {
 		address := viper.GetString("Minecraft."+strconv.Itoa(num)+".IP") + ":" + viper.GetString("Minecraft."+strconv.Itoa(num)+".Port")
 
@@ -50,15 +51,16 @@ func StartRCON(num int) {
 	OnlinePlayer[num] = 0
 	ListPlayer[num] = ""
 	OnlineServer[num] = "offline"
+	numInstance = num
 
-	connect(num)
+	Connect(num)
 
 	for {
 
 		err := ConnectMC[num].Authenticate()
 		if err != nil {
 			OnlineServer[num] = "offline"
-			connect(num)
+			Connect(num)
 		}
 
 		//Count le nombre de joueurs en ligne / liste les pseudo
