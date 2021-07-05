@@ -49,6 +49,7 @@ func AddPlayer(ctx framework.Context) {
 			logger.ErrorLogger.Println(err)
 		}
 
+		logger.ErrorLogger.Println(playermc)
 		WhitelistPlayerMC(playermc)
 	}
 
@@ -65,9 +66,13 @@ func AddPlayer(ctx framework.Context) {
 }
 
 func WhitelistPlayerMC(player string) {
+
+	logger.ErrorLogger.Println(viper.GetString("Minecraft." + strconv.Itoa(0) + ".Name"))
+
 	for {
 		err := framework.ConnectMC[0].Authenticate()
 		if err != nil {
+			logger.ErrorLogger.Println(err)
 			framework.OnlineServer[0] = "offline"
 			framework.Connect(0)
 		}

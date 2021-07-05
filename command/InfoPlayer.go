@@ -107,7 +107,7 @@ func InfoPlayer(ctx framework.Context) {
 func requestSQLPlayer(player string) error {
 	db := framework.DBMinecraft
 
-	err := db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='playertime'").Scan(&stats.playertime)
+	err := db.QueryRow("SELECT CONTENT FROM PLAYERDATA WHERE PLAYER='" + player + "' AND VARIABLE='playtime'").Scan(&stats.playertime)
 	if err != nil {
 		logger.ErrorLogger.Println(err)
 		return err
