@@ -25,7 +25,7 @@ func VerifRuleTimestamp() ([]string, error) {
 	defer rows.Close()
 
 	for rows.Next() {
-		err := rows.Scan(&rule.id, &rule.uid, &rule.timestamp)
+		err := rows.Scan(&rule.uid, &rule.timestamp)
 		if err != nil {
 			return temp, err
 		}
