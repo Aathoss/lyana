@@ -96,7 +96,7 @@ func VerifCandid(secondeboucle time.Duration) {
 				SetURL("https://unispace.page.link/mVFa").
 				SetDescription("Date : " + tNow.Format("2/1 15:04:05")).MessageEmbed
 
-			_, err = session.ChannelMessageSendEmbed("735273466051297433", embedNotif)
+			_, err := session.ChannelMessageSendEmbed("735273466051297433", embedNotif)
 			if err != nil {
 				logger.ErrorLogger.Println(err)
 			}
