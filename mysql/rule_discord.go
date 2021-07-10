@@ -12,6 +12,8 @@ func VerifRule(uuid string) (int, error) {
 	return count, err
 }
 
+// BUG: Corriger l'erreur de régle ID n'existe plus dans la table rule
+// NOTE: Vérifier la liste de chaque membre pour voir si il on accepté le réglement manuellement !
 func VerifRuleTimestamp() ([]string, error) {
 	t1 := time.Now()
 	var temp []string

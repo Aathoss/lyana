@@ -110,12 +110,12 @@ func MinecraftCheckShop(secondeboucle time.Duration) {
 			shop.shop_solde = shop.shop_solde - (calcshop1 + calcshop2)
 			result += calcshop1 + calcshop2
 			fmt.Println("Calcule du joueurs " + player + " en cours | soldes : " + fmt.Sprintf("%.2f", shop.shop_solde) + " | Mairie : " + fmt.Sprintf("%.2f", result))
-			msgLogs := "**Joueurs :** `" + player + "`             **Solde :  " + fmt.Sprintf("%.2f", shop.shop_solde) + " / " + fmt.Sprintf("%.2f", ((calcshop1*7)+(calcshop2*7))) + "** Diamants             :moneybag: -" + fmt.Sprintf("%.2f", (calcshop1+calcshop2))
+			msgLogs := "**Joueurs :** `" + player + "`             **Solde :  " + fmt.Sprintf("%.2f", shop.shop_solde) + " / " + fmt.Sprintf("%.2f", ((calcshop1*7)+(calcshop2*7))*2) + "** Diamants             :moneybag: -" + fmt.Sprintf("%.2f", (calcshop1+calcshop2))
 
-			if shop.shop_solde < ((calcshop1 * 7) + (calcshop2 * 7)) {
+			if shop.shop_solde < -((calcshop1 * 7) + (calcshop2 * 7)) {
 				framework.LogsChannel(":red_heart: " + msgLogs)
 				framework.LogsRolePolicier(":red_heart: " + msgLogs)
-			} else if shop.shop_solde < ((calcshop1*7)+(calcshop2*7))/2 {
+			} else if shop.shop_solde < -((calcshop1*7)+(calcshop2*7))/2 {
 				framework.LogsChannel(":orange_heart: " + msgLogs)
 				framework.LogsRolePolicier(":orange_heart: " + msgLogs)
 
