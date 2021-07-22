@@ -125,6 +125,7 @@ func VocalTemporaire(s *discordgo.Session, m *discordgo.VoiceStateUpdate) {
 				channelrm, err := s.ChannelDelete(channel)
 				if err != nil {
 					logger.DebugLogger.Println(err)
+					return
 				}
 
 				err = mysql.RemoveChannelID(channelrm.ID)

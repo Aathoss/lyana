@@ -71,10 +71,20 @@ func LevelingMessages(s *discordgo.Session, m *discordgo.MessageCreate) {
 			return
 		}
 		defer response.Body.Close()
-		mdecode, _, err := image.Decode(response.Body)
+		var mdecode image.Image
+		mdecode, _, err = image.Decode(response.Body)
 		if err != nil {
-			logger.ErrorLogger.Println(err)
-			return
+			gifpng, err := os.Open("library/leveling/debug_gif.png")
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+				return
+			}
+			defer gifpng.Close()
+			mdecode, _, err = image.Decode(gifpng)
+			if err != nil {
+				logger.ErrorLogger.Println(err)
+				return
+			}
 		}
 
 		// Ajoute d'un coutour autour du profil en couleurs
