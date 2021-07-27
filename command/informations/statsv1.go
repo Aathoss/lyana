@@ -30,7 +30,7 @@ func StatsUnispaceV1(ctx framework.Context) {
 	embed := framework.NewEmbed().
 		SetTitle("Statistique global de Unispace V1").
 		SetColor(0x3A0071).
-		SetDescription("Temps de jeux : **" + framework.Calculetime(stats.playertime/20, 2) + "**" +
+		SetDescription("Temps de jeux : **" + framework.Calculetime(stats.playertime, 2) + "**" +
 			"\nNombre de sauts : **" + humanize.Comma(stats.jump) + "**" +
 			"\nNombre de morts : **" + humanize.Comma(stats.deaths) + "**" +
 			"\nItems craft : **" + humanize.Comma(stats.craftitems) + "**" +

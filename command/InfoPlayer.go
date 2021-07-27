@@ -90,7 +90,7 @@ func InfoPlayer(ctx framework.Context) {
 		SetTitle(":radio_button: Votre Carte d'identité : "+user.User.Username+messagepseudo).
 		SetColor(viper.GetInt("EmbedColor.Informations")).
 		AddField(":radio_button: Discord", "Vous êtes arrivé il y à : **"+framework.Calculetime(t1.Unix(), 0)+"**"+messagewhitelist+messageCount, true).
-		AddField(statsminecraft, "Temps de jeux : **"+framework.Calculetime(stats.playertime/20, 2)+"**"+
+		AddField(statsminecraft, "Temps de jeux : **"+framework.Calculetime(stats.playertime, 2)+"**"+
 			"\nNombre de sauts : **"+humanize.Comma(stats.jump)+"**"+
 			"\nNombre de morts : **"+humanize.Comma(stats.deaths)+"**"+
 			"\nItems craft : **"+humanize.Comma(stats.craftitems)+"**"+
