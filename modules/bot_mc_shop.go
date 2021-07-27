@@ -113,8 +113,8 @@ func MinecraftCheckShop(secondeboucle time.Duration) {
 			msgLogs := "**Joueurs :** `" + player + "`             **Solde :  " + fmt.Sprintf("%.2f", shop.shop_solde) + " / " + fmt.Sprintf("%.2f", ((calcshop1*7)+(calcshop2*7))*2) + "** Diamants             :moneybag: -" + fmt.Sprintf("%.2f", (calcshop1+calcshop2))
 
 			if shop.shop_solde < -((calcshop1 * 7) + (calcshop2 * 7)) {
-				framework.LogsChannel(":red_heart: " + msgLogs)
-				framework.LogsRolePolicier(":red_heart: " + msgLogs)
+				framework.LogsChannel(":heart: " + msgLogs)
+				framework.LogsRolePolicier(":heart: " + msgLogs)
 			} else if shop.shop_solde < -((calcshop1*7)+(calcshop2*7))/2 {
 				framework.LogsChannel(":orange_heart: " + msgLogs)
 				framework.LogsRolePolicier(":orange_heart: " + msgLogs)
