@@ -1,6 +1,7 @@
 package command
 
 import (
+	"fmt"
 	"strconv"
 
 	"github.com/Aathoss/lyana/framework"
@@ -85,6 +86,9 @@ func InfoPlayer(ctx framework.Context) {
 		messagepseudo = " | <:CraftingTable:753547645875912736> Pseudo : " + pseudoMC
 		statsminecraft = ":radio_button: Minecraft Stats"
 	}
+
+	fmt.Println(stats.playertime)
+	fmt.Println(framework.Calculetime(stats.playertime, 2))
 
 	embed := framework.NewEmbed().
 		SetTitle(":radio_button: Votre Carte d'identité : "+user.User.Username+messagepseudo).

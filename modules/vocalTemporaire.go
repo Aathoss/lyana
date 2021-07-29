@@ -124,7 +124,7 @@ func VocalTemporaire(s *discordgo.Session, m *discordgo.VoiceStateUpdate) {
 			if count == 0 {
 				channelrm, err := s.ChannelDelete(channel)
 				if err != nil {
-					logger.DebugLogger.Println(err)
+					logger.DebugLogger.Println("[" + channel + "] " + err.Error())
 					return
 				}
 
