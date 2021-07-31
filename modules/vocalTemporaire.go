@@ -2,6 +2,7 @@ package modules
 
 import (
 	"regexp"
+	"strings"
 
 	"github.com/Aathoss/lyana/logger"
 	"github.com/Aathoss/lyana/mysql"
@@ -124,8 +125,16 @@ func VocalTemporaire(s *discordgo.Session, m *discordgo.VoiceStateUpdate) {
 			if count == 0 {
 				channelrm, err := s.ChannelDelete(channel)
 				if err != nil {
-					logger.DebugLogger.Println("[" + channel + "] " + err.Error())
-					return
+					logger.InfoLogger.Println("[" + channel + "] " + err.Error())
+
+					if strings.Count(err.Error(), "10003") >= 1 {
+						logger.InfoLogger.Println("[" + channel + "] Channel retirer de la base de données avec succès")
+						err = mysql.RemoveChannelID(channel)
+						if err != nil {
+							logger.DebugLogger.Println(err)
+						}
+					}
+					continue
 				}
 
 				err = mysql.RemoveChannelID(channelrm.ID)
