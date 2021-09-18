@@ -60,7 +60,9 @@ func main() {
 		return
 	}
 
-	go modules.MinecraftCheckShop(10)
+	if viper.GetBool("Minecraft_shop_status") == true {
+		go modules.MinecraftCheckShop(10)
+	}
 	go modules.VerifCandid(10)
 	go modules.UpdateOnlinePlayer(5)
 	go event.UpdateEvent(5)
