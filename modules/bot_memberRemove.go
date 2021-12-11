@@ -16,6 +16,9 @@ func GuildMemberLeave(s *discordgo.Session, leave *discordgo.GuildMemberRemove) 
 
 	_, playermc, _, err := mysql.GetWhitelist(leave.User.ID)
 	if err != nil {
+		msg = " Viens de partir, d'après mes informations il n'était pas whitelist."
+		framework.LogsChannel("[<:downvote:742854427177648190>] " + leave.User.Username + msg)
+
 		logger.ErrorLogger.Println(err)
 		return
 	}
