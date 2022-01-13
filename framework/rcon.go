@@ -92,7 +92,9 @@ func StartRCON(num int) {
 
 		}
 
-		if viper.GetString("Minecraft."+strconv.Itoa(num)+".Version") == "1.17" && viper.GetString("Minecraft."+strconv.Itoa(num)+".Version") == "1.18" { //There are 0 of a max of 100 players online:
+		if viper.GetString("Minecraft."+strconv.Itoa(num)+".Version") == "1.17" || viper.GetString("Minecraft."+strconv.Itoa(num)+".Version") == "1.18" { 
+			//There are 0 of a max of 100 players online:
+			//There are 1 of a max of 100 players online: Sharps_Max
 			respFix, err := after(resp, "There")
 			if err != nil {
 				logger.ErrorLogger.Println(err)
