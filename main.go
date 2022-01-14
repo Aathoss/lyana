@@ -193,6 +193,7 @@ func registerCommands() {
 	//Commande d'informations
 	CmdHandler.Register("map", []string{}, 0, informations.DynmapDropURL, "Affiche le liens de la dynmap")
 	CmdHandler.Register("globalstats", []string{}, 1, informations.StatsUnispaceV1, "???")
+	CmdHandler.Register("role", []string{}, 1, command.CreateurRole, "Vous permet de switch entre le role de notification")
 
 	//Commande vocal VocalTemporaire
 	CmdHandler.Register("vtitre", []string{}, 0, vocaltemporaire.VocalTempEditTitre, "Modifie le titre de votre channel vocal temporaire")
